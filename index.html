@@ -306,17 +306,23 @@ backdrop-filter:blur(12px);
 
 display:none;
 
-margin-top:10px;
+position:absolute;
 
-background:rgba(6,24,30,.95);
+top:52px;
+
+right:0;
+
+width:170px;
+
+background:rgba(6,24,30,.96);
 
 border:1px solid rgba(216,176,93,.35);
 
-border-radius:18px;
+border-radius:16px;
 
 overflow:hidden;
 
-min-width:140px;
+box-shadow:0 12px 30px rgba(0,0,0,.45);
 
 }
 
@@ -324,17 +330,19 @@ min-width:140px;
 
 display:block;
 
-padding:10px 14px;
+padding:11px 16px;
 
-font-size:14px;
+font-size:15px;
+
+font-weight:500;
 
 color:white;
 
 text-decoration:none;
 
-transition:.3s;
+transition:background .25s,color .25s;
 
-}
+    }
 
 .lang-menu a:hover{
 
@@ -359,6 +367,10 @@ right:12px;
 padding:10px 16px;
 
 font-size:14px;
+
+min-width:95px;
+    
+height:42px;
 
 }
 
@@ -550,7 +562,7 @@ opacity:.6;">
 
 const btn = document.querySelector(".lang-btn");
 const menu = document.querySelector(".lang-menu");
-
+const savedLanguage = localStorage.getItem("language");
 const english = {
 title:"About FIDDEXA",
 text:`FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.`
@@ -587,6 +599,7 @@ document.getElementById("lang-en").addEventListener("click", function(e){
     document.getElementById("about-text").innerText = english.text;
 
     btn.innerHTML = "🌐 EN";
+    localStorage.setItem("language","en");
 
     menu.style.display="none";
 
@@ -600,10 +613,20 @@ document.getElementById("lang-zh").addEventListener("click", function(e){
     document.getElementById("about-text").innerText = chinese.text;
 
     btn.innerHTML = "🌐 中文";
+    localStorage.setItem("language","zh");
 
     menu.style.display="none";
 
 });
+    if(savedLanguage==="zh"){
+
+document.getElementById("lang-zh").click();
+
+}else{
+
+document.getElementById("lang-en").click();
+
+    }
 
 </script>
 
