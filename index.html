@@ -329,7 +329,7 @@ font-weight:700;
 <body>
     <div class="language-switcher">
     <a href="#" class="active">EN</a>
-    <a href="#">中文</a>
+    <a href="#" id="lang-zh">中文</a>
     <a href="#">FR</a>
     <a href="#">ES</a>
     <a href="#">RU</a>
@@ -342,11 +342,11 @@ font-weight:700;
 
   <section class="section">
 
-<h2>About FIDDEXA</h2>
+<h2 id="about-title">About FIDDEXA</h2>
 
 <div class="gold-line"></div>
 
-<p>
+<p> id="about-text">
 FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.
 </p>
 
@@ -489,6 +489,28 @@ opacity:.6;">
 </footer>
 
 </div>
+
+<script>
+
+const chinese = {
+
+title:"关于 FIDDEXA",
+
+text:`FIDDEXA 是一家国际贸易公司，致力于在全球制造商、供应商、分销商、采购商和投资者之间建立可靠的合作关系。我们帮助企业寻找商业机会，建立长期合作伙伴关系，并提供专业的国际贸易解决方案。`
+
+};
+
+document.getElementById("lang-zh").addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("about-title").innerText=chinese.title;
+
+document.getElementById("about-text").innerText=chinese.text;
+
+});
+
+    </script>
 
 </body>
 
