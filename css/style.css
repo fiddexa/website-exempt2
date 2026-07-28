@@ -1,1 +1,92 @@
+/* ===========================
+   FIDDEXA
+   Premium Corporate Theme
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#06131d;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            rgba(3,10,18,.30),
+            rgba(3,10,18,.55)
+        );
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    max-width:1400px;
+    width:100%;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-logo img{
+    width:180px;
+    margin-bottom:24px;
+    filter:drop-shadow(0 0 25px rgba(255,200,90,.35));
+}
+
+.hero h1{
+    font-size:26px;
+    letter-spacing:8px;
+    font-weight:600;
+    color:#d8b35b;
+    margin-bottom:18px;
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:72px;
+    line-height:1.1;
+    font-weight:700;
+    color:#ffffff;
+    text-shadow:0 5px 25px rgba(0,0,0,.45);
+    margin-bottom:70px;
+}
