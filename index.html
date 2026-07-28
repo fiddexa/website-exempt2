@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -17,176 +16,92 @@ box-sizing:border-box;
 }
 
 body{
-
 background:#000;
-font-family:Arial,sans-serif;
-overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+}
 
+.container{
+max-width:1400px;
+margin:auto;
+padding:30px 20px 60px;
 }
 
 .hero{
-
-position:relative;
-width:100%;
-min-height:100vh;
-
-}
-
-.hero img{
-
 width:100%;
 display:block;
-
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 30px rgba(0,0,0,.45);
 }
 
-.overlay{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.35);
-
-}
-
-.content{
-
-position:absolute;
-
-left:50%;
-top:58%;
-
-transform:translate(-50%,-50%);
-
-width:88%;
-max-width:980px;
-
-background:rgba(5,20,24,.58);
-
-backdrop-filter:blur(14px);
-
-padding:45px;
-
-border:1px solid rgba(212,168,74,.45);
-
-border-radius:20px;
-
-box-shadow:0 0 40px rgba(0,0,0,.55);
-
-}
-
-h1{
-
+.text{
+max-width:1000px;
+margin:45px auto;
 text-align:center;
-
-color:#d8b05d;
-
-font-size:42px;
-
-margin-bottom:30px;
-
-letter-spacing:2px;
-
-}
-
-p{
-
-color:white;
-
-font-size:22px;
-
 line-height:1.9;
-
-text-align:center;
-
-margin-bottom:25px;
-
-}
-
-.bottom{
-
-margin-top:40px;
-
-border-top:1px solid rgba(212,168,74,.35);
-
-padding-top:35px;
-
-}
-
-.bottom h2{
-
-color:#d8b05d;
-
-text-align:center;
-
-font-size:36px;
-
-margin-bottom:25px;
-
-}
-
-.bottom ul{
-
-list-style:none;
-
-padding:0;
-
-}
-
-.bottom li{
-
-color:white;
-
 font-size:22px;
+color:#f4f4f4;
+}
 
-padding:12px 0;
+.text h2{
+font-size:42px;
+color:#d8b05d;
+margin-bottom:30px;
+letter-spacing:3px;
+}
 
+.text p{
+margin-bottom:28px;
+}
+
+.why{
+margin-top:70px;
 text-align:center;
+}
 
+.why h2{
+font-size:42px;
+color:#d8b05d;
+margin-bottom:40px;
+letter-spacing:3px;
+}
+
+.why ul{
+list-style:none;
+max-width:900px;
+margin:auto;
+padding:0;
+}
+
+.why li{
+padding:14px 0;
+font-size:24px;
+border-bottom:1px solid rgba(216,176,93,.35);
 }
 
 @media(max-width:900px){
 
-.content{
-
-top:56%;
-
-padding:22px;
-
-width:94%;
-
+.container{
+padding:10px;
 }
 
-h1{
-
-font-size:28px;
-
+.text{
+font-size:18px;
+line-height:1.8;
 }
 
-p{
-
-font-size:16px;
-
-line-height:1.7;
-
+.text h2{
+font-size:30px;
 }
 
-.bottom h2{
-
-font-size:26px;
-
+.why h2{
+font-size:30px;
 }
 
-.bottom li{
-
-font-size:16px;
-
-padding:9px;
-
+.why li{
+font-size:18px;
+padding:12px 0;
 }
 
 }
@@ -197,18 +112,16 @@ padding:9px;
 
 <body>
 
-<div class="hero">
+<div class="container">
 
-<img src="images/hero.png" alt="FIDDEXA">
+<img src="images/hero.png" class="hero" alt="FIDDEXA">
 
-<div class="overlay"></div>
+<div class="text">
 
-<div class="content">
-
-<h1>ABOUT FIDDEXA</h1>
+<h2>About FIDDEXA</h2>
 
 <p>
-FIDDEXA is an international trading company specializing in developing international business cooperation, connecting suppliers and buyers, organizing international trade operations, and building long-term business relationships with manufacturers, suppliers, buyers, and investors.
+FIDDEXA is an international trading company specializing in the development of global business cooperation, supplier and buyer sourcing, organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
 </p>
 
 <p>
@@ -216,12 +129,14 @@ We connect manufacturers, suppliers, distributors, and buyers from different cou
 </p>
 
 <p>
-Our mission is to create mutually beneficial partnerships by helping companies expand into new markets and successfully develop their international business.
+Our mission is to create mutually beneficial partnerships, helping companies expand into new markets and successfully grow their international business.
 </p>
 
-<div class="bottom">
+</div>
 
-<h2>WHY CHOOSE FIDDEXA</h2>
+<div class="why">
+
+<h2>Why Choose FIDDEXA</h2>
 
 <ul>
 
@@ -242,8 +157,6 @@ Our mission is to create mutually beneficial partnerships by helping companies e
 <li>International Trade Expertise</li>
 
 </ul>
-
-</div>
 
 </div>
 
