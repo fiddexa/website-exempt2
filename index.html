@@ -371,7 +371,7 @@ font-size:14px;
     <div class="language-switcher">
 
 <button class="lang-btn">
-🌐 Language
+🌐 EN
 </button>
 
 <div class="lang-menu">
@@ -548,68 +548,64 @@ opacity:.6;">
 
 <script>
 
-const english={
+const btn = document.querySelector(".lang-btn");
+const menu = document.querySelector(".lang-menu");
 
+const english = {
 title:"About FIDDEXA",
-
 text:`FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.`
-
 };
-
-document.getElementById("lang-en").addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.getElementById("about-title").innerText=english.title;
-
-document.getElementById("about-text").innerText=english.text;
-
-menu.style.display="none";
-
-});
 
 const chinese = {
-
 title:"关于 FIDDEXA",
-
 text:`FIDDEXA 是一家国际贸易公司，致力于在全球制造商、供应商、分销商、采购商和投资者之间建立可靠的合作关系。我们帮助企业寻找商业机会，建立长期合作伙伴关系，并提供专业的国际贸易解决方案。`
-
 };
 
-document.getElementById("lang-zh").addEventListener("click",function(e){
+btn.addEventListener("click", function(e){
+    e.stopPropagation();
 
-e.preventDefault();
-
-document.getElementById("about-title").innerText=chinese.title;
-
-document.getElementById("about-text").innerText=chinese.text;
-
-menu.style.display="none";
+    if(menu.style.display==="block"){
+        menu.style.display="none";
+    }else{
+        menu.style.display="block";
+    }
 });
 
-    </script>
+document.addEventListener("click", function(){
+    menu.style.display="none";
+});
 
-    <script>
+menu.addEventListener("click", function(e){
+    e.stopPropagation();
+});
 
-const btn=document.querySelector(".lang-btn");
-const menu=document.querySelector(".lang-menu");
+document.getElementById("lang-en").addEventListener("click", function(e){
 
-btn.onclick=function(e){
+    e.preventDefault();
 
-e.stopPropagation();
+    document.getElementById("about-title").innerText = english.title;
+    document.getElementById("about-text").innerText = english.text;
 
-menu.style.display=
-menu.style.display==="block" ? "none" : "block";
+    btn.innerHTML = "🌐 EN";
 
-};
+    menu.style.display="none";
 
-document.onclick=function(){
+});
 
-menu.style.display="none";
+document.getElementById("lang-zh").addEventListener("click", function(e){
 
-};
+    e.preventDefault();
 
-    </script>
+    document.getElementById("about-title").innerText = chinese.title;
+    document.getElementById("about-text").innerText = chinese.text;
+
+    btn.innerHTML = "🌐 中文";
+
+    menu.style.display="none";
+
+});
+
+</script>
 
 </body>
 
