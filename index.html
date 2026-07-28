@@ -1,26 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FIDDEXA</title>
 
 <style>
 
-html,body{
+*{
 margin:0;
 padding:0;
-width:100%;
-height:100%;
-background:#000;
-overflow:hidden;
+box-sizing:border-box;
 }
 
-img{
+body{
+background:#000;
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+padding:30px 20px 60px;
+}
+
+.hero{
 width:100%;
-height:100%;
-object-fit:contain;
 display:block;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 30px rgba(0,0,0,.45);
+}
+
+.text{
+max-width:1000px;
+margin:45px auto;
+text-align:center;
+line-height:1.9;
+font-size:22px;
+color:#f4f4f4;
+}
+
+.text h2{
+font-size:42px;
+color:#d8b05d;
+margin-bottom:30px;
+letter-spacing:3px;
+}
+
+.text p{
+margin-bottom:28px;
+}
+
+.why{
+margin-top:70px;
+text-align:center;
+}
+
+.why h2{
+font-size:42px;
+color:#d8b05d;
+margin-bottom:40px;
+letter-spacing:3px;
+}
+
+.why ul{
+list-style:none;
+max-width:900px;
+margin:auto;
+padding:0;
+}
+
+.why li{
+padding:14px 0;
+font-size:24px;
+border-bottom:1px solid rgba(216,176,93,.35);
+}
+
+@media(max-width:900px){
+
+.container{
+padding:10px;
+}
+
+.text{
+font-size:18px;
+line-height:1.8;
+}
+
+.text h2{
+font-size:30px;
+}
+
+.why h2{
+font-size:30px;
+}
+
+.why li{
+font-size:18px;
+padding:12px 0;
+}
+
 }
 
 </style>
@@ -29,7 +112,56 @@ display:block;
 
 <body>
 
-<img src="images/hero.png" alt="FIDDEXA">
+<div class="container">
+
+<img src="images/hero.png" class="hero" alt="FIDDEXA">
+
+<div class="text">
+
+<h2>About FIDDEXA</h2>
+
+<p>
+FIDDEXA is an international trading company specializing in the development of global business cooperation, supplier and buyer sourcing, organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
+</p>
+
+<p>
+We connect manufacturers, suppliers, distributors, and buyers from different countries, providing a professional approach, transparency, and reliability at every stage of cooperation.
+</p>
+
+<p>
+Our mission is to create mutually beneficial partnerships, helping companies expand into new markets and successfully grow their international business.
+</p>
+
+</div>
+
+<div class="why">
+
+<h2>Why Choose FIDDEXA</h2>
+
+<ul>
+
+<li>Reliable International Partner Network</li>
+
+<li>Verified Suppliers</li>
+
+<li>Competitive Cooperation Terms</li>
+
+<li>High Quality Standards</li>
+
+<li>Fast Response and Communication</li>
+
+<li>Individual Approach</li>
+
+<li>Long-Term Business Partnerships</li>
+
+<li>International Trade Expertise</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </body>
+
 </html>
