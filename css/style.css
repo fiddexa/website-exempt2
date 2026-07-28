@@ -90,3 +90,230 @@ body{
     text-shadow:0 5px 25px rgba(0,0,0,.45);
     margin-bottom:70px;
 }
+/* ===========================
+   HERO CARDS
+=========================== */
+
+.hero-cards{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+    align-items:stretch;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(216,179,91,.28);
+    border-radius:22px;
+
+    padding:28px 22px;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.25);
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d8b35b;
+
+    box-shadow:
+        0 18px 40px rgba(216,179,91,.20);
+}
+
+.icon{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+
+}
+
+.card h3{
+
+    font-size:22px;
+
+    color:#d8b35b;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.card p{
+
+    color:rgba(255,255,255,.82);
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   SMALL EFFECTS
+=========================== */
+
+.hero-logo img{
+
+    transition:.5s ease;
+
+}
+
+.hero-logo img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.hero h2{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero-cards{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1200px){
+
+.hero h2{
+    font-size:58px;
+}
+
+.hero-cards{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media (max-width:900px){
+
+.hero{
+    height:auto;
+    min-height:100vh;
+    padding:80px 0;
+}
+
+.hero-content{
+    padding:30px 20px;
+}
+
+.hero-logo img{
+    width:140px;
+}
+
+.hero h1{
+    font-size:22px;
+    letter-spacing:6px;
+}
+
+.hero h2{
+    font-size:46px;
+    margin-bottom:50px;
+}
+
+.hero-cards{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.card{
+    padding:24px;
+}
+
+}
+
+@media (max-width:600px){
+
+.hero h2{
+    font-size:34px;
+    line-height:1.2;
+}
+
+.hero h1{
+    font-size:18px;
+    letter-spacing:4px;
+}
+
+.hero-logo img{
+    width:110px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+.icon{
+    font-size:36px;
+}
+
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+    background:#d8b35b;
+    color:#06131d;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#06131d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d8b35b;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#f2cb72;
+}
