@@ -282,17 +282,19 @@ z-index:1000;
 
 .lang-btn{
 
-background:rgba(6,24,30,.88);
+background:rgba(6,24,30,.90);
 
 color:#d8b05d;
 
 border:1px solid rgba(216,176,93,.45);
 
-border-radius:30px;
+border-radius:24px;
 
-padding:12px 18px;
+padding:8px 14px;
 
-font-size:15px;
+font-size:13px;
+
+font-weight:500;
 
 cursor:pointer;
 
@@ -314,7 +316,7 @@ border-radius:18px;
 
 overflow:hidden;
 
-min-width:180px;
+min-width:140px;
 
 }
 
@@ -322,7 +324,9 @@ min-width:180px;
 
 display:block;
 
-padding:12px 18px;
+padding:10px 14px;
+
+font-size:14px;
 
 color:white;
 
@@ -337,12 +341,6 @@ transition:.3s;
 background:rgba(216,176,93,.15);
 
 color:#d8b05d;
-
-}
-
-.language-switcher:hover .lang-menu{
-
-display:block;
 
 }
 
@@ -378,8 +376,8 @@ font-size:14px;
 
 <div class="lang-menu">
 
-<a href="#" class="active">English</a>
-
+<a href="#" id="lang-en" class="active">English</a>
+    
 <a href="#" id="lang-zh">中文</a>
 
 <a href="#">Français</a>
@@ -550,6 +548,26 @@ opacity:.6;">
 
 <script>
 
+const english={
+
+title:"About FIDDEXA",
+
+text:`FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.`
+
+};
+
+document.getElementById("lang-en").addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("about-title").innerText=english.title;
+
+document.getElementById("about-text").innerText=english.text;
+
+menu.style.display="none";
+
+});
+
 const chinese = {
 
 title:"关于 FIDDEXA",
@@ -566,7 +584,30 @@ document.getElementById("about-title").innerText=chinese.title;
 
 document.getElementById("about-text").innerText=chinese.text;
 
+menu.style.display="none";
 });
+
+    </script>
+
+    <script>
+
+const btn=document.querySelector(".lang-btn");
+const menu=document.querySelector(".lang-menu");
+
+btn.onclick=function(e){
+
+e.stopPropagation();
+
+menu.style.display=
+menu.style.display==="block" ? "none" : "block";
+
+};
+
+document.onclick=function(){
+
+menu.style.display="none";
+
+};
 
     </script>
 
