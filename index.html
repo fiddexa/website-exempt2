@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FIDDEXA</title>
+<title>FIDDEXA | Connecting Businesses Worldwide</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,93 +21,260 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#000;
-font-family:Arial,Helvetica,sans-serif;
-color:white;
+
+background:
+linear-gradient(180deg,#06141a,#081d24,#06141a);
+
+font-family:'Inter',sans-serif;
+
+color:#f5f5f5;
+
+overflow-x:hidden;
+
 }
 
 .container{
-max-width:1400px;
+
+width:100%;
+max-width:1500px;
+
 margin:auto;
-padding:30px 20px 60px;
+
+padding:40px 25px 90px;
+
 }
 
 .hero{
+
 width:100%;
+
 display:block;
-margin:auto;
-border-radius:10px;
-box-shadow:0 0 30px rgba(0,0,0,.45);
+
+border-radius:18px;
+
+box-shadow:
+0 15px 60px rgba(0,0,0,.65);
+
+margin-bottom:55px;
+
 }
 
-.text{
-max-width:1000px;
-margin:45px auto;
+.section{
+
+max-width:1100px;
+
+margin:0 auto 70px;
+
+padding:55px;
+
+background:
+rgba(6,24,30,.62);
+
+backdrop-filter:blur(18px);
+
+border:
+
+1px solid rgba(216,176,93,.28);
+
+border-radius:24px;
+
+box-shadow:
+
+0 0 45px rgba(0,0,0,.40);
+
+}
+
+.section h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:56px;
+
+font-weight:700;
+
 text-align:center;
-line-height:1.9;
-font-size:22px;
-color:#f4f4f4;
-}
 
-.text h2{
-font-size:42px;
+letter-spacing:4px;
+
+text-transform:uppercase;
+
 color:#d8b05d;
-margin-bottom:30px;
-letter-spacing:3px;
+
+margin-bottom:35px;
+
+text-shadow:
+
+0 3px 12px rgba(0,0,0,.55),
+
+0 0 25px rgba(216,176,93,.20);
+
 }
 
-.text p{
+.gold-line{
+
+width:140px;
+
+height:2px;
+
+background:#d8b05d;
+
+margin:0 auto 40px;
+
+opacity:.75;
+
+}
+
+.section p{
+
+font-size:22px;
+
+font-weight:300;
+
+line-height:2.05;
+
+letter-spacing:.35px;
+
+text-align:center;
+
 margin-bottom:28px;
+
+color:#f6f4ef;
+
 }
 
 .why{
-margin-top:70px;
-text-align:center;
-}
 
-.why h2{
-font-size:42px;
-color:#d8b05d;
-margin-bottom:40px;
-letter-spacing:3px;
-}
-
-.why ul{
 list-style:none;
+
 max-width:900px;
+
 margin:auto;
-padding:0;
+
 }
 
 .why li{
-padding:14px 0;
-font-size:24px;
-border-bottom:1px solid rgba(216,176,93,.35);
+
+padding:18px 0;
+
+font-size:22px;
+
+font-weight:400;
+
+letter-spacing:.3px;
+
+text-align:center;
+
+color:#ffffff;
+
+border-bottom:
+
+1px solid rgba(216,176,93,.22);
+
+transition:.35s;
+
+}
+
+.why li:hover{
+
+color:#d8b05d;
+
+letter-spacing:1px;
+
+}
+
+footer{
+
+margin-top:80px;
+
+padding-top:30px;
+
+text-align:center;
+
+font-size:15px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#b8b8b8;
+
+border-top:
+
+1px solid rgba(216,176,93,.25);
+
 }
 
 @media(max-width:900px){
 
 .container{
-padding:10px;
+
+padding:12px;
+
 }
 
-.text{
-font-size:18px;
-line-height:1.8;
+.hero{
+
+border-radius:10px;
+
+margin-bottom:35px;
+
 }
 
-.text h2{
-font-size:30px;
+.section{
+
+padding:28px 22px;
+
+border-radius:16px;
+
+margin-bottom:35px;
+
 }
 
-.why h2{
-font-size:30px;
+.section h2{
+
+font-size:34px;
+
+letter-spacing:2px;
+
+margin-bottom:22px;
+
+}
+
+.gold-line{
+
+width:80px;
+
+margin-bottom:25px;
+
+}
+
+.section p{
+
+font-size:17px;
+
+line-height:1.9;
+
 }
 
 .why li{
-font-size:18px;
-padding:12px 0;
+
+font-size:17px;
+
+padding:13px 0;
+
+}
+
+footer{
+
+font-size:12px;
+
+letter-spacing:2px;
+
 }
 
 }
@@ -111,6 +284,54 @@ padding:12px 0;
 </head>
 
 <body>
+
+<div class="container">
+
+<img src="images/hero.png" class="hero" alt="FIDDEXA">
+
+  <section class="section">
+
+<h2>About FIDDEXA</h2>
+
+<div class="gold-line"></div>
+
+<p>
+FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient sourcing solutions for companies seeking sustainable growth.
+</p>
+
+<p>
+Our approach is based on professionalism, transparency, and long-term cooperation. We work closely with trusted partners around the world, helping businesses establish strong commercial relationships while ensuring confidence, quality, and operational efficiency throughout every stage of the trading process.
+</p>
+
+<p>
+Whether expanding into new international markets, searching for reliable suppliers, or developing new distribution channels, FIDDEXA provides tailored solutions that transform business opportunities into lasting partnerships. Our mission is to connect businesses worldwide and create value through trust, expertise, and international cooperation.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Our Vision</h2>
+
+<div class="gold-line"></div>
+
+<p>
+To become a trusted international business partner recognized for connecting companies, expanding global opportunities, and creating sustainable long-term value through responsible trade and strategic cooperation.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Our Mission</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Our mission is to unite businesses across continents by providing professional international trade services, reliable sourcing, transparent communication, and efficient partnership development. We strive to help companies confidently enter new markets while building relationships founded on integrity, quality, and mutual success.
+</p>
+
+</section>
 
 <div class="container">
 
@@ -133,6 +354,99 @@ Our mission is to create mutually beneficial partnerships, helping companies exp
 </p>
 
 </div>
+
+  <section class="section">
+
+<h2>Why Choose FIDDEXA</h2>
+
+<div class="gold-line"></div>
+
+<ul class="why">
+
+<li>🌍 Reliable International Partner Network</li>
+
+<li>🏭 Verified Manufacturers and Suppliers</li>
+
+<li>🤝 Competitive Cooperation Terms</li>
+
+<li>⭐ High Quality Standards</li>
+
+<li>⚡ Fast Response and Professional Communication</li>
+
+<li>🎯 Individual Approach to Every Client</li>
+
+<li>📈 Long-Term Business Partnerships</li>
+
+<li>🌐 International Trade Expertise</li>
+
+<li>🔒 Transparency, Trust and Reliability</li>
+
+<li>🚢 Comprehensive Global Sourcing Solutions</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>Our Core Values</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Every successful partnership begins with trust.
+
+At FIDDEXA we believe that long-term business relationships are built on integrity, transparency, professionalism, and mutual respect.
+
+We are committed to delivering value through reliable cooperation, strategic thinking, and sustainable international trade solutions.
+
+</p>
+
+</section>
+
+<footer>
+
+<div style="font-family:'Cormorant Garamond',serif;
+font-size:34px;
+color:#d8b05d;
+letter-spacing:5px;
+margin-bottom:12px;">
+
+FIDDEXA
+
+</div>
+
+<div style="font-size:16px;
+letter-spacing:2px;
+margin-bottom:18px;">
+
+CONNECTING BUSINESSES WORLDWIDE
+
+</div>
+
+<div style="opacity:.8;
+line-height:1.8;">
+
+Global Trade • International Sourcing • Strategic Partnerships
+
+</div>
+
+<div style="margin-top:35px;
+font-size:14px;
+opacity:.6;">
+
+© 2026 FIDDEXA. All Rights Reserved.
+
+</div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
 
 <div class="why">
 
