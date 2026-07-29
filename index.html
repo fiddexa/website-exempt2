@@ -568,7 +568,11 @@ const english = {
 
 aboutTitle:"About FIDDEXA",
 
-aboutText:"FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.",
+aboutText1:"FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.",
+
+aboutText2:"Our approach is based on professionalism, transparency, and long-term cooperation. We work closely with trusted partners around the world, helping businesses establish strong commercial relationships while ensuring confidence, quality, and operational efficiency throughout every stage of the trading process.",
+
+aboutText3:"Whether expanding into new international markets, searching for reliable suppliers, or developing new distribution channels, FIDDEXA provides tailored solutions that transform business opportunities into lasting partnerships. Our mission is to connect businesses worldwide and create value through trust, expertise, and international cooperation.",
 
 visionTitle:"Our Vision",
 
@@ -607,7 +611,11 @@ const chinese = {
 
 aboutTitle: "关于我们",
 
-aboutText: "FIDDEXA 是一家国际贸易公司，致力于连接全球企业，建立长期合作伙伴关系，并为国际贸易提供可靠的解决方案。我们相信，信任、透明和专业精神是成功合作的基础。",
+aboutText1:"FIDDEXA 是一家国际贸易公司，致力于连接全球企业，建立长期合作伙伴关系，并为国际贸易提供可靠的解决方案。",
+
+aboutText2:"我们的工作建立在专业精神、透明度和长期合作的基础上。我们与全球值得信赖的合作伙伴紧密合作，帮助企业建立稳固的商业关系。",
+
+aboutText3:"无论是开拓国际市场、寻找可靠供应商，还是建立新的销售渠道，FIDDEXA 都能提供量身定制的解决方案，将商业机会转化为长期合作伙伴关系。",
 
 visionTitle: "我们的愿景",
 
@@ -664,9 +672,6 @@ menu.addEventListener("click", function(e){
 document.getElementById("lang-en").addEventListener("click", function(e){
 
     e.preventDefault();
-
-    document.getElementById("about-title").innerText = english.title;
-    document.getElementById("about-text").innerText = english.text;
 
     btn.innerHTML = "🌐 EN";
     document.getElementById("about-title").innerText = english.aboutTitle;
