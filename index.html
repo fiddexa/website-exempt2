@@ -669,6 +669,7 @@ document.getElementById("lang-en").addEventListener("click", function(e){
     document.getElementById("about-text").innerText = english.text;
 
     btn.innerHTML = "🌐 EN";
+    document.getElementById("about-title").innerText = english.aboutTitle;
 document.getElementById("about-text1").innerText = english.aboutText1;
 document.getElementById("about-text2").innerText = english.aboutText2;
 document.getElementById("about-text3").innerText = english.aboutText3;
@@ -709,6 +710,7 @@ document.getElementById("lang-zh").addEventListener("click", function(e){
     e.preventDefault();
 
     btn.innerHTML = "🌐 中文";
+    document.getElementById("about-title").innerText = chinese.aboutTitle;
 document.getElementById("about-text1").innerText = chinese.aboutText1;
 document.getElementById("about-text2").innerText = chinese.aboutText2;
 document.getElementById("about-text3").innerText = chinese.aboutText3;
