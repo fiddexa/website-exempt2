@@ -37,14 +37,16 @@ scroll-behavior:smooth;
 
 body{
 
-background:
-linear-gradient(180deg,#06141a,#081d24,#06141a);
+    padding-top:78px;
 
-font-family:'Inter',sans-serif;
+    background:
+    linear-gradient(180deg,#06141a,#081d24,#06141a);
 
-color:#f5f5f5;
+    font-family:'Inter',sans-serif;
 
-overflow-x:hidden;
+    color:#f5f5f5;
+
+    overflow-x:hidden;
 
 }
 
@@ -284,11 +286,11 @@ letter-spacing:2px;
 }
 
 .language-switcher{
-position:fixed;
-top:30px;
-right:20px;
-z-index:1000;
-}
+    position:fixed;
+    top:92px;
+    right:20px;
+    z-index:10001;
+    }
 
 .lang-btn{
 
@@ -378,12 +380,11 @@ color:#d8b05d;
 
 .language-switcher{
 
-top:22px;
-
-right:12px;
+    top:88px;
+    right:12px;
 
 }
-    
+
 }
     
 .lang-btn{
@@ -397,13 +398,60 @@ padding:0;
 font-size:13px;
 
     }
+    /* ===== Fixed Header ===== */
+
+.top-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(4,10,20,.82);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,215,0,.15);
+
+    z-index:9999;
+    transition:.35s;
+}
+
+.logo-link img{
+
+    width:340px;
+    max-width:80vw;
+
+    transition:.35s;
+    cursor:pointer;
+
+    filter:drop-shadow(0 0 10px rgba(255,190,40,.55));
+
+}
+
+.logo-link img:hover{
+
+    transform:scale(1.05);
+
+    filter:
+    drop-shadow(0 0 18px rgba(255,210,70,.9));
 
     }
 </style>
 
 </head>
 
-<body>
+<body id="top">
+    <header class="top-header">
+
+<a href="#top" class="logo-link">
+    <img src="images/fiddexa-title.png" alt="FIDDEXA">
+</a>
+
+    </header>
     <div class="language-switcher">
 
 <button class="lang-btn">
