@@ -568,6 +568,44 @@ const english = {
 title:"About FIDDEXA",
 text:`FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.`
 };
+const chinese = {
+
+aboutTitle: "关于我们",
+
+aboutText: "FIDDEXA 是一家国际贸易公司，致力于连接全球企业，建立长期合作伙伴关系，并为国际贸易提供可靠的解决方案。我们相信，信任、透明和专业精神是成功合作的基础。",
+
+visionTitle: "我们的愿景",
+
+visionText: "成为值得信赖的国际商业合作伙伴，通过可靠、高效和创新的贸易解决方案连接全球企业。",
+
+missionTitle: "我们的使命",
+
+missionText: "我们的使命是帮助企业开拓国际市场，建立长期合作关系，并提供专业的采购、贸易和商业发展服务。",
+
+whyTitle: "为什么选择 FIDDEXA",
+
+why1: "可靠的国际合作伙伴网络",
+why2: "经过验证的制造商和供应商",
+why3: "具有竞争力的合作条件",
+why4: "高质量标准",
+why5: "快速响应和专业沟通",
+why6: "为每位客户提供个性化服务",
+why7: "长期商业合作伙伴关系",
+why8: "丰富的国际贸易经验",
+why9: "透明、诚信、可靠",
+why10: "全球采购综合解决方案",
+
+valuesTitle: "我们的核心价值观",
+
+valuesText: "每一次成功的合作都始于信任。FIDDEXA 坚持诚信、透明、责任和长期合作，为客户创造可持续价值。",
+
+footerSlogan: "连接全球企业",
+
+footerServices: "国际贸易 • 全球采购 • 战略合作伙伴关系",
+
+footerCopy: "© 2026 FIDDEXA。版权所有。"
+
+};
 
 const chinese = {
 title:"关于 FIDDEXA",
@@ -600,6 +638,34 @@ document.getElementById("lang-en").addEventListener("click", function(e){
     document.getElementById("about-text").innerText = english.text;
 
     btn.innerHTML = "🌐 EN";
+    document.getElementById("about-title").innerText = english.aboutTitle;
+document.getElementById("about-text").innerText = english.aboutText;
+
+document.getElementById("vision-title").innerText = english.visionTitle;
+document.getElementById("vision-text").innerText = english.visionText;
+
+document.getElementById("mission-title").innerText = english.missionTitle;
+document.getElementById("mission-text").innerText = english.missionText;
+
+document.getElementById("why-title").innerText = english.whyTitle;
+
+document.getElementById("why1").innerText = english.why1;
+document.getElementById("why2").innerText = english.why2;
+document.getElementById("why3").innerText = english.why3;
+document.getElementById("why4").innerText = english.why4;
+document.getElementById("why5").innerText = english.why5;
+document.getElementById("why6").innerText = english.why6;
+document.getElementById("why7").innerText = english.why7;
+document.getElementById("why8").innerText = english.why8;
+document.getElementById("why9").innerText = english.why9;
+document.getElementById("why10").innerText = english.why10;
+
+document.getElementById("values-title").innerText = english.valuesTitle;
+document.getElementById("values-text").innerText = english.valuesText;
+
+document.getElementById("footer-slogan").innerText = english.footerSlogan;
+document.getElementById("footer-services").innerText = english.footerServices;
+document.getElementById("footer-copy").innerText = english.footerCopy;
     localStorage.setItem("language","en");
 
     menu.style.display="none";
@@ -614,6 +680,34 @@ document.getElementById("lang-zh").addEventListener("click", function(e){
     document.getElementById("about-text").innerText = chinese.text;
 
     btn.innerHTML = "🌐 中文";
+    document.getElementById("about-title").innerText = chinese.aboutTitle;
+document.getElementById("about-text").innerText = chinese.aboutText;
+
+document.getElementById("vision-title").innerText = chinese.visionTitle;
+document.getElementById("vision-text").innerText = chinese.visionText;
+
+document.getElementById("mission-title").innerText = chinese.missionTitle;
+document.getElementById("mission-text").innerText = chinese.missionText;
+
+document.getElementById("why-title").innerText = chinese.whyTitle;
+
+document.getElementById("why1").innerText = chinese.why1;
+document.getElementById("why2").innerText = chinese.why2;
+document.getElementById("why3").innerText = chinese.why3;
+document.getElementById("why4").innerText = chinese.why4;
+document.getElementById("why5").innerText = chinese.why5;
+document.getElementById("why6").innerText = chinese.why6;
+document.getElementById("why7").innerText = chinese.why7;
+document.getElementById("why8").innerText = chinese.why8;
+document.getElementById("why9").innerText = chinese.why9;
+document.getElementById("why10").innerText = chinese.why10;
+
+document.getElementById("values-title").innerText = chinese.valuesTitle;
+document.getElementById("values-text").innerText = chinese.valuesText;
+
+document.getElementById("footer-slogan").innerText = chinese.footerSlogan;
+document.getElementById("footer-services").innerText = chinese.footerServices;
+document.getElementById("footer-copy").innerText = chinese.footerCopy;
     localStorage.setItem("language","zh");
 
     menu.style.display="none";
