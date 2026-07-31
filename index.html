@@ -721,12 +721,14 @@ opacity:.6;">
 
 <div id="footer-copy">
 © 2026 FIDDEXA. All Rights Reserved.
-<div/>
-    
-    
+</div>
+
+</div>
+
+</div>
+
 </footer>
-<div/>
-    
+
 </div>
 
 <script>
@@ -939,15 +941,12 @@ aboutContent.classList.toggle("show");
 
 if(aboutContent.classList.contains("show")){
 
-aboutBtn.innerHTML="СКРЫТЬ";
+    aboutContent.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
 
-}else{
-
-aboutBtn.innerHTML="WHO WE ARE";
-
-}
-
-});
+    }
 
 </script>
 
