@@ -901,7 +901,9 @@ document.getElementById("footer-slogan").innerText = english.footerSlogan;
 document.getElementById("footer-services").innerText = english.footerServices;
 document.getElementById("footer-copy").innerText = english.footerCopy;
     localStorage.setItem("language","en");
-
+aboutBtn.innerHTML = aboutContent.classList.contains("show")
+    ? english.hideButton
+    : english.aboutButton;
     menu.style.display="none";
 
 });
@@ -942,10 +944,16 @@ document.getElementById("footer-slogan").innerText = chinese.footerSlogan;
 document.getElementById("footer-services").innerText = chinese.footerServices;
 document.getElementById("footer-copy").innerText = chinese.footerCopy;
     localStorage.setItem("language","zh");
-
+aboutBtn.innerHTML = aboutContent.classList.contains("show")
+    ? chinese.hideButton
+    : chinese.aboutButton;
     menu.style.display="none";
 
 });
+
+    const aboutBtn = document.getElementById("aboutBtn");
+const aboutContent = document.getElementById("aboutContent");
+    
     if(savedLanguage==="zh"){
 
 document.getElementById("lang-zh").click();
@@ -961,9 +969,6 @@ document.getElementById("lang-en").click();
 } else {
     aboutBtn.innerHTML = english.hideButton;
     }
-
-    const aboutBtn = document.getElementById("aboutBtn");
-const aboutContent = document.getElementById("aboutContent");
 
 aboutBtn.addEventListener("click", function(){
 
@@ -991,11 +996,6 @@ localStorage.getItem("language") === "zh"
 
     }
 
-    if (!aboutContent.classList.contains("show")) {
-    aboutBtn.innerHTML = chinese.aboutButton;
-} else {
-    aboutBtn.innerHTML = chinese.hideButton;
-        }
 });
 
 </script>
