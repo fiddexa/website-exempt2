@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,6 +9,13 @@
 <title>About | FIDDEXA</title>
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta name="theme-color" content="#06141a">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +85,8 @@ width:230px;
 
 height:auto;
 
+display:block;
+
 transition:.3s;
 
 }
@@ -86,6 +96,98 @@ transition:.3s;
 transform:scale(1.05);
 
 filter:drop-shadow(0 0 18px rgba(255,210,70,.9));
+
+}
+
+.language-switcher{
+
+position:fixed;
+
+top:102px;
+
+right:12px;
+
+z-index:1000;
+
+}
+
+.lang-btn{
+
+background:rgba(6,24,30,.92);
+
+color:#d8b05d;
+
+border:1px solid rgba(216,176,93,.45);
+
+border-radius:999px;
+
+width:72px;
+
+height:38px;
+
+font-size:13px;
+
+font-weight:600;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:5px;
+
+backdrop-filter:blur(12px);
+
+}
+
+.lang-menu{
+
+display:none;
+
+position:absolute;
+
+top:52px;
+
+right:0;
+
+width:130px;
+
+background:rgba(6,24,30,.97);
+
+border:1px solid rgba(216,176,93,.35);
+
+border-radius:14px;
+
+overflow:hidden;
+
+box-shadow:0 12px 30px rgba(0,0,0,.45);
+
+}
+
+.lang-menu a{
+
+display:block;
+
+padding:10px 14px;
+
+font-size:15px;
+
+color:white;
+
+text-decoration:none;
+
+transition:.25s;
+
+}
+
+.lang-menu a:hover{
+
+background:rgba(216,176,93,.15);
+
+color:#d8b05d;
 
 }
 
@@ -103,11 +205,11 @@ padding:40px 20px 70px;
 
 background:rgba(6,24,30,.65);
 
-backdrop-filter:blur(16px);
-
 border:1px solid rgba(216,176,93,.28);
 
 border-radius:24px;
+
+backdrop-filter:blur(16px);
 
 padding:60px;
 
@@ -115,169 +217,23 @@ box-shadow:0 0 45px rgba(0,0,0,.45);
 
 }
 
-h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:64px;
-
-text-align:center;
-
-letter-spacing:5px;
-
-color:#d8b05d;
-
-margin-bottom:20px;
-
-}
-
-.gold-line{
-
-width:140px;
-
-height:2px;
-
-background:#d8b05d;
-
-margin:0 auto 40px;
-
-}
-
-h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:42px;
-
-color:#d8b05d;
-
-margin-top:45px;
-
-margin-bottom:20px;
-
-letter-spacing:2px;
-
-}
-
-p{
-
-font-size:21px;
-
-line-height:2;
-
-margin-bottom:20px;
-
-color:#f5f5f5;
-
-}
-
-ul{
-
-padding-left:25px;
-
-margin-top:15px;
-
-}
-
-li{
-
-font-size:20px;
-
-line-height:1.9;
-
-margin-bottom:12px;
-
-}
-
-.back{
-
-display:flex;
-
-justify-content:center;
-
-margin-top:55px;
-
-}
-
-.back a{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:18px 50px;
-
-border-radius:60px;
-
-text-decoration:none;
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:26px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-background:linear-gradient(180deg,#f0d17d,#d8b05d);
-
-color:#06141a;
-
-transition:.3s;
-
-}
-
-.back a:hover{
-
-transform:translateY(-3px);
-
-}
-
 @media(max-width:900px){
-
-.card{
-
-padding:28px;
-
-}
-
-h1{
-
-font-size:40px;
-
-}
-
-h2{
-
-font-size:30px;
-
-}
-
-p{
-
-font-size:17px;
-
-}
-
-li{
-
-font-size:17px;
-
-}
-
-.back a{
-
-font-size:22px;
-
-padding:15px 35px;
-
-}
 
 .logo-link img{
 
 width:190px;
+
+}
+
+.language-switcher{
+
+top:100px;
+
+}
+
+.card{
+
+padding:28px;
 
 }
 
@@ -299,45 +255,136 @@ width:190px;
 
 </header>
 
-<div class="container">
+<div class="language-switcher">
+
+<button class="lang-btn">
+
+🌐 EN
+
+</button>
+
+<div class="lang-menu">
+
+<a href="#" id="lang-en">English</a>
+
+<a href="#" id="lang-zh">中文</a>
+
+</div>
+
+</div>
+
+  <div class="container">
 
 <div class="card">
 
-<h1>WHO WE ARE</h1>
+<h1 id="title"
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+text-align:center;
+letter-spacing:5px;
+color:#d8b05d;
+margin-bottom:20px;">
 
-<div class="gold-line"></div>
+WHO WE ARE
 
-<p>
-FIDDEXA is an international trading company focused on connecting businesses worldwide through reliable partnerships, efficient sourcing, and professional trade solutions.
+</h1>
+
+<div style="
+width:140px;
+height:2px;
+background:#d8b05d;
+margin:0 auto 40px;
+opacity:.8;">
+</div>
+
+<p id="intro1"
+style="
+font-size:21px;
+line-height:2;
+margin-bottom:24px;">
+
+FIDDEXA is an international trading company connecting businesses worldwide through trusted partnerships, efficient sourcing, and professional trade solutions.
+
 </p>
 
-<p>
-Our mission is to build long-term business relationships based on trust, transparency, quality, and mutual success.
+<p id="intro2"
+style="
+font-size:21px;
+line-height:2;
+margin-bottom:24px;">
+
+We build long-term relationships based on integrity, transparency, quality, and mutual success.
+
 </p>
 
-<h2>MISSION</h2>
+<h2 id="missionTitle"
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#d8b05d;
+margin-top:50px;
+margin-bottom:20px;">
 
-<p>
-To create sustainable international business opportunities by connecting manufacturers, suppliers, and buyers across global markets.
+MISSION
+
+</h2>
+
+<p id="missionText"
+style="
+font-size:20px;
+line-height:2;">
+
+To connect manufacturers, suppliers, and buyers across global markets while creating sustainable business opportunities and delivering reliable international trade solutions.
+
 </p>
 
-<h2>VISION</h2>
+<h2 id="visionTitle"
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#d8b05d;
+margin-top:50px;
+margin-bottom:20px;">
 
-<p>
-To become a trusted international trading company recognized for professionalism, innovation, and long-term partnerships.
+VISION
+
+</h2>
+
+<p id="visionText"
+style="
+font-size:20px;
+line-height:2;">
+
+To become one of the world's most trusted international trading companies by combining innovation, professionalism, and long-term partnerships.
+
 </p>
 
-<h2>OUR VALUES</h2>
+<h2 id="valuesTitle"
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#d8b05d;
+margin-top:50px;
+margin-bottom:20px;">
 
-<ul>
+OUR VALUES
 
-<li>Trust and Transparency</li>
+</h2>
+
+<ul id="valuesList"
+style="
+padding-left:28px;
+font-size:20px;
+line-height:2;">
+
+<li>Trust & Transparency</li>
 
 <li>Professionalism</li>
 
 <li>Innovation</li>
 
-<li>Long-Term Cooperation</li>
+<li>Long-Term Partnerships</li>
 
 <li>High Quality Standards</li>
 
@@ -345,9 +392,23 @@ To become a trusted international trading company recognized for professionalism
 
 </ul>
 
-<h2>OUR BUSINESS AREAS</h2>
+<h2 id="businessTitle"
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#d8b05d;
+margin-top:50px;
+margin-bottom:20px;">
 
-<ul>
+OUR BUSINESS AREAS
+
+</h2>
+
+<ul id="businessList"
+style="
+padding-left:28px;
+font-size:20px;
+line-height:2;">
 
 <li>Petroleum Products</li>
 
@@ -357,15 +418,51 @@ To become a trusted international trading company recognized for professionalism
 
 <li>Precious Metals</li>
 
-<li>Medical Equipment</li>
+<li>Medical Products</li>
 
-<li>International Trade & Sourcing</li>
+<li>International Trade</li>
+
+<li>Global Sourcing</li>
+
+<li>Strategic Partnerships</li>
 
 </ul>
+  
+<div class="back" style="display:flex;justify-content:center;margin-top:60px;">
 
-<div class="back">
+<a id="backHome"
+href="index.html"
 
-<a href="index.html">
+style="
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:18px 50px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:26px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+background:linear-gradient(
+180deg,
+#f0d17d,
+#d8b05d);
+
+color:#06141a;
+
+box-shadow:
+0 8px 30px rgba(216,176,93,.45);
+
+transition:.35s;">
 
 ← BACK TO HOME
 
@@ -375,7 +472,298 @@ To become a trusted international trading company recognized for professionalism
 
 </div>
 
+<footer style="
+
+margin-top:80px;
+
+padding-top:30px;
+
+padding-bottom:40px;
+
+text-align:center;
+
+border-top:1px solid rgba(216,176,93,.25);
+
+">
+
+<div style="
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+letter-spacing:5px;
+
+color:#d8b05d;
+
+margin-bottom:14px;">
+
+FIDDEXA
+
 </div>
+
+<div style="margin-bottom:22px;">
+
+<a href="mailto:contact@fiddexa.com"
+
+style="
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 26px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+background:rgba(6,24,30,.75);
+
+border:1.5px solid #e3c06d;
+
+color:#e3c06d;
+
+font-size:18px;
+
+font-weight:600;
+
+">
+
+contact@fiddexa.com
+
+</a>
+
+</div>
+
+<div id="footerSlogan"
+
+style="
+
+font-size:16px;
+
+letter-spacing:2px;
+
+">
+
+CONNECTING BUSINESSES WORLDWIDE
+
+</div>
+
+<div id="footerCopy"
+
+style="
+
+margin-top:28px;
+
+font-size:14px;
+
+opacity:.6;">
+
+© 2026 FIDDEXA. All Rights Reserved.
+
+</div>
+
+</footer>
+
+</div>
+
+<script>
+
+const btn=document.querySelector(".lang-btn");
+const menu=document.querySelector(".lang-menu");
+
+const en={
+
+title:"WHO WE ARE",
+
+intro1:"FIDDEXA is an international trading company connecting businesses worldwide through trusted partnerships, efficient sourcing, and professional trade solutions.",
+
+intro2:"We build long-term relationships based on integrity, transparency, quality, and mutual success.",
+
+missionTitle:"MISSION",
+
+missionText:"To connect manufacturers, suppliers, and buyers across global markets while creating sustainable business opportunities and delivering reliable international trade solutions.",
+
+visionTitle:"VISION",
+
+visionText:"To become one of the world's most trusted international trading companies by combining innovation, professionalism, and long-term partnerships.",
+
+valuesTitle:"OUR VALUES",
+
+businessTitle:"OUR BUSINESS AREAS",
+
+back:"← BACK TO HOME",
+
+footer:"CONNECTING BUSINESSES WORLDWIDE"
+
+};
+
+const zh={
+
+title:"关于我们",
+
+intro1:"FIDDEXA 是一家国际贸易公司，通过可靠的合作伙伴关系、高效采购和专业贸易解决方案连接全球企业。",
+
+intro2:"我们致力于建立基于诚信、透明、质量和共同成功的长期合作关系。",
+
+missionTitle:"使命",
+
+missionText:"连接全球制造商、供应商和采购商，创造可持续的国际商业机会。",
+
+visionTitle:"愿景",
+
+visionText:"成为全球最值得信赖的国际贸易公司之一。",
+
+valuesTitle:"我们的价值观",
+
+businessTitle:"业务领域",
+
+back:"← 返回首页",
+
+footer:"连接全球企业"
+
+};
+
+btn.addEventListener("click",function(e){
+
+e.stopPropagation();
+
+menu.style.display=
+
+menu.style.display==="block"
+
+?
+
+"none"
+
+:
+
+"block";
+
+});
+
+document.addEventListener("click",function(){
+
+menu.style.display="none";
+
+});
+
+menu.addEventListener("click",function(e){
+
+e.stopPropagation();
+
+});
+
+function applyLanguage(lang){
+
+const data=lang==="zh"?zh:en;
+
+btn.innerHTML=lang==="zh"?"🌐 中文":"🌐 EN";
+
+document.getElementById("title").innerText=data.title;
+document.getElementById("intro1").innerText=data.intro1;
+document.getElementById("intro2").innerText=data.intro2;
+
+document.getElementById("missionTitle").innerText=data.missionTitle;
+document.getElementById("missionText").innerText=data.missionText;
+
+document.getElementById("visionTitle").innerText=data.visionTitle;
+document.getElementById("visionText").innerText=data.visionText;
+
+document.getElementById("valuesTitle").innerText=data.valuesTitle;
+
+document.getElementById("businessTitle").innerText=data.businessTitle;
+
+document.getElementById("backHome").innerText=data.back;
+
+document.getElementById("footerSlogan").innerText=data.footer;
+
+const values=document.getElementById("valuesList").children;
+
+if(lang==="zh"){
+
+values[0].innerText="诚信与透明";
+values[1].innerText="专业精神";
+values[2].innerText="创新";
+values[3].innerText="长期合作";
+values[4].innerText="高质量标准";
+values[5].innerText="全球业务发展";
+
+}else{
+
+values[0].innerText="Trust & Transparency";
+values[1].innerText="Professionalism";
+values[2].innerText="Innovation";
+values[3].innerText="Long-Term Partnerships";
+values[4].innerText="High Quality Standards";
+values[5].innerText="Global Business Development";
+
+}
+
+const business=document.getElementById("businessList").children;
+
+if(lang==="zh"){
+
+business[0].innerText="石油产品";
+business[1].innerText="农产品";
+business[2].innerText="金属";
+business[3].innerText="贵金属";
+business[4].innerText="医疗产品";
+business[5].innerText="国际贸易";
+business[6].innerText="全球采购";
+business[7].innerText="战略合作伙伴";
+
+}else{
+
+business[0].innerText="Petroleum Products";
+business[1].innerText="Agricultural Products";
+business[2].innerText="Metals";
+business[3].innerText="Precious Metals";
+business[4].innerText="Medical Products";
+business[5].innerText="International Trade";
+business[6].innerText="Global Sourcing";
+business[7].innerText="Strategic Partnerships";
+
+}
+
+localStorage.setItem("language",lang);
+
+menu.style.display="none";
+
+}
+
+document.getElementById("lang-en").addEventListener("click",function(e){
+
+e.preventDefault();
+
+applyLanguage("en");
+
+});
+
+document.getElementById("lang-zh").addEventListener("click",function(e){
+
+e.preventDefault();
+
+applyLanguage("zh");
+
+});
+
+const savedLanguage=localStorage.getItem("language");
+
+if(savedLanguage==="zh"){
+
+applyLanguage("zh");
+
+}else{
+
+applyLanguage("en");
+
+}
+
+</script>
 
 </body>
 
