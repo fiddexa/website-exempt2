@@ -932,21 +932,29 @@ document.getElementById("lang-en").click();
 
     }
 
-    const aboutBtn=document.getElementById("aboutBtn");
-const aboutContent=document.getElementById("aboutContent");
+    const aboutBtn = document.getElementById("aboutBtn");
+const aboutContent = document.getElementById("aboutContent");
 
-aboutBtn.addEventListener("click",function(){
+aboutBtn.addEventListener("click", function(){
 
-aboutContent.classList.toggle("show");
+    aboutContent.classList.toggle("show");
 
-if(aboutContent.classList.contains("show")){
+    if(aboutContent.classList.contains("show")){
 
-    aboutContent.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-    });
+        aboutBtn.innerHTML = "HIDE";
+
+        aboutContent.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }else{
+
+        aboutBtn.innerHTML = "WHO WE ARE";
 
     }
+
+});
 
 </script>
 
