@@ -25,6 +25,81 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
+    .about-button-wrap{
+
+display:flex;
+justify-content:center;
+
+margin:45px 0 60px;
+
+}
+
+.about-btn{
+
+padding:22px 80px;
+
+font-size:28px;
+
+font-weight:700;
+
+font-family:'Cormorant Garamond',serif;
+
+letter-spacing:3px;
+
+color:#06141a;
+
+background:linear-gradient(
+180deg,
+#f0d17d,
+#d8b05d);
+
+border:none;
+
+border-radius:60px;
+
+cursor:pointer;
+
+box-shadow:
+
+0 8px 30px rgba(216,176,93,.45);
+
+transition:.35s;
+
+}
+
+.about-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 35px rgba(216,176,93,.6);
+
+}
+
+.about-content{
+
+overflow:hidden;
+
+max-height:0;
+
+opacity:0;
+
+transition:
+
+max-height .9s ease,
+
+opacity .6s ease;
+
+}
+
+.about-content.show{
+
+max-height:6000px;
+
+opacity:1;
+
+}
+
 *{
 margin:0;
 padding:0;
@@ -477,6 +552,16 @@ font-size:13px;
 
 <img src="images/hero.png" class="hero" alt="FIDDEXA">
 
+    <div class="about-button-wrap">
+
+<button id="aboutBtn" class="about-btn">
+WHO WE ARE
+</button>
+
+</div>
+
+<div id="aboutContent" class="about-content">
+
   <section class="section">
 
 <h2 id="about-title">About FIDDEXA</h2>
@@ -636,10 +721,12 @@ opacity:.6;">
 
 <div id="footer-copy">
 © 2026 FIDDEXA. All Rights Reserved.
-</div>
-
+<div/>
+    
+    
 </footer>
-
+<div/>
+    
 </div>
 
 <script>
@@ -842,6 +929,25 @@ document.getElementById("lang-zh").click();
 document.getElementById("lang-en").click();
 
     }
+
+    const aboutBtn=document.getElementById("aboutBtn");
+const aboutContent=document.getElementById("aboutContent");
+
+aboutBtn.addEventListener("click",function(){
+
+aboutContent.classList.toggle("show");
+
+if(aboutContent.classList.contains("show")){
+
+aboutBtn.innerHTML="СКРЫТЬ";
+
+}else{
+
+aboutBtn.innerHTML="WHO WE ARE";
+
+}
+
+});
 
 </script>
 
