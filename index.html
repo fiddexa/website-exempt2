@@ -756,6 +756,9 @@ const menu = document.querySelector(".lang-menu");
 const savedLanguage = localStorage.getItem("language");
 const english = {
 
+aboutButton: "WHO WE ARE",
+hideButton: "HIDE",
+    
 aboutTitle:"About FIDDEXA",
 
 aboutText1:"FIDDEXA is an international trading company dedicated to creating reliable connections between manufacturers, suppliers, distributors, buyers, and investors across global markets. We facilitate international trade by identifying business opportunities, building strategic partnerships, and delivering efficient solutions for companies seeking sustainable growth.",
@@ -799,6 +802,9 @@ footerCopy:"© 2026 FIDDEXA. All Rights Reserved."
     
 const chinese = {
 
+aboutButton: "关于我们",
+hideButton: "隐藏",
+    
 aboutTitle: "关于我们",
 
 aboutText1:"FIDDEXA 是一家国际贸易公司，致力于连接全球企业，建立长期合作伙伴关系，并为国际贸易提供可靠的解决方案。",
@@ -950,6 +956,12 @@ document.getElementById("lang-en").click();
 
     }
 
+    if (!aboutContent.classList.contains("show")) {
+    aboutBtn.innerHTML = english.aboutButton;
+} else {
+    aboutBtn.innerHTML = english.hideButton;
+    }
+
     const aboutBtn = document.getElementById("aboutBtn");
 const aboutContent = document.getElementById("aboutContent");
 
@@ -960,7 +972,10 @@ aboutBtn.addEventListener("click", function(){
 
     if(aboutContent.classList.contains("show")){
 
-        aboutBtn.innerHTML = "HIDE";
+    aboutBtn.innerHTML =
+localStorage.getItem("language") === "zh"
+? chinese.hideButton
+: english.hideButton;
 
         aboutContent.scrollIntoView({
             behavior: "smooth",
@@ -969,10 +984,18 @@ aboutBtn.addEventListener("click", function(){
 
     }else{
 
-        aboutBtn.innerHTML = "WHO WE ARE";
+        aboutBtn.innerHTML =
+localStorage.getItem("language") === "zh"
+? chinese.aboutButton
+: english.aboutButton;
 
     }
 
+    if (!aboutContent.classList.contains("show")) {
+    aboutBtn.innerHTML = chinese.aboutButton;
+} else {
+    aboutBtn.innerHTML = chinese.hideButton;
+        }
 });
 
 </script>
