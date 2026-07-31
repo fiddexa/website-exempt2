@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About | FIDDEXA</title>
+<title>WHO WE ARE | FIDDEXA</title>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
-<meta name="theme-color" content="#06141a">
+<link rel="icon" href="images/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -36,20 +30,18 @@ scroll-behavior:smooth;
 
 body{
 
-padding-top:90px;
+font-family:'Poppins',sans-serif;
 
 background:
-linear-gradient(180deg,#06141a,#081d24,#06141a);
+linear-gradient(180deg,#05141c 0%,#071d26 50%,#041017 100%);
 
-font-family:'Inter',sans-serif;
-
-color:#f5f5f5;
+color:#ffffff;
 
 overflow-x:hidden;
 
 }
 
-.top-header{
+header{
 
 position:fixed;
 
@@ -63,83 +55,61 @@ height:90px;
 
 display:flex;
 
-justify-content:center;
-
 align-items:center;
 
-padding-top:16px;
+justify-content:space-between;
 
-background:rgba(4,10,20,.82);
+padding:0 8%;
 
-backdrop-filter:blur(10px);
+background:rgba(4,15,22,.92);
 
-border-bottom:1px solid rgba(255,215,0,.15);
+backdrop-filter:blur(14px);
 
-z-index:9999;
-
-}
-
-.logo-link img{
-
-width:230px;
-
-height:auto;
-
-display:block;
-
-transition:.3s;
-
-}
-
-.logo-link img:hover{
-
-transform:scale(1.05);
-
-filter:drop-shadow(0 0 18px rgba(255,210,70,.9));
-
-}
-
-.language-switcher{
-
-position:fixed;
-
-top:102px;
-
-right:12px;
+border-bottom:1px solid rgba(216,176,93,.18);
 
 z-index:1000;
 
 }
 
+.logo img{
+
+height:48px;
+
+}
+
+.language-switcher{
+
+position:relative;
+
+}
+
 .lang-btn{
 
-background:rgba(6,24,30,.92);
+background:none;
+
+border:1px solid #d8b05d;
 
 color:#d8b05d;
 
-border:1px solid rgba(216,176,93,.45);
+padding:10px 18px;
 
-border-radius:999px;
-
-width:72px;
-
-height:38px;
-
-font-size:13px;
-
-font-weight:600;
+border-radius:40px;
 
 cursor:pointer;
 
-display:flex;
+font-size:15px;
 
-align-items:center;
+font-weight:600;
 
-justify-content:center;
+transition:.3s;
 
-gap:5px;
+}
 
-backdrop-filter:blur(12px);
+.lang-btn:hover{
+
+background:#d8b05d;
+
+color:#05141c;
 
 }
 
@@ -149,21 +119,21 @@ display:none;
 
 position:absolute;
 
-top:52px;
-
 right:0;
 
-width:130px;
+top:52px;
 
-background:rgba(6,24,30,.97);
+background:#081a22;
 
-border:1px solid rgba(216,176,93,.35);
+border:1px solid rgba(216,176,93,.25);
 
 border-radius:14px;
 
 overflow:hidden;
 
-box-shadow:0 12px 30px rgba(0,0,0,.45);
+min-width:170px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 
 }
 
@@ -171,23 +141,21 @@ box-shadow:0 12px 30px rgba(0,0,0,.45);
 
 display:block;
 
-padding:10px 14px;
+padding:12px 18px;
 
-font-size:15px;
-
-color:white;
+color:#fff;
 
 text-decoration:none;
 
-transition:.25s;
+transition:.3s;
 
 }
 
 .lang-menu a:hover{
 
-background:rgba(216,176,93,.15);
+background:#d8b05d;
 
-color:#d8b05d;
+color:#05141c;
 
 }
 
@@ -197,63 +165,306 @@ max-width:1200px;
 
 margin:auto;
 
-padding:40px 20px 70px;
+padding:150px 25px 80px;
 
 }
 
-.card{
+.hero{
 
-background:rgba(6,24,30,.65);
+text-align:center;
 
-border:1px solid rgba(216,176,93,.28);
+margin-bottom:70px;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:70px;
+
+color:#d8b05d;
+
+letter-spacing:3px;
+
+margin-bottom:18px;
+
+}
+
+.hero p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:21px;
+
+line-height:1.9;
+
+color:#d7d7d7;
+
+}
+
+.section{
+
+margin-bottom:45px;
+
+padding:45px;
 
 border-radius:24px;
 
-backdrop-filter:blur(16px);
+background:rgba(255,255,255,.03);
 
-padding:60px;
+border:1px solid rgba(216,176,93,.16);
 
-box-shadow:0 0 45px rgba(0,0,0,.45);
+backdrop-filter:blur(12px);
 
-}
-
-@media(max-width:900px){
-
-.logo-link img{
-
-width:190px;
+transition:.4s;
 
 }
 
-.language-switcher{
+.section:hover{
 
-top:100px;
+transform:translateY(-5px);
 
-}
+border-color:#d8b05d;
 
-.card{
-
-padding:28px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
 
 }
 
+.section h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:42px;
+
+color:#d8b05d;
+
+margin-bottom:22px;
+
 }
 
+.section p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#e4e4e4;
+
+}
+
+.section ul{
+
+margin-top:18px;
+
+padding-left:22px;
+
+}
+
+.section li{
+
+margin-bottom:12px;
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+padding:0 20px;
+
+}
+
+.logo img{
+
+height:38px;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.section{
+
+padding:30px;
+
+}
+
+.section h2{
+
+font-size:34px;
+
+}
+
+}
+  .step{
+
+margin-top:30px;
+
+padding:25px;
+
+border-left:4px solid #d8b05d;
+
+background:rgba(255,255,255,.02);
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.step:hover{
+
+background:rgba(216,176,93,.06);
+
+transform:translateX(5px);
+
+}
+
+.step h3{
+
+font-size:24px;
+
+color:#d8b05d;
+
+margin-bottom:12px;
+
+font-weight:600;
+
+}
+
+.step p{
+
+margin:0;
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#e4e4e4;
+
+}
+.back-button{
+
+display:inline-block;
+
+padding:18px 48px;
+
+background:linear-gradient(180deg,#f0d17d,#d8b05d);
+
+color:#05141c;
+
+text-decoration:none;
+
+font-weight:700;
+
+font-size:18px;
+
+border-radius:60px;
+
+transition:.35s;
+
+box-shadow:0 12px 30px rgba(216,176,93,.35);
+
+}
+
+.back-button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 40px rgba(216,176,93,.45);
+
+}
+
+footer{
+
+margin-top:90px;
+
+padding:60px 20px;
+
+text-align:center;
+
+border-top:1px solid rgba(216,176,93,.18);
+
+background:rgba(4,15,22,.95);
+
+}
+
+.footer-logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:42px;
+
+letter-spacing:6px;
+
+color:#d8b05d;
+
+margin-bottom:12px;
+
+}
+
+.footer-slogan{
+
+font-size:17px;
+
+color:#d7d7d7;
+
+margin-bottom:20px;
+
+}
+
+.footer-email a{
+
+color:#d8b05d;
+
+text-decoration:none;
+
+font-weight:500;
+
+}
+
+.footer-email{
+
+margin-bottom:18px;
+
+}
+
+.footer-copy{
+
+font-size:14px;
+
+color:#8c8c8c;
+
+  }
 </style>
 
 </head>
 
 <body>
 
-<header class="top-header">
+<header>
 
-<a href="index.html" class="logo-link">
+<a href="index.html" class="logo">
 
-<img src="images/fiddexa-title.png" alt="FIDDEXA">
+<img src="images/logo.png" alt="FIDDEXA">
 
 </a>
-
-</header>
 
 <div class="language-switcher">
 
@@ -273,232 +484,315 @@ padding:28px;
 
 </div>
 
-  <div class="container">
+</header>
 
-<div class="card">
+<div class="container">
 
-<h1 id="title"
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:64px;
-text-align:center;
-letter-spacing:5px;
-color:#d8b05d;
-margin-bottom:20px;">
+<div class="hero">
+
+<h1 id="pageTitle">
 
 WHO WE ARE
 
 </h1>
 
-<div style="
-width:140px;
-height:2px;
-background:#d8b05d;
-margin:0 auto 40px;
-opacity:.8;">
+<p id="pageIntro">
+
+Connecting Businesses Worldwide
+
+</p>
+
 </div>
 
-<p id="intro1"
-style="
-font-size:21px;
-line-height:2;
-margin-bottom:24px;">
+  <div class="section">
 
-FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, the organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
-</p>
-
-<p id="intro2"
-style="
-font-size:21px;
-line-height:2;
-margin-bottom:24px;">
-
-We connect manufacturers, suppliers, distributors, and buyers from different countries by providing a professional approach, transparency, and reliability at every stage of cooperation.
-</p>
-
-<p id="intro3"
-style="
-font-size:21px;
-line-height:2;
-margin-bottom:24px;">
-
-Our goal is to build mutually beneficial partnerships that help companies enter new markets and expand their international business.
-</p>
-  
-<h2 id="missionTitle"
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:40px;
-color:#d8b05d;
-margin-top:50px;
-margin-bottom:20px;">
+<h2 id="aboutTitle">
 
 ABOUT FIDDEXA
 
 </h2>
 
-<p id="missionText"
-style="
-font-size:20px;
-line-height:2;">
+<p id="aboutText1">
 
-FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
-We connect manufacturers, suppliers, distributors, buyers, and investors from different countries by providing a professional approach, transparency, and reliability throughout every stage of cooperation.
-Our mission is to create mutually beneficial partnerships that help businesses expand into new markets and achieve sustainable international growth.
-Why Choose FIDDEXA
-Reliable International Partner Network
-Verified Suppliers
-Competitive Cooperation Terms
-High Quality Standards
-Fast Response
-Individual Approach
-Long-Term Partnerships
-International Business Expertise
+FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, the organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
 
 </p>
 
-<h2 id="visionTitle"
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:40px;
-color:#d8b05d;
-margin-top:50px;
-margin-bottom:20px;">
+<br>
+
+<p id="aboutText2">
+
+We connect manufacturers, suppliers, distributors, buyers, and investors from different countries by providing a professional approach, transparency, and reliability at every stage of cooperation.
+
+</p>
+
+<br>
+
+<p id="aboutText3">
+
+Our goal is to build mutually beneficial partnerships that help companies enter new markets, strengthen international cooperation, and achieve sustainable business growth.
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h2 id="whyTitle">
+
+WHY CHOOSE FIDDEXA
+
+</h2>
+
+<ul id="whyList">
+
+<li>Reliable International Partner Network</li>
+
+<li>Verified Suppliers</li>
+
+<li>Competitive Cooperation Terms</li>
+
+<li>High Quality Standards</li>
+
+<li>Fast Response and Effective Communication</li>
+
+<li>Personalized Approach to Every Client</li>
+
+<li>Long-Term Business Partnerships</li>
+
+<li>International Business Expertise</li>
+
+</ul>
+
+</div>
+
+  <div class="section">
+
+<h2 id="geographyTitle">
 
 COOPERATION GEOGRAPHY
 
 </h2>
 
-<p id="visionText"
-style="
-font-size:20px;
-line-height:2;">
+<p id="geographyIntro">
 
-We develop business cooperation with companies across:
-CIS Countries
-Central Asia
-Southeast Asia
-China
-Middle East
-Africa
-Europe
-United States of America
+We actively develop business cooperation with companies, manufacturers, suppliers, distributors, investors, and business partners across the following regions:
+
 </p>
 
-<h2 id="valuesTitle"
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:40px;
-color:#d8b05d;
-margin-top:50px;
-margin-bottom:20px;">
+<ul id="geographyList">
+
+<li>CIS Countries</li>
+
+<li>Central Asia</li>
+
+<li>Southeast Asia</li>
+
+<li>China</li>
+
+<li>Middle East</li>
+
+<li>Africa</li>
+
+<li>Europe</li>
+
+<li>United States of America</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2 id="businessTitle">
 
 OUR BUSINESS AREAS
 
 </h2>
 
-<ul id="valuesList"
-style="
-padding-left:28px;
-font-size:20px;
-line-height:2;">
+<p id="businessIntro">
+
+FIDDEXA operates across multiple industries, providing comprehensive international trade solutions and connecting businesses with reliable partners worldwide.
+
+</p>
+
+<ul id="businessList">
 
 <li>Finance</li>
+
 <li>Investments</li>
+
 <li>Energy</li>
+
 <li>Petroleum Products</li>
-<li>Precious and Semi-Precious Metals</li>
+
+<li>Precious & Semi-Precious Metals</li>
+
 <li>Medical Products</li>
+
 <li>Agricultural Products</li>
+
 <li>Food & Beverages</li>
-<li>FMCG Products</li>
+
+<li>Fast-Moving Consumer Goods (FMCG)</li>
+
 <li>Chemical Products</li>
 
 </ul>
 
-<h2 id="businessTitle"
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:40px;
-color:#d8b05d;
-margin-top:50px;
-margin-bottom:20px;">
+</div>
+
+  <div class="section">
+
+<h2 id="servicesTitle">
 
 OUR SERVICES
 
 </h2>
 
-<ul id="businessList"
-style="
-padding-left:28px;
-font-size:20px;
-line-height:2;">
+<p id="servicesIntro">
+
+FIDDEXA provides comprehensive international business solutions designed to help companies expand globally, establish reliable partnerships, and achieve sustainable growth.
+
+</p>
+
+<ul id="servicesList">
 
 <li>International Trade</li>
+
 <li>Manufacturer & Supplier Sourcing</li>
+
 <li>Buyer Sourcing</li>
-<li>Export & Import</li>
+
+<li>Export & Import Support</li>
+
 <li>Supplier Verification</li>
-<li>Market Research</li>
+
+<li>Market Research & Analysis</li>
+
 <li>Business Development</li>
+
 <li>Strategic Partnership Development</li>
+
 <li>International Trade Consulting</li>
+
 <li>Financial Consulting</li>
 
 </ul>
 
-How We Work
-1. Request
-Tell us about your business needs and cooperation goals.
-2. Analysis
-We carefully analyze your request and determine the best solution.
-3. Opportunity Search
-We identify suitable manufacturers, suppliers, buyers, or strategic business partners.
-4. Commercial Proposal
-We prepare a customized commercial proposal and discuss cooperation terms.
-5. Agreement
-After both parties approve the conditions, the cooperation officially begins.
-6. Long-Term Support
-We continue supporting communication and business development between partners to build sustainable long-term relationships.
-Our Partners
-Content is currently being updated.
-  
-  
-<div class="back" style="display:flex;justify-content:center;margin-top:60px;">
+</div>
 
-<a id="backHome"
-href="index.html"
+<div class="section">
 
-style="
-display:inline-flex;
-align-items:center;
-justify-content:center;
+<h2 id="workTitle">
 
-padding:18px 50px;
+HOW WE WORK
 
-border-radius:60px;
+</h2>
 
-text-decoration:none;
+<p id="workIntro">
 
-font-family:'Cormorant Garamond',serif;
+Our cooperation process is transparent, efficient, and focused on building long-term business relationships.
 
-font-size:26px;
+</p>
 
-font-weight:700;
+<div class="step">
 
-letter-spacing:2px;
+<h3>1. Request Submission</h3>
 
-background:linear-gradient(
-180deg,
-#f0d17d,
-#d8b05d);
+<p>
 
-color:#06141a;
+You tell us about your business needs, products, services, or cooperation objectives. Our team carefully reviews every request.
 
-box-shadow:
-0 8px 30px rgba(216,176,93,.45);
+</p>
 
-transition:.35s;">
+</div>
+
+<div class="step">
+
+<h3>2. Request Analysis</h3>
+
+<p>
+
+We analyze your requirements, evaluate available opportunities, and determine the most effective strategy to achieve your goals.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>3. Opportunity Search</h3>
+
+<p>
+
+We identify reliable manufacturers, suppliers, buyers, investors, or potential strategic partners that best match your business requirements.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>4. Commercial Proposal</h3>
+
+<p>
+
+We prepare a customized commercial proposal, discuss the cooperation model, and negotiate mutually beneficial terms.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>5. Agreement</h3>
+
+<p>
+
+After all conditions are agreed upon, both parties confirm the partnership and proceed with project implementation.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>6. Long-Term Support</h3>
+
+<p>
+
+We continue supporting communication between partners, helping to strengthen cooperation and develop long-term business relationships.
+
+</p>
+
+</div>
+
+</div>
+
+  <div class="section">
+
+<h2 id="partnersTitle">
+
+OUR PARTNERS
+
+</h2>
+
+<p id="partnersText">
+
+This section is currently being updated.
+
+We are continuously expanding our international partner network and will soon present information about our strategic partners and successful business collaborations.
+
+Stay tuned for future updates.
+
+</p>
+
+</div>
+
+<div style="text-align:center;margin-top:70px;">
+
+<a href="index.html" class="back-button" id="backHome">
 
 ← BACK TO HOME
 
@@ -508,65 +802,23 @@ transition:.35s;">
 
 </div>
 
-<footer style="
+<footer>
 
-margin-top:80px;
-
-padding-top:30px;
-
-padding-bottom:40px;
-
-text-align:center;
-
-border-top:1px solid rgba(216,176,93,.25);
-
-">
-
-<div style="
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:34px;
-
-letter-spacing:5px;
-
-color:#d8b05d;
-
-margin-bottom:14px;">
+<div class="footer-logo">
 
 FIDDEXA
 
 </div>
 
-<div style="margin-bottom:22px;">
+<div class="footer-slogan" id="footerSlogan">
 
-<a href="mailto:contact@fiddexa.com"
+Connecting Businesses Worldwide
 
-style="
+</div>
 
-display:inline-flex;
+<div class="footer-email">
 
-align-items:center;
-
-justify-content:center;
-
-padding:12px 26px;
-
-border-radius:999px;
-
-text-decoration:none;
-
-background:rgba(6,24,30,.75);
-
-border:1.5px solid #e3c06d;
-
-color:#e3c06d;
-
-font-size:18px;
-
-font-weight:600;
-
-">
+<a href="mailto:contact@fiddexa.com">
 
 contact@fiddexa.com
 
@@ -574,29 +826,7 @@ contact@fiddexa.com
 
 </div>
 
-<div id="footerSlogan"
-
-style="
-
-font-size:16px;
-
-letter-spacing:2px;
-
-">
-
-CONNECTING BUSINESSES WORLDWIDE
-
-</div>
-
-<div id="footerCopy"
-
-style="
-
-margin-top:28px;
-
-font-size:14px;
-
-opacity:.6;">
+<div class="footer-copy">
 
 © 2026 FIDDEXA. All Rights Reserved.
 
@@ -604,64 +834,11 @@ opacity:.6;">
 
 </footer>
 
-</div>
-
 <script>
 
 const btn=document.querySelector(".lang-btn");
+
 const menu=document.querySelector(".lang-menu");
-
-const en={
-
-title:"WHO WE ARE",
-
-intro1:"FIDDEXA is an international trading company connecting businesses worldwide through trusted partnerships, efficient sourcing, and professional trade solutions.",
-
-intro2:"We build long-term relationships based on integrity, transparency, quality, and mutual success.",
-
-missionTitle:"MISSION",
-
-missionText:"To connect manufacturers, suppliers, and buyers across global markets while creating sustainable business opportunities and delivering reliable international trade solutions.",
-
-visionTitle:"VISION",
-
-visionText:"To become one of the world's most trusted international trading companies by combining innovation, professionalism, and long-term partnerships.",
-
-valuesTitle:"OUR VALUES",
-
-businessTitle:"OUR BUSINESS AREAS",
-
-back:"← BACK TO HOME",
-
-footer:"CONNECTING BUSINESSES WORLDWIDE"
-
-};
-
-const zh={
-
-title:"关于我们",
-
-intro1:"FIDDEXA 是一家国际贸易公司，通过可靠的合作伙伴关系、高效采购和专业贸易解决方案连接全球企业。",
-
-intro2:"我们致力于建立基于诚信、透明、质量和共同成功的长期合作关系。",
-
-missionTitle:"使命",
-
-missionText:"连接全球制造商、供应商和采购商，创造可持续的国际商业机会。",
-
-visionTitle:"愿景",
-
-visionText:"成为全球最值得信赖的国际贸易公司之一。",
-
-valuesTitle:"我们的价值观",
-
-businessTitle:"业务领域",
-
-back:"← 返回首页",
-
-footer:"连接全球企业"
-
-};
 
 btn.addEventListener("click",function(e){
 
@@ -693,99 +870,126 @@ e.stopPropagation();
 
 });
 
+  const en={
+
+pageTitle:"WHO WE ARE",
+pageIntro:"Connecting Businesses Worldwide",
+
+aboutTitle:"ABOUT FIDDEXA",
+aboutText1:"FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, the organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.",
+aboutText2:"We connect manufacturers, suppliers, distributors, buyers, and investors from different countries by providing a professional approach, transparency, and reliability at every stage of cooperation.",
+aboutText3:"Our goal is to build mutually beneficial partnerships that help companies enter new markets, strengthen international cooperation, and achieve sustainable business growth.",
+
+whyTitle:"WHY CHOOSE FIDDEXA",
+
+geographyTitle:"COOPERATION GEOGRAPHY",
+geographyIntro:"We actively develop business cooperation with companies, manufacturers, suppliers, distributors, investors, and business partners across the following regions:",
+
+businessTitle:"OUR BUSINESS AREAS",
+businessIntro:"FIDDEXA operates across multiple industries, providing comprehensive international trade solutions and connecting businesses with reliable partners worldwide.",
+
+servicesTitle:"OUR SERVICES",
+servicesIntro:"FIDDEXA provides comprehensive international business solutions designed to help companies expand globally, establish reliable partnerships, and achieve sustainable growth.",
+
+workTitle:"HOW WE WORK",
+workIntro:"Our cooperation process is transparent, efficient, and focused on building long-term business relationships.",
+
+partnersTitle:"OUR PARTNERS",
+partnersText:"This section is currently being updated. We are continuously expanding our international partner network. Stay tuned for future updates.",
+
+backHome:"← BACK TO HOME",
+footerSlogan:"Connecting Businesses Worldwide"
+
+};
+
+const zh={
+
+pageTitle:"关于我们",
+pageIntro:"连接全球企业",
+
+aboutTitle:"关于 FIDDEXA",
+aboutText1:"FIDDEXA 是一家国际贸易公司，专注于国际商务合作、供应商与采购商开发、国际贸易运营以及建立长期合作关系。",
+aboutText2:"我们连接来自世界各地的制造商、供应商、分销商、采购商和投资者，为每一个合作项目提供专业、透明和可靠的服务。",
+aboutText3:"我们的目标是建立互利共赢的合作伙伴关系，帮助企业拓展国际市场，实现可持续发展。",
+
+whyTitle:"为什么选择 FIDDEXA",
+
+geographyTitle:"合作地区",
+geographyIntro:"我们与以下地区的企业开展合作：",
+
+businessTitle:"业务领域",
+businessIntro:"FIDDEXA 在多个行业开展国际贸易合作。",
+
+servicesTitle:"我们的服务",
+servicesIntro:"我们提供全面的国际贸易解决方案。",
+
+workTitle:"合作流程",
+workIntro:"我们的合作流程透明、高效，并专注于长期合作。",
+
+partnersTitle:"合作伙伴",
+partnersText:"该部分正在完善中。",
+
+backHome:"← 返回首页",
+footerSlogan:"连接全球企业"
+
+};
+
 function applyLanguage(lang){
 
 const data=lang==="zh"?zh:en;
 
-btn.innerHTML=lang==="zh"?"🌐 中文":"🌐 EN";
+document.getElementById("pageTitle").innerText=data.pageTitle;
+document.getElementById("pageIntro").innerText=data.pageIntro;
 
-document.getElementById("title").innerText=data.title;
-document.getElementById("intro1").innerText=data.intro1;
-document.getElementById("intro2").innerText=data.intro2;
+document.getElementById("aboutTitle").innerText=data.aboutTitle;
+document.getElementById("aboutText1").innerText=data.aboutText1;
+document.getElementById("aboutText2").innerText=data.aboutText2;
+document.getElementById("aboutText3").innerText=data.aboutText3;
 
-document.getElementById("missionTitle").innerText=data.missionTitle;
-document.getElementById("missionText").innerText=data.missionText;
+document.getElementById("whyTitle").innerText=data.whyTitle;
 
-document.getElementById("visionTitle").innerText=data.visionTitle;
-document.getElementById("visionText").innerText=data.visionText;
-
-document.getElementById("valuesTitle").innerText=data.valuesTitle;
+document.getElementById("geographyTitle").innerText=data.geographyTitle;
+document.getElementById("geographyIntro").innerText=data.geographyIntro;
 
 document.getElementById("businessTitle").innerText=data.businessTitle;
+document.getElementById("businessIntro").innerText=data.businessIntro;
 
-document.getElementById("backHome").innerText=data.back;
+document.getElementById("servicesTitle").innerText=data.servicesTitle;
+document.getElementById("servicesIntro").innerText=data.servicesIntro;
 
-document.getElementById("footerSlogan").innerText=data.footer;
+document.getElementById("workTitle").innerText=data.workTitle;
+document.getElementById("workIntro").innerText=data.workIntro;
 
-const values=document.getElementById("valuesList").children;
+document.getElementById("partnersTitle").innerText=data.partnersTitle;
+document.getElementById("partnersText").innerText=data.partnersText;
 
-if(lang==="zh"){
+document.getElementById("backHome").innerText=data.backHome;
 
-values[0].innerText="诚信与透明";
-values[1].innerText="专业精神";
-values[2].innerText="创新";
-values[3].innerText="长期合作";
-values[4].innerText="高质量标准";
-values[5].innerText="全球业务发展";
-
-}else{
-
-values[0].innerText="Trust & Transparency";
-values[1].innerText="Professionalism";
-values[2].innerText="Innovation";
-values[3].innerText="Long-Term Partnerships";
-values[4].innerText="High Quality Standards";
-values[5].innerText="Global Business Development";
-
-}
-
-const business=document.getElementById("businessList").children;
-
-if(lang==="zh"){
-
-business[0].innerText="石油产品";
-business[1].innerText="农产品";
-business[2].innerText="金属";
-business[3].innerText="贵金属";
-business[4].innerText="医疗产品";
-business[5].innerText="国际贸易";
-business[6].innerText="全球采购";
-business[7].innerText="战略合作伙伴";
-
-}else{
-
-business[0].innerText="Petroleum Products";
-business[1].innerText="Agricultural Products";
-business[2].innerText="Metals";
-business[3].innerText="Precious Metals";
-business[4].innerText="Medical Products";
-business[5].innerText="International Trade";
-business[6].innerText="Global Sourcing";
-business[7].innerText="Strategic Partnerships";
-
-}
+document.getElementById("footerSlogan").innerText=data.footerSlogan;
 
 localStorage.setItem("language",lang);
+
+btn.innerHTML=lang==="zh"?"🌐 中文":"🌐 EN";
 
 menu.style.display="none";
 
 }
 
-document.getElementById("lang-en").addEventListener("click",function(e){
+document.getElementById("lang-en").onclick=function(e){
 
 e.preventDefault();
 
 applyLanguage("en");
 
-});
+};
 
-document.getElementById("lang-zh").addEventListener("click",function(e){
+document.getElementById("lang-zh").onclick=function(e){
 
 e.preventDefault();
 
 applyLanguage("zh");
 
-});
+};
 
 const savedLanguage=localStorage.getItem("language");
 
