@@ -95,30 +95,6 @@ box-shadow:
 
     }
 
-.about-content{
-
-overflow:hidden;
-
-max-height:0;
-
-opacity:0;
-
-transition:
-
-max-height .9s ease,
-
-opacity .6s ease;
-
-}
-
-.about-content.show{
-
-max-height:6000px;
-
-opacity:1;
-
-}
-
 *{
 margin:0;
 padding:0;
@@ -573,7 +549,7 @@ font-size:13px;
 
     <div class="about-button-wrap">
 
-<a href="about.html" class="about-btn">
+<a href="about.html" id="aboutBtn" class="about-btn">
 WHO WE ARE
 </a>
 
@@ -638,44 +614,6 @@ Our mission is to unite businesses across continents by providing professional i
 <li id="why2">Verified Manufacturers and Suppliers</li>
 
 <li id="why3">Competitive Cooperation Terms</li>
-
-<li id="why4">High Quality Standards</li>
-
-<li id="why5">Fast Response and Professional Communication</li>
-
-<li id="why6">Individual Approach to Every Client</li>
-
-<li id="why7">Long-Term Business Partnerships</li>
-
-<li id="why8">International Trade Expertise</li>
-
-<li id="why9">Transparency, Trust and Reliability</li>
-
-<li id="why10">Comprehensive Global Sourcing Solutions</li>
-
-</ul>
-
-</section>
-
-<section class="section">
-
-<h2 id="values-title">Our Core Values</h2>
-
-<div class="gold-line"></div>
-
-<p id="values-text">
-
-Every successful partnership begins with trust.
-
-At FIDDEXA we believe that long-term business relationships are built on integrity, transparency, professionalism, and mutual respect.
-
-We are committed to delivering value through reliable cooperation, strategic thinking, and sustainable international trade solutions.
-
-</p>
-
-</section>
-
-</div>
 
 <footer>
     
@@ -905,9 +843,7 @@ document.getElementById("footer-slogan").innerText = english.footerSlogan;
 document.getElementById("footer-services").innerText = english.footerServices;
 document.getElementById("footer-copy").innerText = english.footerCopy;
     localStorage.setItem("language","en");
-aboutBtn.innerHTML = aboutContent.classList.contains("show")
-    ? english.hideButton
-    : english.aboutButton;
+
     menu.style.display="none";
 
 });
@@ -948,16 +884,12 @@ document.getElementById("footer-slogan").innerText = chinese.footerSlogan;
 document.getElementById("footer-services").innerText = chinese.footerServices;
 document.getElementById("footer-copy").innerText = chinese.footerCopy;
     localStorage.setItem("language","zh");
-aboutBtn.innerHTML = aboutContent.classList.contains("show")
-    ? chinese.hideButton
-    : chinese.aboutButton;
+
     menu.style.display="none";
 
 });
 
-    const aboutBtn = document.getElementById("aboutBtn");
-const aboutContent = document.getElementById("aboutContent");
-    
+
     if(savedLanguage==="zh"){
 
 document.getElementById("lang-zh").click();
@@ -965,38 +897,6 @@ document.getElementById("lang-zh").click();
 }else{
 
 document.getElementById("lang-en").click();
-
-    }
-
-    if (!aboutContent.classList.contains("show")) {
-    aboutBtn.innerHTML = english.aboutButton;
-} else {
-    aboutBtn.innerHTML = english.hideButton;
-    }
-
-aboutBtn.addEventListener("click", function(){
-
-    aboutContent.classList.toggle("show");
-    aboutBtn.classList.toggle("active");
-
-    if(aboutContent.classList.contains("show")){
-
-    aboutBtn.innerHTML =
-localStorage.getItem("language") === "zh"
-? chinese.hideButton
-: english.hideButton;
-
-        aboutContent.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }else{
-
-        aboutBtn.innerHTML =
-localStorage.getItem("language") === "zh"
-? chinese.aboutButton
-: english.aboutButton;
 
     }
 
