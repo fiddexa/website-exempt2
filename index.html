@@ -377,24 +377,24 @@ font-size:13px;
 
     <div class="about-button-wrap">
 
-    <a href="about.html" class="about-btn">
-        WHO WE ARE
+    <a href="about.html" id="btnWho" class="about-btn">
+    WHO WE ARE
     </a>
 
 </div>
 
 <div class="about-button-wrap">
 
-    <a href="offers.html" class="about-btn">
-        OUR OFFERS
+    <a href="offers.html" id="btnOffers" class="about-btn">
+    OUR OFFERS
     </a>
 
 </div>
 
 <div class="about-button-wrap">
 
-    <a href="partner.html" class="about-btn">
-        BECOME A PARTNER
+    <a href="partner.html" id="btnPartner" class="about-btn">
+    BECOME A PARTNER
     </a>
 
 </div>
@@ -484,6 +484,10 @@ const menu = document.querySelector(".lang-menu");
 const savedLanguage = localStorage.getItem("language");
 const english = {
 
+buttonWho: "WHO WE ARE",
+buttonOffers: "OUR OFFERS",
+buttonPartner: "BECOME A PARTNER",
+    
 footerSlogan:"CONNECTING BUSINESSES WORLDWIDE",
 
 footerServices:"Global Trade • International Sourcing • Strategic Partnerships",
@@ -494,6 +498,10 @@ footerCopy:"© 2026 FIDDEXA. All Rights Reserved."
     
 const chinese = {
 
+buttonWho: "关于我们",
+buttonOffers: "我们的服务",
+buttonPartner: "成为合作伙伴",
+    
 footerSlogan: "连接全球企业",
 
 footerServices: "国际贸易 • 全球采购 • 战略合作伙伴关系",
@@ -525,7 +533,9 @@ document.getElementById("lang-en").addEventListener("click", function(e){
     e.preventDefault();
 
     btn.innerHTML = "🌐 EN";
-
+document.getElementById("btnWho").innerText = english.buttonWho;
+document.getElementById("btnOffers").innerText = english.buttonOffers;
+document.getElementById("btnPartner").innerText = english.buttonPartner;
 document.getElementById("footer-slogan").innerText = english.footerSlogan;
 document.getElementById("footer-services").innerText = english.footerServices;
 document.getElementById("footer-copy").innerText = english.footerCopy;
@@ -540,7 +550,9 @@ document.getElementById("lang-zh").addEventListener("click", function(e){
     e.preventDefault();
 
     btn.innerHTML = "🌐 中文";
-    
+document.getElementById("btnWho").innerText = chinese.buttonWho;
+document.getElementById("btnOffers").innerText = chinese.buttonOffers;
+document.getElementById("btnPartner").innerText = chinese.buttonPartner;    
 document.getElementById("footer-slogan").innerText = chinese.footerSlogan;
 document.getElementById("footer-services").innerText = chinese.footerServices;
 document.getElementById("footer-copy").innerText = chinese.footerCopy;
