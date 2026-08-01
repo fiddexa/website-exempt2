@@ -1,1005 +1,3246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WHO WE ARE | FIDDEXA</title>
+<title>Who We Are | FIDDEXA</title>
 
-<link rel="icon" href="images/favicon.png">
+<meta name="description"
+content="Learn about FIDDEXA, our international business network, areas of expertise, services and approach to global cooperation.">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<meta name="theme-color" content="#06141a">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* =========================
+   BASIC SETTINGS
+========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Poppins',sans-serif;
-
-background:
-linear-gradient(180deg,#05141c 0%,#071d26 50%,#041017 100%);
-
-color:#ffffff;
-
-overflow-x:hidden;
-
-}
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:90px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 8%;
-
-background:rgba(4,15,22,.92);
-
-backdrop-filter:blur(14px);
-
-border-bottom:1px solid rgba(216,176,93,.18);
-
-z-index:1000;
-
-}
-
-.logo img{
-
-height:48px;
-
-}
-
-.language-switcher{
-
-position:relative;
-
-}
-
-.lang-btn{
-
-background:none;
-
-border:1px solid #d8b05d;
-
-color:#d8b05d;
-
-padding:10px 18px;
-
-border-radius:40px;
-
-cursor:pointer;
-
-font-size:15px;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-.lang-btn:hover{
-
-background:#d8b05d;
-
-color:#05141c;
-
-}
-
-.lang-menu{
-
-display:none;
-
-position:absolute;
-
-right:0;
-
-top:52px;
-
-background:#081a22;
-
-border:1px solid rgba(216,176,93,.25);
-
-border-radius:14px;
-
-overflow:hidden;
-
-min-width:170px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-
-}
-
-.lang-menu a{
-
-display:block;
-
-padding:12px 18px;
-
-color:#fff;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.lang-menu a:hover{
-
-background:#d8b05d;
-
-color:#05141c;
-
+    padding-top:90px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #06141a 0%,
+        #081d24 50%,
+        #06141a 100%
+    );
+
+    font-family:'Inter',sans-serif;
+    color:#f5f5f5;
+
+    overflow-x:hidden;
 }
 
 .container{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:150px 25px 80px;
-
+    width:100%;
+    max-width:1920px;
+    margin:0 auto;
+    padding-bottom:50px;
 }
 
-.hero{
 
-text-align:center;
+/* =========================
+   FIXED HEADER
+========================= */
 
-margin-bottom:70px;
+.top-header{
+    position:fixed;
 
+    top:0;
+    left:0;
+
+    width:100%;
+    height:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding-top:16px;
+
+    background:rgba(4,10,20,.88);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(216,176,93,.18);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.25);
+
+    z-index:9999;
 }
 
-.hero h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:70px;
-
-color:#d8b05d;
-
-letter-spacing:3px;
-
-margin-bottom:18px;
-
+.logo-link{
+    display:inline-block;
 }
 
-.hero p{
+.logo-link img{
+    width:230px;
+    height:auto;
+    display:block;
 
-max-width:850px;
-
-margin:auto;
-
-font-size:21px;
-
-line-height:1.9;
-
-color:#d7d7d7;
-
+    transition:
+    transform .3s ease,
+    filter .3s ease;
 }
+
+.logo-link img:hover{
+    transform:scale(1.04);
+
+    filter:
+    drop-shadow(
+        0 0 18px rgba(216,176,93,.65)
+    );
+}
+
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher{
+    position:fixed;
+
+    top:102px;
+    right:12px;
+
+    z-index:9000;
+}
+
+.lang-btn{
+    width:72px;
+    height:38px;
+
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+
+    background:rgba(6,24,30,.94);
+
+    color:#d8b05d;
+
+    border:
+    1px solid rgba(216,176,93,.45);
+
+    border-radius:999px;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:13px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+}
+
+.lang-menu{
+    display:none;
+
+    position:absolute;
+
+    top:52px;
+    right:0;
+
+    width:140px;
+
+    background:rgba(6,24,30,.98);
+
+    border:
+    1px solid rgba(216,176,93,.35);
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.45);
+}
+
+.lang-menu a{
+    display:block;
+
+    padding:11px 15px;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:500;
+
+    transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+.lang-menu a:hover{
+    background:
+    rgba(216,176,93,.15);
+
+    color:#d8b05d;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-wrap{
+    width:100%;
+    max-width:1100px;
+
+    margin:35px auto 20px;
+
+    padding:0 20px;
+}
+
+.back-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    padding:11px 20px;
+
+    border:
+    1px solid rgba(216,176,93,.40);
+
+    border-radius:999px;
+
+    background:
+    rgba(6,24,30,.70);
+
+    color:#d8b05d;
+
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:600;
+
+    letter-spacing:1.2px;
+
+    transition:
+    transform .3s ease,
+    background .3s ease,
+    border-color .3s ease;
+}
+
+.back-btn:hover{
+    transform:translateX(-3px);
+
+    background:
+    rgba(216,176,93,.10);
+
+    border-color:#d8b05d;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-intro{
+    max-width:1100px;
+
+    margin:25px auto 55px;
+
+    padding:45px 25px;
+
+    text-align:center;
+}
+
+.page-intro h1{
+    font-family:
+    'Cormorant Garamond',serif;
+
+    font-size:68px;
+    font-weight:700;
+
+    letter-spacing:6px;
+
+    color:#d8b05d;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 3px 15px rgba(0,0,0,.60),
+    0 0 30px rgba(216,176,93,.18);
+}
+
+.page-intro-line{
+    width:150px;
+    height:2px;
+
+    margin:25px auto 0;
+
+    background:#d8b05d;
+
+    opacity:.75;
+}
+
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
 
 .section{
+    max-width:1100px;
 
-margin-bottom:45px;
+    margin:0 auto 45px;
 
-padding:45px;
+    padding:50px 55px;
 
-border-radius:24px;
+    background:
+    rgba(6,24,30,.64);
 
-background:rgba(255,255,255,.03);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-border:1px solid rgba(216,176,93,.16);
+    border:
+    1px solid rgba(216,176,93,.25);
 
-backdrop-filter:blur(12px);
+    border-radius:24px;
 
-transition:.4s;
-
-}
-
-.section:hover{
-
-transform:translateY(-5px);
-
-border-color:#d8b05d;
-
-box-shadow:0 20px 50px rgba(0,0,0,.35);
-
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.30);
 }
 
 .section h2{
+    font-family:
+    'Cormorant Garamond',serif;
 
-font-family:'Cormorant Garamond',serif;
+    font-size:45px;
+    font-weight:700;
 
-font-size:42px;
+    text-align:center;
 
-color:#d8b05d;
+    letter-spacing:3px;
 
-margin-bottom:22px;
+    text-transform:uppercase;
 
+    color:#d8b05d;
+
+    margin-bottom:22px;
+}
+
+.gold-line{
+    width:100px;
+    height:2px;
+
+    background:#d8b05d;
+
+    margin:0 auto 32px;
+
+    opacity:.75;
 }
 
 .section p{
+    max-width:950px;
 
-font-size:18px;
+    margin:0 auto 25px;
 
-line-height:1.9;
+    font-size:19px;
+    font-weight:300;
 
-color:#e4e4e4;
+    line-height:1.9;
+
+    letter-spacing:.2px;
+
+    color:#f4f2ed;
+
+    text-align:left;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.info-list{
+    list-style:none;
+
+    max-width:900px;
+
+    margin:15px auto 0;
+}
+
+.info-list li{
+    position:relative;
+
+    padding:
+    15px 15px 15px 32px;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    border-bottom:
+    1px solid rgba(216,176,93,.16);
+}
+
+.info-list li::before{
+    content:"";
+
+    position:absolute;
+
+    left:7px;
+    top:25px;
+
+    width:7px;
+    height:7px;
+
+    background:#d8b05d;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 10px rgba(216,176,93,.50);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:14px;
+
+    max-width:950px;
+
+    margin:0 auto;
+}
+
+.info-card{
+    padding:20px 22px;
+
+    display:flex;
+    align-items:center;
+
+    min-height:70px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:
+    1px solid rgba(216,176,93,.17);
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    line-height:1.5;
+
+    transition:
+    transform .3s ease,
+    border-color .3s ease,
+    background .3s ease;
+}
+
+.info-card:hover{
+    transform:translateY(-2px);
+
+    border-color:
+    rgba(216,176,93,.48);
+
+    background:
+    rgba(216,176,93,.06);
+}
+
+
+/* =========================
+   HOW WE WORK
+========================= */
+
+.steps{
+    max-width:950px;
+
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.step{
+    display:grid;
+
+    grid-template-columns:
+    65px 1fr;
+
+    gap:20px;
+
+    padding:25px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:
+    1px solid rgba(216,176,93,.17);
+
+    border-radius:17px;
+}
+
+.step-number{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f0d17d,
+        #d8b05d
+    );
+
+    color:#06141a;
+
+    font-family:
+    'Cormorant Garamond',serif;
+
+    font-size:25px;
+    font-weight:700;
+}
+
+.step-content h3{
+    margin-bottom:8px;
+
+    color:#d8b05d;
+
+    font-family:
+    'Cormorant Garamond',serif;
+
+    font-size:25px;
+
+    letter-spacing:.5px;
+}
+
+.step-content p{
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.75;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    body{
+        padding-top:90px;
+    }
+
+    .logo-link img{
+        width:200px;
+    }
+
+    .language-switcher{
+        top:100px;
+        right:12px;
+    }
+
+    .back-wrap{
+        margin-top:25px;
+    }
+
+    .page-intro{
+        margin:
+        20px auto 35px;
+
+        padding:
+        35px 20px 20px;
+    }
+
+    .page-intro h1{
+        font-size:43px;
+        letter-spacing:3px;
+    }
+
+    .page-intro-line{
+        width:90px;
+    }
+
+    .section{
+        margin:
+        0 15px 30px;
+
+        padding:
+        32px 22px;
+
+        border-radius:18px;
+    }
+
+    .section h2{
+        font-size:32px;
+
+        letter-spacing:1.8px;
+    }
+
+    .section p{
+        font-size:16px;
+
+        line-height:1.8;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+        font-size:16px;
+
+        min-height:60px;
+    }
+
+    .info-list li{
+        font-size:16px;
+    }
+
+    .step{
+        grid-template-columns:
+        48px 1fr;
+
+        gap:14px;
+
+        padding:20px 16px;
+    }
+
+    .step-number{
+        width:45px;
+        height:45px;
+
+        font-size:21px;
+    }
+
+    .step-content h3{
+        font-size:22px;
+    }
+
+    .step-content p{
+        font-size:15px;
+    }
 
 }
 
-.section ul{
-
-margin-top:18px;
-
-padding-left:22px;
-
-}
-
-.section li{
-
-margin-bottom:12px;
-
-font-size:18px;
-
-line-height:1.8;
-
-}
-
-@media(max-width:768px){
-
-header{
-
-padding:0 20px;
-
-}
-
-.logo img{
-
-height:38px;
-
-}
-
-.hero h1{
-
-font-size:46px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.section{
-
-padding:30px;
-
-}
-
-.section h2{
-
-font-size:34px;
-
-}
-
-}
-  .step{
-
-margin-top:30px;
-
-padding:25px;
-
-border-left:4px solid #d8b05d;
-
-background:rgba(255,255,255,.02);
-
-border-radius:12px;
-
-transition:.3s;
-
-}
-
-.step:hover{
-
-background:rgba(216,176,93,.06);
-
-transform:translateX(5px);
-
-}
-
-.step h3{
-
-font-size:24px;
-
-color:#d8b05d;
-
-margin-bottom:12px;
-
-font-weight:600;
-
-}
-
-.step p{
-
-margin:0;
-
-font-size:17px;
-
-line-height:1.8;
-
-color:#e4e4e4;
-
-}
-.back-button{
-
-display:inline-block;
-
-padding:18px 48px;
-
-background:linear-gradient(180deg,#f0d17d,#d8b05d);
-
-color:#05141c;
-
-text-decoration:none;
-
-font-weight:700;
-
-font-size:18px;
-
-border-radius:60px;
-
-transition:.35s;
-
-box-shadow:0 12px 30px rgba(216,176,93,.35);
-
-}
-
-.back-button:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 18px 40px rgba(216,176,93,.45);
-
-}
-
-footer{
-
-margin-top:90px;
-
-padding:60px 20px;
-
-text-align:center;
-
-border-top:1px solid rgba(216,176,93,.18);
-
-background:rgba(4,15,22,.95);
-
-}
-
-.footer-logo{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:42px;
-
-letter-spacing:6px;
-
-color:#d8b05d;
-
-margin-bottom:12px;
-
-}
-
-.footer-slogan{
-
-font-size:17px;
-
-color:#d7d7d7;
-
-margin-bottom:20px;
-
-}
-
-.footer-email a{
-
-color:#d8b05d;
-
-text-decoration:none;
-
-font-weight:500;
-
-}
-
-.footer-email{
-
-margin-bottom:18px;
-
-}
-
-.footer-copy{
-
-font-size:14px;
-
-color:#8c8c8c;
-
-  }
 </style>
-
 </head>
 
-<body>
+<body id="top">
 
-<header>
+<!-- =========================
+     HEADER
+========================= -->
 
-<a href="index.html" class="logo">
+<header class="top-header">
 
-<img src="images/logo.png" alt="FIDDEXA">
-
-</a>
-
-<div class="language-switcher">
-
-<button class="lang-btn">
-
-🌐 EN
-
-</button>
-
-<div class="lang-menu">
-
-<a href="#" id="lang-en">English</a>
-
-<a href="#" id="lang-zh">中文</a>
-
-</div>
-
-</div>
+    <a href="index.html" class="logo-link">
+        <img src="images/fiddexa-title.png" alt="FIDDEXA">
+    </a>
 
 </header>
 
+
+<!-- =========================
+     LANGUAGE SWITCHER
+========================= -->
+
+<div class="language-switcher">
+
+    <button class="lang-btn" id="langBtn">
+        🌐 EN
+    </button>
+
+    <div class="lang-menu" id="langMenu">
+
+        <a href="#" data-lang="en">
+            English
+        </a>
+
+        <a href="#" data-lang="zh">
+            中文
+        </a>
+
+        <a href="#" data-lang="fr">
+            Français
+        </a>
+
+        <a href="#" data-lang="es">
+            Español
+        </a>
+
+        <a href="#" data-lang="ru">
+            Русский
+        </a>
+
+        <a href="#" data-lang="hi">
+            हिन्दी
+        </a>
+
+    </div>
+
+</div>
+
+
 <div class="container">
 
-<div class="hero">
 
-<h1 id="pageTitle">
+<!-- =========================
+     BACK BUTTON
+========================= -->
 
-WHO WE ARE
+<div class="back-wrap">
 
-</h1>
+    <a href="index.html"
+       class="back-btn"
+       id="backButton">
 
-<p id="pageIntro">
+        ← BACK TO HOME
 
-Connecting Businesses Worldwide
-
-</p>
-
-</div>
-
-  <div class="section">
-
-<h2 id="aboutTitle">
-
-ABOUT FIDDEXA
-
-</h2>
-
-<p id="aboutText1">
-
-FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, the organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.
-
-</p>
-
-<br>
-
-<p id="aboutText2">
-
-We connect manufacturers, suppliers, distributors, buyers, and investors from different countries by providing a professional approach, transparency, and reliability at every stage of cooperation.
-
-</p>
-
-<br>
-
-<p id="aboutText3">
-
-Our goal is to build mutually beneficial partnerships that help companies enter new markets, strengthen international cooperation, and achieve sustainable business growth.
-
-</p>
+    </a>
 
 </div>
 
-<div class="section">
 
-<h2 id="whyTitle">
+<!-- =========================
+     PAGE TITLE
+========================= -->
 
-WHY CHOOSE FIDDEXA
+<section class="page-intro">
 
-</h2>
+    <h1 id="pageTitle">
+        WHO WE ARE
+    </h1>
 
-<ul id="whyList">
+    <div class="page-intro-line"></div>
 
-<li>Reliable International Partner Network</li>
+</section>
 
-<li>Verified Suppliers</li>
 
-<li>Competitive Cooperation Terms</li>
+<!-- =========================
+     ABOUT FIDDEXA
+========================= -->
 
-<li>High Quality Standards</li>
+<section class="section">
 
-<li>Fast Response and Effective Communication</li>
+    <h2 id="aboutTitle">
+        ABOUT FIDDEXA
+    </h2>
 
-<li>Personalized Approach to Every Client</li>
+    <div class="gold-line"></div>
 
-<li>Long-Term Business Partnerships</li>
+    <p id="aboutText1">
+        FIDDEXA is an international trading company specializing
+        in the development of international cooperation, sourcing
+        suppliers and buyers, organizing trade operations, and
+        building long-term business relationships in cooperation
+        with manufacturers, suppliers, buyers, and investors.
+    </p>
 
-<li>International Business Expertise</li>
+    <p id="aboutText2">
+        We connect manufacturers, suppliers, distributors, and
+        buyers from different countries, providing a professional
+        approach, transparency, and reliability at every stage
+        of cooperation.
+    </p>
 
-</ul>
+    <p id="aboutText3">
+        Our goal is to create mutually beneficial partnerships,
+        helping companies enter new markets and develop their
+        international business.
+    </p>
 
-</div>
+</section>
 
-  <div class="section">
 
-<h2 id="geographyTitle">
+<!-- =========================
+     WHY CHOOSE FIDDEXA
+========================= -->
 
-COOPERATION GEOGRAPHY
+<section class="section">
 
-</h2>
+    <h2 id="whyTitle">
+        WHY CHOOSE FIDDEXA
+    </h2>
 
-<p id="geographyIntro">
+    <div class="gold-line"></div>
 
-We actively develop business cooperation with companies, manufacturers, suppliers, distributors, investors, and business partners across the following regions:
+    <ul class="info-list">
 
-</p>
+        <li id="why1">
+            Reliable international partner network
+        </li>
 
-<ul id="geographyList">
+        <li id="why2">
+            Verified suppliers
+        </li>
 
-<li>CIS Countries</li>
+        <li id="why3">
+            Competitive cooperation terms
+        </li>
 
-<li>Central Asia</li>
+        <li id="why4">
+            High quality standards
+        </li>
 
-<li>Southeast Asia</li>
+        <li id="why5">
+            Fast and responsive communication
+        </li>
 
-<li>China</li>
+        <li id="why6">
+            Individual approach
+        </li>
 
-<li>Middle East</li>
+        <li id="why7">
+            Long-term business partnerships
+        </li>
 
-<li>Africa</li>
+        <li id="why8">
+            International business expertise
+        </li>
 
-<li>Europe</li>
+    </ul>
 
-<li>United States of America</li>
+</section>
 
-</ul>
 
-</div>
+<!-- =========================
+     COOPERATION GEOGRAPHY
+========================= -->
 
-<div class="section">
+<section class="section">
 
-<h2 id="businessTitle">
+    <h2 id="geographyTitle">
+        COOPERATION GEOGRAPHY
+    </h2>
 
-OUR BUSINESS AREAS
+    <div class="gold-line"></div>
 
-</h2>
+    <p id="geographyText">
+        We develop cooperation with companies in the following
+        regions:
+    </p>
 
-<p id="businessIntro">
+    <div class="info-grid">
 
-FIDDEXA operates across multiple industries, providing comprehensive international trade solutions and connecting businesses with reliable partners worldwide.
+        <div class="info-card"
+             id="geo1">
+            CIS Countries
+        </div>
 
-</p>
+        <div class="info-card"
+             id="geo2">
+            Central Asia
+        </div>
 
-<ul id="businessList">
+        <div class="info-card"
+             id="geo3">
+            Southeast Asia
+        </div>
 
-<li>Finance</li>
+        <div class="info-card"
+             id="geo4">
+            China
+        </div>
 
-<li>Investments</li>
+        <div class="info-card"
+             id="geo5">
+            Middle East
+        </div>
 
-<li>Energy</li>
+        <div class="info-card"
+             id="geo6">
+            Africa
+        </div>
 
-<li>Petroleum Products</li>
+        <div class="info-card"
+             id="geo7">
+            Europe
+        </div>
 
-<li>Precious & Semi-Precious Metals</li>
+        <div class="info-card"
+             id="geo8">
+            United States of America
+        </div>
 
-<li>Medical Products</li>
+    </div>
 
-<li>Agricultural Products</li>
+</section>
 
-<li>Food & Beverages</li>
 
-<li>Fast-Moving Consumer Goods (FMCG)</li>
+<!-- =========================
+     OUR BUSINESS AREAS
+========================= -->
 
-<li>Chemical Products</li>
+<section class="section">
 
-</ul>
+    <h2 id="areasTitle">
+        OUR BUSINESS AREAS
+    </h2>
 
-</div>
+    <div class="gold-line"></div>
 
-  <div class="section">
+    <div class="info-grid">
 
-<h2 id="servicesTitle">
+        <div class="info-card"
+             id="area1">
+            Finance
+        </div>
 
-OUR SERVICES
+        <div class="info-card"
+             id="area2">
+            Investments
+        </div>
 
-</h2>
+        <div class="info-card"
+             id="area3">
+            Energy
+        </div>
 
-<p id="servicesIntro">
+        <div class="info-card"
+             id="area4">
+            Petroleum Products
+        </div>
 
-FIDDEXA provides comprehensive international business solutions designed to help companies expand globally, establish reliable partnerships, and achieve sustainable growth.
+        <div class="info-card"
+             id="area5">
+            Precious and Semi-Precious Metals
+        </div>
 
-</p>
+        <div class="info-card"
+             id="area6">
+            Medical Products
+        </div>
 
-<ul id="servicesList">
+        <div class="info-card"
+             id="area7">
+            Agricultural Products
+        </div>
 
-<li>International Trade</li>
+        <div class="info-card"
+             id="area8">
+            Food and Beverages
+        </div>
 
-<li>Manufacturer & Supplier Sourcing</li>
+        <div class="info-card"
+             id="area9">
+            Fast-Moving Consumer Goods (FMCG)
+        </div>
 
-<li>Buyer Sourcing</li>
+        <div class="info-card"
+             id="area10">
+            Chemical Products
+        </div>
 
-<li>Export & Import Support</li>
+    </div>
 
-<li>Supplier Verification</li>
+  </section>
+  <!-- =========================
+     OUR SERVICES
+========================= -->
 
-<li>Market Research & Analysis</li>
+<section class="section">
 
-<li>Business Development</li>
+    <h2 id="servicesTitle">
+        OUR SERVICES
+    </h2>
 
-<li>Strategic Partnership Development</li>
+    <div class="gold-line"></div>
 
-<li>International Trade Consulting</li>
+    <div class="info-grid">
 
-<li>Financial Consulting</li>
+        <div class="info-card" id="service1">
+            International Trade
+        </div>
 
-</ul>
+        <div class="info-card" id="service2">
+            Manufacturer and Supplier Sourcing
+        </div>
 
-</div>
+        <div class="info-card" id="service3">
+            Buyer Sourcing
+        </div>
 
-<div class="section">
+        <div class="info-card" id="service4">
+            Export and Import
+        </div>
 
-<h2 id="workTitle">
+        <div class="info-card" id="service5">
+            Supplier Verification
+        </div>
 
-HOW WE WORK
+        <div class="info-card" id="service6">
+            Market Analysis
+        </div>
 
-</h2>
+        <div class="info-card" id="service7">
+            Business Development
+        </div>
 
-<p id="workIntro">
+        <div class="info-card" id="service8">
+            Strategic Partnership Development
+        </div>
 
-Our cooperation process is transparent, efficient, and focused on building long-term business relationships.
+        <div class="info-card" id="service9">
+            International Trade Consulting
+        </div>
 
-</p>
+        <div class="info-card" id="service10">
+            Financial Consulting
+        </div>
 
-<div class="step">
+    </div>
 
-<h3>1. Request Submission</h3>
+</section>
 
-<p>
 
-You tell us about your business needs, products, services, or cooperation objectives. Our team carefully reviews every request.
+<!-- =========================
+     HOW WE WORK
+========================= -->
 
-</p>
+<section class="section">
 
-</div>
+    <h2 id="workTitle">
+        HOW WE WORK
+    </h2>
 
-<div class="step">
+    <div class="gold-line"></div>
 
-<h3>2. Request Analysis</h3>
 
-<p>
+    <div class="steps">
 
-We analyze your requirements, evaluate available opportunities, and determine the most effective strategy to achieve your goals.
 
-</p>
+        <!-- STEP 1 -->
 
-</div>
+        <div class="step">
 
-<div class="step">
+            <div class="step-number">
+                1
+            </div>
 
-<h3>3. Opportunity Search</h3>
+            <div class="step-content">
 
-<p>
+                <h3 id="step1Title">
+                    Request
+                </h3>
 
-We identify reliable manufacturers, suppliers, buyers, investors, or potential strategic partners that best match your business requirements.
+                <p id="step1Text">
+                    You tell us about your needs and
+                    cooperation objectives.
+                </p>
 
-</p>
+            </div>
 
-</div>
+        </div>
 
-<div class="step">
 
-<h3>4. Commercial Proposal</h3>
+        <!-- STEP 2 -->
 
-<p>
+        <div class="step">
 
-We prepare a customized commercial proposal, discuss the cooperation model, and negotiate mutually beneficial terms.
+            <div class="step-number">
+                2
+            </div>
 
-</p>
+            <div class="step-content">
 
-</div>
+                <h3 id="step2Title">
+                    Request Analysis
+                </h3>
 
-<div class="step">
+                <p id="step2Text">
+                    We carefully analyze your requirements
+                    and identify the most suitable solution.
+                </p>
 
-<h3>5. Agreement</h3>
+            </div>
 
-<p>
+        </div>
 
-After all conditions are agreed upon, both parties confirm the partnership and proceed with project implementation.
 
-</p>
+        <!-- STEP 3 -->
 
-</div>
+        <div class="step">
 
-<div class="step">
+            <div class="step-number">
+                3
+            </div>
 
-<h3>6. Long-Term Support</h3>
+            <div class="step-content">
 
-<p>
+                <h3 id="step3Title">
+                    Opportunity Search
+                </h3>
 
-We continue supporting communication between partners, helping to strengthen cooperation and develop long-term business relationships.
+                <p id="step3Text">
+                    We identify manufacturers, suppliers,
+                    buyers, or potential business partners
+                    that match your requirements.
+                </p>
 
-</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
 
-  <div class="section">
+        <!-- STEP 4 -->
 
-<h2 id="partnersTitle">
+        <div class="step">
 
-OUR PARTNERS
+            <div class="step-number">
+                4
+            </div>
 
-</h2>
+            <div class="step-content">
 
-<p id="partnersText">
+                <h3 id="step4Title">
+                    Commercial Proposal
+                </h3>
 
-This section is currently being updated.
+                <p id="step4Text">
+                    We prepare a tailored commercial proposal
+                    and coordinate the terms of cooperation.
+                </p>
 
-We are continuously expanding our international partner network and will soon present information about our strategic partners and successful business collaborations.
+            </div>
 
-Stay tuned for future updates.
+        </div>
 
-</p>
 
-</div>
+        <!-- STEP 5 -->
 
-<div style="text-align:center;margin-top:70px;">
+        <div class="step">
 
-<a href="index.html" class="back-button" id="backHome">
+            <div class="step-number">
+                5
+            </div>
 
-← BACK TO HOME
+            <div class="step-content">
 
-</a>
+                <h3 id="step5Title">
+                    Agreement
+                </h3>
 
-</div>
+                <p id="step5Text">
+                    Once the terms are agreed, the parties
+                    confirm the cooperation and proceed
+                    with project implementation.
+                </p>
 
-</div>
+            </div>
 
-<footer>
+        </div>
 
-<div class="footer-logo">
 
-FIDDEXA
+        <!-- STEP 6 -->
 
-</div>
+        <div class="step">
 
-<div class="footer-slogan" id="footerSlogan">
+            <div class="step-number">
+                6
+            </div>
 
-Connecting Businesses Worldwide
+            <div class="step-content">
 
-</div>
+                <h3 id="step6Title">
+                    Long-Term Support
+                </h3>
 
-<div class="footer-email">
+                <p id="step6Text">
+                    We support communication between partners
+                    and contribute to the development of
+                    long-term cooperation.
+                </p>
 
-<a href="mailto:contact@fiddexa.com">
+            </div>
 
-contact@fiddexa.com
+        </div>
 
-</a>
 
-</div>
+    </div>
 
-<div class="footer-copy">
+</section>
 
-© 2026 FIDDEXA. All Rights Reserved.
 
-</div>
+<!-- =========================
+     OUR PARTNERS
+========================= -->
+
+<section class="section">
+
+    <h2 id="partnersTitle">
+        OUR PARTNERS
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p id="partnersText"
+       style="
+       text-align:center;
+       margin-bottom:0;
+       ">
+
+        This section is currently being updated.
+        Information about FIDDEXA's international
+        partners will be added soon.
+
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer style="
+margin-top:80px;
+padding:40px 20px 25px;
+text-align:center;
+border-top:1px solid rgba(216,176,93,.25);
+color:#b8b8b8;
+">
+
+
+    <!-- FIDDEXA -->
+
+    <div style="
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:600;
+    color:#d8b05d;
+    letter-spacing:5px;
+    margin-bottom:15px;
+    ">
+
+        FIDDEXA
+
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div style="
+    margin-bottom:22px;
+    ">
+
+        <a href="mailto:contact@fiddexa.com"
+           style="
+           display:inline-flex;
+           align-items:center;
+           justify-content:center;
+
+           padding:11px 24px;
+
+           border:
+           1.5px solid #d8b05d;
+
+           border-radius:999px;
+
+           background:
+           rgba(6,24,30,.75);
+
+           color:#d8b05d;
+
+           text-decoration:none;
+
+           font-family:'Inter',sans-serif;
+
+           font-size:16px;
+           font-weight:600;
+
+           letter-spacing:.5px;
+
+           box-shadow:
+           0 0 12px rgba(216,176,93,.20),
+           0 0 24px rgba(216,176,93,.08);
+           ">
+
+            contact@fiddexa.com
+
+        </a>
+
+    </div>
+
+
+    <!-- SLOGAN -->
+
+    <div id="footerSlogan"
+         style="
+         font-size:15px;
+         letter-spacing:2px;
+         margin-bottom:12px;
+         color:#d8d8d8;
+         ">
+
+        CONNECTING BUSINESSES WORLDWIDE
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <div id="footerServices"
+         style="
+         font-size:13px;
+         letter-spacing:1px;
+         line-height:1.8;
+         opacity:.78;
+         ">
+
+        Global Trade • International Sourcing • Strategic Partnerships
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div id="footerCopy"
+         style="
+         margin-top:30px;
+         font-size:12px;
+         letter-spacing:1px;
+         opacity:.55;
+         ">
+
+        © 2026 FIDDEXA. All Rights Reserved.
+
+    </div>
+
 
 </footer>
 
-<script>
 
-const btn=document.querySelector(".lang-btn");
+</div>
+<!-- END .container -->
+  <script>
 
-const menu=document.querySelector(".lang-menu");
+/* =========================
+   LANGUAGE SYSTEM
+========================= */
 
-btn.addEventListener("click",function(e){
+const langBtn = document.getElementById("langBtn");
+const langMenu = document.getElementById("langMenu");
 
-e.stopPropagation();
+const savedLanguage =
+    localStorage.getItem("language") || "en";
 
-menu.style.display=
 
-menu.style.display==="block"
+/* =========================
+   ENGLISH
+========================= */
 
-?
+const translations = {
 
-"none"
+en: {
 
-:
+    langButton: "🌐 EN",
 
-"block";
+    backButton: "← BACK TO HOME",
 
-});
+    pageTitle: "WHO WE ARE",
 
-document.addEventListener("click",function(){
 
-menu.style.display="none";
+    /* ABOUT FIDDEXA */
 
-});
+    aboutTitle: "ABOUT FIDDEXA",
 
-menu.addEventListener("click",function(e){
+    aboutText1:
+    "FIDDEXA is an international trading company specializing in the development of international cooperation, sourcing suppliers and buyers, organizing trade operations, and building long-term business relationships in cooperation with manufacturers, suppliers, buyers, and investors.",
 
-e.stopPropagation();
+    aboutText2:
+    "We connect manufacturers, suppliers, distributors, and buyers from different countries, providing a professional approach, transparency, and reliability at every stage of cooperation.",
 
-});
+    aboutText3:
+    "Our goal is to create mutually beneficial partnerships, helping companies enter new markets and develop their international business.",
 
-  const en={
 
-pageTitle:"WHO WE ARE",
-pageIntro:"Connecting Businesses Worldwide",
+    /* WHY CHOOSE FIDDEXA */
 
-aboutTitle:"ABOUT FIDDEXA",
-aboutText1:"FIDDEXA is an international trading company specializing in the development of international business cooperation, supplier and buyer sourcing, the organization of international trade operations, and the establishment of long-term business relationships with manufacturers, suppliers, buyers, and investors.",
-aboutText2:"We connect manufacturers, suppliers, distributors, buyers, and investors from different countries by providing a professional approach, transparency, and reliability at every stage of cooperation.",
-aboutText3:"Our goal is to build mutually beneficial partnerships that help companies enter new markets, strengthen international cooperation, and achieve sustainable business growth.",
+    whyTitle: "WHY CHOOSE FIDDEXA",
 
-whyTitle:"WHY CHOOSE FIDDEXA",
+    why1:
+    "Reliable international partner network",
 
-geographyTitle:"COOPERATION GEOGRAPHY",
-geographyIntro:"We actively develop business cooperation with companies, manufacturers, suppliers, distributors, investors, and business partners across the following regions:",
+    why2:
+    "Verified suppliers",
 
-businessTitle:"OUR BUSINESS AREAS",
-businessIntro:"FIDDEXA operates across multiple industries, providing comprehensive international trade solutions and connecting businesses with reliable partners worldwide.",
+    why3:
+    "Competitive cooperation terms",
 
-servicesTitle:"OUR SERVICES",
-servicesIntro:"FIDDEXA provides comprehensive international business solutions designed to help companies expand globally, establish reliable partnerships, and achieve sustainable growth.",
+    why4:
+    "High quality standards",
 
-workTitle:"HOW WE WORK",
-workIntro:"Our cooperation process is transparent, efficient, and focused on building long-term business relationships.",
+    why5:
+    "Fast and responsive communication",
 
-partnersTitle:"OUR PARTNERS",
-partnersText:"This section is currently being updated. We are continuously expanding our international partner network. Stay tuned for future updates.",
+    why6:
+    "Individual approach",
 
-backHome:"← BACK TO HOME",
-footerSlogan:"Connecting Businesses Worldwide"
+    why7:
+    "Long-term business partnerships",
 
-};
+    why8:
+    "International business expertise",
 
-const zh={
 
-pageTitle:"关于我们",
-pageIntro:"连接全球企业",
+    /* COOPERATION GEOGRAPHY */
 
-aboutTitle:"关于 FIDDEXA",
-aboutText1:"FIDDEXA 是一家国际贸易公司，专注于国际商务合作、供应商与采购商开发、国际贸易运营以及建立长期合作关系。",
-aboutText2:"我们连接来自世界各地的制造商、供应商、分销商、采购商和投资者，为每一个合作项目提供专业、透明和可靠的服务。",
-aboutText3:"我们的目标是建立互利共赢的合作伙伴关系，帮助企业拓展国际市场，实现可持续发展。",
+    geographyTitle:
+    "COOPERATION GEOGRAPHY",
 
-whyTitle:"为什么选择 FIDDEXA",
+    geographyText:
+    "We develop cooperation with companies in the following regions:",
 
-geographyTitle:"合作地区",
-geographyIntro:"我们与以下地区的企业开展合作：",
+    geo1:
+    "CIS Countries",
 
-businessTitle:"业务领域",
-businessIntro:"FIDDEXA 在多个行业开展国际贸易合作。",
+    geo2:
+    "Central Asia",
 
-servicesTitle:"我们的服务",
-servicesIntro:"我们提供全面的国际贸易解决方案。",
+    geo3:
+    "Southeast Asia",
 
-workTitle:"合作流程",
-workIntro:"我们的合作流程透明、高效，并专注于长期合作。",
+    geo4:
+    "China",
 
-partnersTitle:"合作伙伴",
-partnersText:"该部分正在完善中。",
+    geo5:
+    "Middle East",
 
-backHome:"← 返回首页",
-footerSlogan:"连接全球企业"
+    geo6:
+    "Africa",
 
-};
+    geo7:
+    "Europe",
 
-function applyLanguage(lang){
+    geo8:
+    "United States of America",
 
-const data=lang==="zh"?zh:en;
 
-document.getElementById("pageTitle").innerText=data.pageTitle;
-document.getElementById("pageIntro").innerText=data.pageIntro;
+    /* OUR BUSINESS AREAS */
 
-document.getElementById("aboutTitle").innerText=data.aboutTitle;
-document.getElementById("aboutText1").innerText=data.aboutText1;
-document.getElementById("aboutText2").innerText=data.aboutText2;
-document.getElementById("aboutText3").innerText=data.aboutText3;
+    areasTitle:
+    "OUR BUSINESS AREAS",
 
-document.getElementById("whyTitle").innerText=data.whyTitle;
+    area1:
+    "Finance",
 
-document.getElementById("geographyTitle").innerText=data.geographyTitle;
-document.getElementById("geographyIntro").innerText=data.geographyIntro;
+    area2:
+    "Investments",
 
-document.getElementById("businessTitle").innerText=data.businessTitle;
-document.getElementById("businessIntro").innerText=data.businessIntro;
+    area3:
+    "Energy",
 
-document.getElementById("servicesTitle").innerText=data.servicesTitle;
-document.getElementById("servicesIntro").innerText=data.servicesIntro;
+    area4:
+    "Petroleum Products",
 
-document.getElementById("workTitle").innerText=data.workTitle;
-document.getElementById("workIntro").innerText=data.workIntro;
+    area5:
+    "Precious and Semi-Precious Metals",
 
-document.getElementById("partnersTitle").innerText=data.partnersTitle;
-document.getElementById("partnersText").innerText=data.partnersText;
+    area6:
+    "Medical Products",
 
-document.getElementById("backHome").innerText=data.backHome;
+    area7:
+    "Agricultural Products",
 
-document.getElementById("footerSlogan").innerText=data.footerSlogan;
+    area8:
+    "Food and Beverages",
 
-localStorage.setItem("language",lang);
+    area9:
+    "Fast-Moving Consumer Goods (FMCG)",
 
-btn.innerHTML=lang==="zh"?"🌐 中文":"🌐 EN";
+    area10:
+    "Chemical Products",
 
-menu.style.display="none";
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "OUR SERVICES",
+
+    service1:
+    "International Trade",
+
+    service2:
+    "Manufacturer and Supplier Sourcing",
+
+    service3:
+    "Buyer Sourcing",
+
+    service4:
+    "Export and Import",
+
+    service5:
+    "Supplier Verification",
+
+    service6:
+    "Market Analysis",
+
+    service7:
+    "Business Development",
+
+    service8:
+    "Strategic Partnership Development",
+
+    service9:
+    "International Trade Consulting",
+
+    service10:
+    "Financial Consulting",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "HOW WE WORK",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "Request",
+
+    step1Text:
+    "You tell us about your needs and cooperation objectives.",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "Request Analysis",
+
+    step2Text:
+    "We carefully analyze your requirements and identify the most suitable solution.",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "Opportunity Search",
+
+    step3Text:
+    "We identify manufacturers, suppliers, buyers, or potential business partners that match your requirements.",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "Commercial Proposal",
+
+    step4Text:
+    "We prepare a tailored commercial proposal and coordinate the terms of cooperation.",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "Agreement",
+
+    step5Text:
+    "Once the terms are agreed, the parties confirm the cooperation and proceed with project implementation.",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "Long-Term Support",
+
+    step6Text:
+    "We support communication between partners and contribute to the development of long-term cooperation.",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "OUR PARTNERS",
+
+    partnersText:
+    "This section is currently being updated. Information about FIDDEXA's international partners will be added soon.",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "CONNECTING BUSINESSES WORLDWIDE",
+
+    footerServices:
+    "Global Trade • International Sourcing • Strategic Partnerships",
+
+    footerCopy:
+    "© 2026 FIDDEXA. All Rights Reserved."
+
+},
+  /* =========================
+   CHINESE
+========================= */
+
+zh: {
+
+    langButton: "🌐 中文",
+
+    backButton: "← 返回首页",
+
+    pageTitle: "关于我们",
+
+
+    /* ABOUT FIDDEXA */
+
+    aboutTitle: "关于 FIDDEXA",
+
+    aboutText1:
+    "FIDDEXA 是一家国际贸易公司，专注于发展国际合作、寻找供应商和买家、组织贸易业务，并通过与制造商、供应商、买家和投资者合作建立长期商业关系。",
+
+    aboutText2:
+    "我们连接来自不同国家的制造商、供应商、分销商和买家，并在合作的每一个阶段提供专业、透明和可靠的服务。",
+
+    aboutText3:
+    "我们的目标是建立互利共赢的合作伙伴关系，帮助企业进入新的市场并发展国际业务。",
+
+
+    /* WHY CHOOSE FIDDEXA */
+
+    whyTitle: "为什么选择 FIDDEXA",
+
+    why1:
+    "可靠的国际合作伙伴网络",
+
+    why2:
+    "经过验证的供应商",
+
+    why3:
+    "具有竞争力的合作条件",
+
+    why4:
+    "高质量标准",
+
+    why5:
+    "快速高效的沟通与反馈",
+
+    why6:
+    "个性化服务",
+
+    why7:
+    "长期商业合作伙伴关系",
+
+    why8:
+    "国际商业专业经验",
+
+
+    /* COOPERATION GEOGRAPHY */
+
+    geographyTitle:
+    "合作区域",
+
+    geographyText:
+    "我们积极与以下地区的企业发展合作：",
+
+    geo1:
+    "独联体国家",
+
+    geo2:
+    "中亚",
+
+    geo3:
+    "东南亚",
+
+    geo4:
+    "中国",
+
+    geo5:
+    "中东",
+
+    geo6:
+    "非洲",
+
+    geo7:
+    "欧洲",
+
+    geo8:
+    "美国",
+
+
+    /* OUR BUSINESS AREAS */
+
+    areasTitle:
+    "我们的业务领域",
+
+    area1:
+    "金融",
+
+    area2:
+    "投资",
+
+    area3:
+    "能源",
+
+    area4:
+    "石油产品",
+
+    area5:
+    "贵金属和半贵金属",
+
+    area6:
+    "医疗产品",
+
+    area7:
+    "农产品",
+
+    area8:
+    "食品和饮料",
+
+    area9:
+    "快速消费品（FMCG）",
+
+    area10:
+    "化工产品",
+
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "我们的服务",
+
+    service1:
+    "国际贸易",
+
+    service2:
+    "寻找制造商和供应商",
+
+    service3:
+    "寻找买家",
+
+    service4:
+    "出口与进口",
+
+    service5:
+    "供应商审核",
+
+    service6:
+    "市场分析",
+
+    service7:
+    "业务发展",
+
+    service8:
+    "战略合作伙伴关系发展",
+
+    service9:
+    "国际贸易咨询",
+
+    service10:
+    "金融咨询",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "我们的合作流程",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "接收需求",
+
+    step1Text:
+    "您向我们介绍您的需求以及合作目标。",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "需求分析",
+
+    step2Text:
+    "我们认真分析您的具体要求，并确定最合适的解决方案。",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "寻找合作机会",
+
+    step3Text:
+    "我们根据您的要求寻找合适的制造商、供应商、买家或潜在商业合作伙伴。",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "商业方案",
+
+    step4Text:
+    "我们为您准备个性化的商业方案，并协调双方的合作条件。",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "签订协议",
+
+    step5Text:
+    "双方就合作条件达成一致后，确认合作关系并开始项目实施。",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "长期支持",
+
+    step6Text:
+    "我们持续支持合作伙伴之间的沟通，并促进长期稳定的商业合作。",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "我们的合作伙伴",
+
+    partnersText:
+    "本栏目正在更新中。FIDDEXA 国际合作伙伴的相关信息将陆续添加。",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "连接全球企业",
+
+    footerServices:
+    "国际贸易 • 全球采购 • 战略合作伙伴关系",
+
+    footerCopy:
+    "© 2026 FIDDEXA。版权所有。"
+
+},
+
+
+/* =========================
+   RUSSIAN
+========================= */
+
+ru: {
+
+    langButton: "🌐 RU",
+
+    backButton: "← НА ГЛАВНУЮ",
+
+    pageTitle: "О НАС",
+
+
+    /* ABOUT FIDDEXA */
+
+    aboutTitle: "О КОМПАНИИ FIDDEXA",
+
+    aboutText1:
+    "FIDDEXA — международная торговая компания, специализирующаяся на развитии международного сотрудничества, поиске поставщиков и покупателей, организации торговых операций и построении долгосрочных деловых отношений в сотрудничестве с производителями, поставщиками, покупателями и инвесторами.",
+
+    aboutText2:
+    "Мы объединяем производителей, поставщиков, дистрибьюторов и покупателей из разных стран, предлагая профессиональный подход, прозрачность и надёжность на каждом этапе сотрудничества.",
+
+    aboutText3:
+    "Наша цель — создавать взаимовыгодные партнёрства, помогая компаниям выходить на новые рынки и развивать международный бизнес.",
+
+
+    /* WHY CHOOSE FIDDEXA */
+
+    whyTitle: "ПОЧЕМУ ВЫБИРАЮТ FIDDEXA",
+
+    why1:
+    "Надёжная международная сеть партнёров",
+
+    why2:
+    "Проверенные поставщики",
+
+    why3:
+    "Конкурентные условия сотрудничества",
+
+    why4:
+    "Высокие стандарты качества",
+
+    why5:
+    "Оперативная обратная связь",
+
+    why6:
+    "Индивидуальный подход",
+
+    why7:
+    "Долгосрочные партнёрские отношения",
+
+    why8:
+    "Международная деловая экспертиза",
+
+
+    /* COOPERATION GEOGRAPHY */
+
+    geographyTitle:
+    "ГЕОГРАФИЯ СОТРУДНИЧЕСТВА",
+
+    geographyText:
+    "Мы развиваем сотрудничество с компаниями в следующих регионах:",
+
+    geo1:
+    "Страны СНГ",
+
+    geo2:
+    "Центральная Азия",
+
+    geo3:
+    "Юго-Восточная Азия",
+
+    geo4:
+    "Китай",
+
+    geo5:
+    "Ближний Восток",
+
+    geo6:
+    "Африка",
+
+    geo7:
+    "Европа",
+
+    geo8:
+    "Соединённые Штаты Америки",
+
+
+    /* OUR BUSINESS AREAS */
+
+    areasTitle:
+    "НАШИ НАПРАВЛЕНИЯ",
+
+    area1:
+    "Финансы",
+
+    area2:
+    "Инвестиции",
+
+    area3:
+    "Энергетика",
+
+    area4:
+    "Нефтепродукты",
+
+    area5:
+    "Драгоценные и полудрагоценные металлы",
+
+    area6:
+    "Медицинские товары",
+
+    area7:
+    "Сельскохозяйственная продукция",
+
+    area8:
+    "Продукты питания и напитки",
+
+    area9:
+    "Товары повседневного спроса (FMCG)",
+
+    area10:
+    "Химическая продукция",
+
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "НАШИ УСЛУГИ",
+
+    service1:
+    "Международная торговля",
+
+    service2:
+    "Поиск производителей и поставщиков",
+
+    service3:
+    "Поиск покупателей",
+
+    service4:
+    "Экспорт и импорт",
+
+    service5:
+    "Проверка поставщиков",
+
+    service6:
+    "Анализ рынка",
+
+    service7:
+    "Развитие бизнеса",
+
+    service8:
+    "Построение стратегических партнёрств",
+
+    service9:
+    "Консультации по международной торговле",
+
+    service10:
+    "Финансовый консалтинг",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "КАК МЫ РАБОТАЕМ",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "Получение запроса",
+
+    step1Text:
+    "Вы рассказываете нам о своих потребностях и целях сотрудничества.",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "Анализ запроса",
+
+    step2Text:
+    "Мы внимательно изучаем ваши требования и подбираем оптимальное решение.",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "Поиск возможностей",
+
+    step3Text:
+    "Подбираем производителей, поставщиков, покупателей или потенциальных деловых партнёров.",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "Коммерческое предложение",
+
+    step4Text:
+    "Подготавливаем индивидуальное предложение и согласовываем условия сотрудничества.",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "Заключение соглашения",
+
+    step5Text:
+    "После согласования условий стороны подтверждают сотрудничество и приступают к реализации проекта.",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "Долгосрочное сопровождение",
+
+    step6Text:
+    "Мы поддерживаем взаимодействие между партнёрами и способствуем развитию долгосрочного сотрудничества.",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "НАШИ ПАРТНЁРЫ",
+
+    partnersText:
+    "Раздел находится в процессе наполнения. Информация о международных партнёрах FIDDEXA будет добавлена в ближайшее время.",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "СОЕДИНЯЕМ БИЗНЕС ПО ВСЕМУ МИРУ",
+
+    footerServices:
+    "Международная торговля • Глобальный поиск поставщиков • Стратегические партнёрства",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Все права защищены."
+
+},
+  /* =========================
+   FRENCH
+========================= */
+
+fr: {
+
+    langButton: "🌐 FR",
+
+    backButton: "← ACCUEIL",
+
+    pageTitle: "QUI SOMMES-NOUS",
+
+
+    /* ABOUT FIDDEXA */
+
+    aboutTitle: "À PROPOS DE FIDDEXA",
+
+    aboutText1:
+    "FIDDEXA est une société de commerce international spécialisée dans le développement de la coopération internationale, la recherche de fournisseurs et d’acheteurs, l’organisation d’opérations commerciales et la création de relations d’affaires à long terme en collaboration avec des fabricants, fournisseurs, acheteurs et investisseurs.",
+
+    aboutText2:
+    "Nous mettons en relation des fabricants, fournisseurs, distributeurs et acheteurs de différents pays, en offrant une approche professionnelle, transparente et fiable à chaque étape de la coopération.",
+
+    aboutText3:
+    "Notre objectif est de créer des partenariats mutuellement avantageux, en aidant les entreprises à accéder à de nouveaux marchés et à développer leurs activités à l’international.",
+
+
+    /* WHY CHOOSE FIDDEXA */
+
+    whyTitle: "POURQUOI CHOISIR FIDDEXA",
+
+    why1:
+    "Réseau international fiable de partenaires",
+
+    why2:
+    "Fournisseurs vérifiés",
+
+    why3:
+    "Conditions de coopération compétitives",
+
+    why4:
+    "Normes de qualité élevées",
+
+    why5:
+    "Communication et réponse rapides",
+
+    why6:
+    "Approche personnalisée",
+
+    why7:
+    "Partenariats commerciaux à long terme",
+
+    why8:
+    "Expertise en affaires internationales",
+
+
+    /* COOPERATION GEOGRAPHY */
+
+    geographyTitle:
+    "GÉOGRAPHIE DE NOTRE COOPÉRATION",
+
+    geographyText:
+    "Nous développons des relations de coopération avec des entreprises dans les régions suivantes :",
+
+    geo1:
+    "Pays de la CEI",
+
+    geo2:
+    "Asie centrale",
+
+    geo3:
+    "Asie du Sud-Est",
+
+    geo4:
+    "Chine",
+
+    geo5:
+    "Moyen-Orient",
+
+    geo6:
+    "Afrique",
+
+    geo7:
+    "Europe",
+
+    geo8:
+    "États-Unis d’Amérique",
+
+
+    /* OUR BUSINESS AREAS */
+
+    areasTitle:
+    "NOS SECTEURS D’ACTIVITÉ",
+
+    area1:
+    "Finance",
+
+    area2:
+    "Investissements",
+
+    area3:
+    "Énergie",
+
+    area4:
+    "Produits pétroliers",
+
+    area5:
+    "Métaux précieux et semi-précieux",
+
+    area6:
+    "Produits médicaux",
+
+    area7:
+    "Produits agricoles",
+
+    area8:
+    "Produits alimentaires et boissons",
+
+    area9:
+    "Produits de grande consommation (FMCG)",
+
+    area10:
+    "Produits chimiques",
+
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "NOS SERVICES",
+
+    service1:
+    "Commerce international",
+
+    service2:
+    "Recherche de fabricants et de fournisseurs",
+
+    service3:
+    "Recherche d’acheteurs",
+
+    service4:
+    "Exportation et importation",
+
+    service5:
+    "Vérification des fournisseurs",
+
+    service6:
+    "Analyse de marché",
+
+    service7:
+    "Développement commercial",
+
+    service8:
+    "Développement de partenariats stratégiques",
+
+    service9:
+    "Conseil en commerce international",
+
+    service10:
+    "Conseil financier",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "COMMENT NOUS TRAVAILLONS",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "Réception de la demande",
+
+    step1Text:
+    "Vous nous présentez vos besoins et vos objectifs de coopération.",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "Analyse de la demande",
+
+    step2Text:
+    "Nous étudions attentivement vos exigences afin d’identifier la solution la plus adaptée.",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "Recherche d’opportunités",
+
+    step3Text:
+    "Nous recherchons des fabricants, fournisseurs, acheteurs ou partenaires commerciaux potentiels correspondant à vos besoins.",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "Proposition commerciale",
+
+    step4Text:
+    "Nous préparons une proposition personnalisée et coordonnons les conditions de coopération.",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "Conclusion de l’accord",
+
+    step5Text:
+    "Après l’approbation des conditions, les parties confirment leur coopération et commencent la mise en œuvre du projet.",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "Accompagnement à long terme",
+
+    step6Text:
+    "Nous facilitons la communication entre les partenaires et contribuons au développement d’une coopération durable.",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "NOS PARTENAIRES",
+
+    partnersText:
+    "Cette section est en cours de développement. Les informations sur les partenaires internationaux de FIDDEXA seront ajoutées prochainement.",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "CONNECTER LES ENTREPRISES DANS LE MONDE ENTIER",
+
+    footerServices:
+    "Commerce international • Sourcing mondial • Partenariats stratégiques",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Tous droits réservés."
+
+},
+
+
+/* =========================
+   SPANISH
+========================= */
+
+es: {
+
+    langButton: "🌐 ES",
+
+    backButton: "← INICIO",
+
+    pageTitle: "QUIÉNES SOMOS",
+
+
+    /* ABOUT FIDDEXA */
+
+    aboutTitle: "SOBRE FIDDEXA",
+
+    aboutText1:
+    "FIDDEXA es una empresa de comercio internacional especializada en el desarrollo de la cooperación internacional, la búsqueda de proveedores y compradores, la organización de operaciones comerciales y la construcción de relaciones empresariales a largo plazo mediante la colaboración con fabricantes, proveedores, compradores e inversores.",
+
+    aboutText2:
+    "Conectamos fabricantes, proveedores, distribuidores y compradores de diferentes países, ofreciendo profesionalidad, transparencia y fiabilidad en cada etapa de la cooperación.",
+
+    aboutText3:
+    "Nuestro objetivo es crear asociaciones mutuamente beneficiosas, ayudando a las empresas a acceder a nuevos mercados y desarrollar sus negocios internacionales.",
+
+
+    /* WHY CHOOSE FIDDEXA */
+
+    whyTitle: "POR QUÉ ELEGIR FIDDEXA",
+
+    why1:
+    "Red internacional fiable de socios",
+
+    why2:
+    "Proveedores verificados",
+
+    why3:
+    "Condiciones competitivas de cooperación",
+
+    why4:
+    "Altos estándares de calidad",
+
+    why5:
+    "Comunicación y respuesta rápidas",
+
+    why6:
+    "Enfoque personalizado",
+
+    why7:
+    "Relaciones comerciales a largo plazo",
+
+    why8:
+    "Experiencia en negocios internacionales",
+
+
+    /* COOPERATION GEOGRAPHY */
+
+    geographyTitle:
+    "GEOGRAFÍA DE COOPERACIÓN",
+
+    geographyText:
+    "Desarrollamos relaciones de cooperación con empresas en las siguientes regiones:",
+
+    geo1:
+    "Países de la CEI",
+
+    geo2:
+    "Asia Central",
+
+    geo3:
+    "Sudeste Asiático",
+
+    geo4:
+    "China",
+
+    geo5:
+    "Oriente Medio",
+
+    geo6:
+    "África",
+
+    geo7:
+    "Europa",
+
+    geo8:
+    "Estados Unidos de América",
+
+
+    /* OUR BUSINESS AREAS */
+
+    areasTitle:
+    "NUESTRAS ÁREAS DE ACTIVIDAD",
+
+    area1:
+    "Finanzas",
+
+    area2:
+    "Inversiones",
+
+    area3:
+    "Energía",
+
+    area4:
+    "Productos petrolíferos",
+
+    area5:
+    "Metales preciosos y semipreciosos",
+
+    area6:
+    "Productos médicos",
+
+    area7:
+    "Productos agrícolas",
+
+    area8:
+    "Alimentos y bebidas",
+
+    area9:
+    "Productos de consumo masivo (FMCG)",
+
+    area10:
+    "Productos químicos",
+
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "NUESTROS SERVICIOS",
+
+    service1:
+    "Comercio internacional",
+
+    service2:
+    "Búsqueda de fabricantes y proveedores",
+
+    service3:
+    "Búsqueda de compradores",
+
+    service4:
+    "Exportación e importación",
+
+    service5:
+    "Verificación de proveedores",
+
+    service6:
+    "Análisis de mercado",
+
+    service7:
+    "Desarrollo empresarial",
+
+    service8:
+    "Desarrollo de asociaciones estratégicas",
+
+    service9:
+    "Consultoría en comercio internacional",
+
+    service10:
+    "Consultoría financiera",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "CÓMO TRABAJAMOS",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "Recepción de la solicitud",
+
+    step1Text:
+    "Nos informa sobre sus necesidades y objetivos de cooperación.",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "Análisis de la solicitud",
+
+    step2Text:
+    "Analizamos cuidadosamente sus requisitos para encontrar la solución más adecuada.",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "Búsqueda de oportunidades",
+
+    step3Text:
+    "Buscamos fabricantes, proveedores, compradores o posibles socios comerciales que se ajusten a sus necesidades.",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "Propuesta comercial",
+
+    step4Text:
+    "Preparamos una propuesta personalizada y coordinamos las condiciones de cooperación.",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "Formalización del acuerdo",
+
+    step5Text:
+    "Una vez acordadas las condiciones, las partes confirman la cooperación y comienzan la implementación del proyecto.",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "Apoyo a largo plazo",
+
+    step6Text:
+    "Apoyamos la comunicación entre los socios y contribuimos al desarrollo de una cooperación empresarial a largo plazo.",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "NUESTROS SOCIOS",
+
+    partnersText:
+    "Esta sección se encuentra en proceso de actualización. Próximamente se añadirá información sobre los socios internacionales de FIDDEXA.",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "CONECTANDO EMPRESAS EN TODO EL MUNDO",
+
+    footerServices:
+    "Comercio internacional • Abastecimiento global • Asociaciones estratégicas",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Todos los derechos reservados."
+
+},
+
+
+/* =========================
+   HINDI
+========================= */
+
+hi: {
+
+    langButton: "🌐 हिन्दी",
+
+    backButton: "← होम",
+
+    pageTitle: "हमारे बारे में",
+
+
+    /* ABOUT FIDDEXA */
+
+    aboutTitle: "FIDDEXA के बारे में",
+
+    aboutText1:
+    "FIDDEXA एक अंतरराष्ट्रीय व्यापार कंपनी है जो अंतरराष्ट्रीय सहयोग के विकास, आपूर्तिकर्ताओं और खरीदारों की खोज, व्यापारिक लेन-देन के आयोजन तथा निर्माताओं, आपूर्तिकर्ताओं, खरीदारों और निवेशकों के साथ सहयोग के माध्यम से दीर्घकालिक व्यावसायिक संबंध स्थापित करने में विशेषज्ञता रखती है।",
+
+    aboutText2:
+    "हम विभिन्न देशों के निर्माताओं, आपूर्तिकर्ताओं, वितरकों और खरीदारों को जोड़ते हैं तथा सहयोग के प्रत्येक चरण में पेशेवर दृष्टिकोण, पारदर्शिता और विश्वसनीयता प्रदान करते हैं।",
+
+    aboutText3:
+    "हमारा लक्ष्य पारस्परिक रूप से लाभकारी साझेदारियाँ बनाना, कंपनियों को नए बाजारों में प्रवेश करने में सहायता करना और उनके अंतरराष्ट्रीय व्यवसाय के विकास में योगदान देना है।",
+
+
+    /* WHY CHOOSE FIDDEXA */
+
+    whyTitle:
+    "FIDDEXA को क्यों चुनें",
+
+    why1:
+    "विश्वसनीय अंतरराष्ट्रीय साझेदार नेटवर्क",
+
+    why2:
+    "सत्यापित आपूर्तिकर्ता",
+
+    why3:
+    "प्रतिस्पर्धी सहयोग की शर्तें",
+
+    why4:
+    "उच्च गुणवत्ता मानक",
+
+    why5:
+    "त्वरित प्रतिक्रिया और पेशेवर संचार",
+
+    why6:
+    "व्यक्तिगत दृष्टिकोण",
+
+    why7:
+    "दीर्घकालिक व्यावसायिक साझेदारी",
+
+    why8:
+    "अंतरराष्ट्रीय व्यापार विशेषज्ञता",
+
+
+    /* COOPERATION GEOGRAPHY */
+
+    geographyTitle:
+    "सहयोग का भौगोलिक क्षेत्र",
+
+    geographyText:
+    "हम निम्नलिखित क्षेत्रों की कंपनियों के साथ सहयोग विकसित करते हैं:",
+
+    geo1:
+    "CIS देश",
+
+    geo2:
+    "मध्य एशिया",
+
+    geo3:
+    "दक्षिण-पूर्व एशिया",
+
+    geo4:
+    "चीन",
+
+    geo5:
+    "मध्य पूर्व",
+
+    geo6:
+    "अफ्रीका",
+
+    geo7:
+    "यूरोप",
+
+    geo8:
+    "संयुक्त राज्य अमेरिका",
+
+
+    /* OUR BUSINESS AREAS */
+
+    areasTitle:
+    "हमारे व्यावसायिक क्षेत्र",
+
+    area1:
+    "वित्त",
+
+    area2:
+    "निवेश",
+
+    area3:
+    "ऊर्जा",
+
+    area4:
+    "पेट्रोलियम उत्पाद",
+
+    area5:
+    "कीमती और अर्ध-कीमती धातुएँ",
+
+    area6:
+    "चिकित्सा उत्पाद",
+
+    area7:
+    "कृषि उत्पाद",
+
+    area8:
+    "खाद्य और पेय पदार्थ",
+
+    area9:
+    "दैनिक उपभोग की वस्तुएँ (FMCG)",
+
+    area10:
+    "रासायनिक उत्पाद",
+
+
+    /* OUR SERVICES */
+
+    servicesTitle:
+    "हमारी सेवाएँ",
+
+    service1:
+    "अंतरराष्ट्रीय व्यापार",
+
+    service2:
+    "निर्माताओं और आपूर्तिकर्ताओं की खोज",
+
+    service3:
+    "खरीदारों की खोज",
+
+    service4:
+    "निर्यात और आयात",
+
+    service5:
+    "आपूर्तिकर्ताओं का सत्यापन",
+
+    service6:
+    "बाजार विश्लेषण",
+
+    service7:
+    "व्यवसाय विकास",
+
+    service8:
+    "रणनीतिक साझेदारी का विकास",
+
+    service9:
+    "अंतरराष्ट्रीय व्यापार परामर्श",
+
+    service10:
+    "वित्तीय परामर्श",
+
+
+    /* HOW WE WORK */
+
+    workTitle:
+    "हम कैसे काम करते हैं",
+
+
+    /* STEP 1 */
+
+    step1Title:
+    "अनुरोध प्राप्त करना",
+
+    step1Text:
+    "आप हमें अपनी आवश्यकताओं और सहयोग के उद्देश्यों के बारे में बताते हैं।",
+
+
+    /* STEP 2 */
+
+    step2Title:
+    "अनुरोध का विश्लेषण",
+
+    step2Text:
+    "हम आपकी आवश्यकताओं का सावधानीपूर्वक विश्लेषण करते हैं और सबसे उपयुक्त समाधान निर्धारित करते हैं।",
+
+
+    /* STEP 3 */
+
+    step3Title:
+    "अवसरों की खोज",
+
+    step3Text:
+    "हम आपकी आवश्यकताओं के अनुसार निर्माताओं, आपूर्तिकर्ताओं, खरीदारों या संभावित व्यावसायिक साझेदारों की खोज करते हैं।",
+
+
+    /* STEP 4 */
+
+    step4Title:
+    "व्यावसायिक प्रस्ताव",
+
+    step4Text:
+    "हम एक व्यक्तिगत व्यावसायिक प्रस्ताव तैयार करते हैं और सहयोग की शर्तों का समन्वय करते हैं।",
+
+
+    /* STEP 5 */
+
+    step5Title:
+    "समझौते का निष्पादन",
+
+    step5Text:
+    "शर्तों पर सहमति बनने के बाद दोनों पक्ष सहयोग की पुष्टि करते हैं और परियोजना का कार्यान्वयन शुरू करते हैं।",
+
+
+    /* STEP 6 */
+
+    step6Title:
+    "दीर्घकालिक सहयोग",
+
+    step6Text:
+    "हम साझेदारों के बीच संवाद का समर्थन करते हैं और दीर्घकालिक व्यावसायिक सहयोग के विकास में सहायता करते हैं।",
+
+
+    /* OUR PARTNERS */
+
+    partnersTitle:
+    "हमारे साझेदार",
+
+    partnersText:
+    "यह अनुभाग वर्तमान में अपडेट किया जा रहा है। FIDDEXA के अंतरराष्ट्रीय साझेदारों की जानकारी जल्द ही जोड़ी जाएगी।",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "दुनिया भर के व्यवसायों को जोड़ना",
+
+    footerServices:
+    "अंतरराष्ट्रीय व्यापार • वैश्विक सोर्सिंग • रणनीतिक साझेदारी",
+
+    footerCopy:
+    "© 2026 FIDDEXA. सर्वाधिकार सुरक्षित।"
+
+    }
+  }; // конец translations
+
+
+/* =========================
+   LANGUAGE FUNCTION
+========================= */
+
+function setLanguage(lang) {
+
+    const t = translations[lang];
+
+    if (!t) return;
+
+
+    /* =========================
+       LANGUAGE BUTTON
+    ========================= */
+
+    const langBtn = document.querySelector(".lang-btn");
+
+    if (langBtn) {
+        langBtn.innerHTML = t.langButton;
+    }
+
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
+    const backButton = document.getElementById("back-button");
+
+    if (backButton) {
+        backButton.innerText = t.backButton;
+    }
+
+
+    /* =========================
+       PAGE TITLE
+    ========================= */
+
+    const pageTitle = document.getElementById("page-title");
+
+    if (pageTitle) {
+        pageTitle.innerText = t.pageTitle;
+    }
+
+
+    /* =========================
+       ABOUT FIDDEXA
+    ========================= */
+
+    setText("about-title", t.aboutTitle);
+
+    setText("about-text1", t.aboutText1);
+    setText("about-text2", t.aboutText2);
+    setText("about-text3", t.aboutText3);
+
+
+    /* =========================
+       WHY CHOOSE FIDDEXA
+    ========================= */
+
+    setText("why-title", t.whyTitle);
+
+    setText("why1", t.why1);
+    setText("why2", t.why2);
+    setText("why3", t.why3);
+    setText("why4", t.why4);
+    setText("why5", t.why5);
+    setText("why6", t.why6);
+    setText("why7", t.why7);
+    setText("why8", t.why8);
+
+
+    /* =========================
+       COOPERATION GEOGRAPHY
+    ========================= */
+
+    setText("geography-title", t.geographyTitle);
+
+    setText("geography-text", t.geographyText);
+
+    setText("geo1", t.geo1);
+    setText("geo2", t.geo2);
+    setText("geo3", t.geo3);
+    setText("geo4", t.geo4);
+    setText("geo5", t.geo5);
+    setText("geo6", t.geo6);
+    setText("geo7", t.geo7);
+    setText("geo8", t.geo8);
+
+
+    /* =========================
+       OUR BUSINESS AREAS
+    ========================= */
+
+    setText("areas-title", t.areasTitle);
+
+    setText("area1", t.area1);
+    setText("area2", t.area2);
+    setText("area3", t.area3);
+    setText("area4", t.area4);
+    setText("area5", t.area5);
+    setText("area6", t.area6);
+    setText("area7", t.area7);
+    setText("area8", t.area8);
+    setText("area9", t.area9);
+    setText("area10", t.area10);
+
+
+    /* =========================
+       OUR SERVICES
+    ========================= */
+
+    setText("services-title", t.servicesTitle);
+
+    setText("service1", t.service1);
+    setText("service2", t.service2);
+    setText("service3", t.service3);
+    setText("service4", t.service4);
+    setText("service5", t.service5);
+    setText("service6", t.service6);
+    setText("service7", t.service7);
+    setText("service8", t.service8);
+    setText("service9", t.service9);
+    setText("service10", t.service10);
+
+
+    /* =========================
+       HOW WE WORK
+    ========================= */
+
+    setText("work-title", t.workTitle);
+
+
+    /* STEP 1 */
+
+    setText("step1-title", t.step1Title);
+    setText("step1-text", t.step1Text);
+
+
+    /* STEP 2 */
+
+    setText("step2-title", t.step2Title);
+    setText("step2-text", t.step2Text);
+
+
+    /* STEP 3 */
+
+    setText("step3-title", t.step3Title);
+    setText("step3-text", t.step3Text);
+
+
+    /* STEP 4 */
+
+    setText("step4-title", t.step4Title);
+    setText("step4-text", t.step4Text);
+
+
+    /* STEP 5 */
+
+    setText("step5-title", t.step5Title);
+    setText("step5-text", t.step5Text);
+
+
+    /* STEP 6 */
+
+    setText("step6-title", t.step6Title);
+    setText("step6-text", t.step6Text);
+
+
+    /* =========================
+       OUR PARTNERS
+    ========================= */
+
+    setText("partners-title", t.partnersTitle);
+
+    setText("partners-text", t.partnersText);
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    setText("footer-slogan", t.footerSlogan);
+
+    setText("footer-services", t.footerServices);
+
+    setText("footer-copy", t.footerCopy);
+
+
+    /* =========================
+       SAVE LANGUAGE
+    ========================= */
+
+    localStorage.setItem("language", lang);
+
+
+    /* =========================
+       HTML LANGUAGE ATTRIBUTE
+    ========================= */
+
+    document.documentElement.lang = lang;
+
+
+    /* =========================
+       CLOSE LANGUAGE MENU
+    ========================= */
+
+    const menu = document.querySelector(".lang-menu");
+
+    if (menu) {
+        menu.style.display = "none";
+    }
 
 }
 
-document.getElementById("lang-en").onclick=function(e){
 
-e.preventDefault();
 
-applyLanguage("en");
+/* =========================
+   SAFE TEXT FUNCTION
+========================= */
 
-};
+function setText(id, text) {
 
-document.getElementById("lang-zh").onclick=function(e){
+    const element = document.getElementById(id);
 
-e.preventDefault();
+    if (element && text !== undefined) {
+        element.innerText = text;
+    }
 
-applyLanguage("zh");
+}
 
-};
 
-const savedLanguage=localStorage.getItem("language");
 
-if(savedLanguage==="zh"){
+/* =========================
+   LANGUAGE MENU
+========================= */
 
-applyLanguage("zh");
+const languageButton =
+document.querySelector(".lang-btn");
 
-}else{
+const languageMenu =
+document.querySelector(".lang-menu");
 
-applyLanguage("en");
+
+if (languageButton && languageMenu) {
+
+    languageButton.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        languageMenu.style.display =
+        languageMenu.style.display === "block"
+        ? "none"
+        : "block";
+
+    });
+
+
+    languageMenu.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+    });
+
+
+    document.addEventListener("click", function() {
+
+        languageMenu.style.display = "none";
+
+    });
+
+}
+
+
+
+/* =========================
+   LANGUAGE LINKS
+========================= */
+
+
+/* ENGLISH */
+
+const langEN =
+document.getElementById("lang-en");
+
+if (langEN) {
+
+    langEN.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("en");
+
+    });
+
+}
+
+
+/* CHINESE */
+
+const langZH =
+document.getElementById("lang-zh");
+
+if (langZH) {
+
+    langZH.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("zh");
+
+    });
+
+}
+
+
+/* RUSSIAN */
+
+const langRU =
+document.getElementById("lang-ru");
+
+if (langRU) {
+
+    langRU.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("ru");
+
+    });
+
+}
+
+
+/* FRENCH */
+
+const langFR =
+document.getElementById("lang-fr");
+
+if (langFR) {
+
+    langFR.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("fr");
+
+    });
+
+}
+
+
+/* SPANISH */
+
+const langES =
+document.getElementById("lang-es");
+
+if (langES) {
+
+    langES.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("es");
+
+    });
+
+}
+
+
+/* HINDI */
+
+const langHI =
+document.getElementById("lang-hi");
+
+if (langHI) {
+
+    langHI.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        setLanguage("hi");
+
+    });
+
+}
+
+
+
+/* =========================
+   LOAD SAVED LANGUAGE
+========================= */
+
+const savedLanguage =
+localStorage.getItem("language") || "en";
+
+
+if (translations[savedLanguage]) {
+
+    setLanguage(savedLanguage);
+
+} else {
+
+    setLanguage("en");
 
 }
 
@@ -1008,3 +3249,4 @@ applyLanguage("en");
 </body>
 
 </html>
+  
