@@ -3110,121 +3110,27 @@ if (languageButton && languageMenu) {
 
 }
 
-
-
-/* =========================
+     /* =========================
    LANGUAGE LINKS
 ========================= */
 
+const languageLinks =
+document.querySelectorAll(".lang-menu a[data-lang]");
 
-/* ENGLISH */
+languageLinks.forEach(function(link) {
 
-const langEN =
-document.getElementById("lang-en");
-
-if (langEN) {
-
-    langEN.addEventListener("click", function(event) {
+    link.addEventListener("click", function(event) {
 
         event.preventDefault();
 
-        setLanguage("en");
+        const selectedLanguage =
+        this.getAttribute("data-lang");
+
+        setLanguage(selectedLanguage);
 
     });
 
-}
-
-
-/* CHINESE */
-
-const langZH =
-document.getElementById("lang-zh");
-
-if (langZH) {
-
-    langZH.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        setLanguage("zh");
-
-    });
-
-}
-
-
-/* RUSSIAN */
-
-const langRU =
-document.getElementById("lang-ru");
-
-if (langRU) {
-
-    langRU.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        setLanguage("ru");
-
-    });
-
-}
-
-
-/* FRENCH */
-
-const langFR =
-document.getElementById("lang-fr");
-
-if (langFR) {
-
-    langFR.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        setLanguage("fr");
-
-    });
-
-}
-
-
-/* SPANISH */
-
-const langES =
-document.getElementById("lang-es");
-
-if (langES) {
-
-    langES.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        setLanguage("es");
-
-    });
-
-}
-
-
-/* HINDI */
-
-const langHI =
-document.getElementById("lang-hi");
-
-if (langHI) {
-
-    langHI.addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        setLanguage("hi");
-
-    });
-
-}
-
-
+});
 
 /* =========================
    LOAD SAVED LANGUAGE
@@ -3249,4 +3155,3 @@ if (translations[savedLanguage]) {
 </body>
 
 </html>
-  
