@@ -595,10 +595,12 @@ const menu = document.querySelector(".lang-menu");
 const savedLanguage = localStorage.getItem("language");
 const english = {
 
-buttonWho: "WHO WE ARE",
-buttonOffers: "OUR OFFERS",
-buttonPartner: "BECOME A PARTNER",
-    
+aboutButton:"WHO WE ARE",
+
+offersButton:"OUR OFFERS",
+
+partnerButton:"BECOME A PARTNER",
+
 footerSlogan:"CONNECTING BUSINESSES WORLDWIDE",
 
 footerServices:"Global Trade • International Sourcing • Strategic Partnerships",
@@ -609,15 +611,17 @@ footerCopy:"© 2026 FIDDEXA. All Rights Reserved."
     
 const chinese = {
 
-buttonWho: "关于我们",
-buttonOffers: "我们的服务",
-buttonPartner: "成为合作伙伴",
-    
-footerSlogan: "连接全球企业",
+aboutButton:"关于我们",
 
-footerServices: "国际贸易 • 全球采购 • 战略合作伙伴关系",
+offersButton:"我们的业务机会",
 
-footerCopy: "© 2026 FIDDEXA。版权所有。"
+partnerButton:"成为合作伙伴",
+
+footerSlogan:"连接全球企业",
+
+footerServices:"国际贸易 • 全球采购 • 战略合作伙伴关系",
+
+footerCopy:"© 2026 FIDDEXA。版权所有。"
 
 };
 
@@ -644,6 +648,14 @@ document.getElementById("lang-en").addEventListener("click", function(e){
     e.preventDefault();
 
     btn.innerHTML = "🌐 EN";
+    document.getElementById("btn-about").innerText =
+english.aboutButton;
+
+document.getElementById("btn-offers").innerText =
+english.offersButton;
+
+document.getElementById("btn-partner").innerText =
+english.partnerButton;
 document.getElementById("btnWho").innerText = english.buttonWho;
 document.getElementById("btnOffers").innerText = english.buttonOffers;
 document.getElementById("btnPartner").innerText = english.buttonPartner;
@@ -661,6 +673,14 @@ document.getElementById("lang-zh").addEventListener("click", function(e){
     e.preventDefault();
 
     btn.innerHTML = "🌐 中文";
+    document.getElementById("btn-about").innerText =
+chinese.aboutButton;
+
+document.getElementById("btn-offers").innerText =
+chinese.offersButton;
+
+document.getElementById("btn-partner").innerText =
+chinese.partnerButton;
 document.getElementById("btnWho").innerText = chinese.buttonWho;
 document.getElementById("btnOffers").innerText = chinese.buttonOffers;
 document.getElementById("btnPartner").innerText = chinese.buttonPartner;    
