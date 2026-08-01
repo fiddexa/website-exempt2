@@ -1536,6 +1536,10 @@ footer{
 id="partnerForm"
 method="POST">
 
+     <input
+type="hidden"
+name="access_key"
+value="7b614622-f0d3-44ff-8c14-fc55ad1b0d4c">
 
 <div class="form-grid">
 
@@ -3299,26 +3303,10 @@ partnerForm.addEventListener(
         */
 
         const FORM_ENDPOINT =
-        "YOUR_FORM_ENDPOINT_HERE";
+"https://api.web3forms.com/submit";
 
 
         try{
-
-
-            /* =========================
-               CHECK ENDPOINT
-            ========================= */
-
-            if(
-                FORM_ENDPOINT ===
-                "YOUR_FORM_ENDPOINT_HERE"
-            ){
-
-                throw new Error(
-                    "Form endpoint is not configured."
-                );
-
-            }
 
 
             /* =========================
