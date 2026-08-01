@@ -592,119 +592,238 @@ opacity:.6;">
 
 const btn = document.querySelector(".lang-btn");
 const menu = document.querySelector(".lang-menu");
-const savedLanguage = localStorage.getItem("language");
+
+const savedLanguage =
+localStorage.getItem("language");
+
+
+/* =========================
+   ENGLISH
+========================= */
+
 const english = {
 
-aboutButton:"WHO WE ARE",
+    aboutButton:
+    "WHO WE ARE",
 
-offersButton:"OUR OFFERS",
+    offersButton:
+    "OUR OFFERS",
 
-partnerButton:"BECOME A PARTNER",
+    partnerButton:
+    "BECOME A PARTNER",
 
-footerSlogan:"CONNECTING BUSINESSES WORLDWIDE",
+    footerSlogan:
+    "CONNECTING BUSINESSES WORLDWIDE",
 
-footerServices:"Global Trade • International Sourcing • Strategic Partnerships",
+    footerServices:
+    "Global Trade • International Sourcing • Strategic Partnerships",
 
-footerCopy:"© 2026 FIDDEXA. All Rights Reserved."
+    footerCopy:
+    "© 2026 FIDDEXA. All Rights Reserved."
 
 };
-    
+
+
+/* =========================
+   CHINESE
+========================= */
+
 const chinese = {
 
-aboutButton:"关于我们",
+    aboutButton:
+    "关于我们",
 
-offersButton:"我们的业务机会",
+    offersButton:
+    "我们的业务机会",
 
-partnerButton:"成为合作伙伴",
+    partnerButton:
+    "成为合作伙伴",
 
-footerSlogan:"连接全球企业",
+    footerSlogan:
+    "连接全球企业",
 
-footerServices:"国际贸易 • 全球采购 • 战略合作伙伴关系",
+    footerServices:
+    "国际贸易 • 全球采购 • 战略合作伙伴关系",
 
-footerCopy:"© 2026 FIDDEXA。版权所有。"
+    footerCopy:
+    "© 2026 FIDDEXA。版权所有。"
 
 };
 
 
+/* =========================
+   OPEN / CLOSE LANGUAGE MENU
+========================= */
+
 btn.addEventListener("click", function(e){
+
     e.stopPropagation();
 
-   menu.style.display =
-menu.style.display === "block"
-? "none"
-: "block";
+    menu.style.display =
+    menu.style.display === "block"
+    ? "none"
+    : "block";
+
 });
+
+
+/* =========================
+   CLOSE MENU OUTSIDE
+========================= */
 
 document.addEventListener("click", function(){
-    menu.style.display="none";
+
+    menu.style.display = "none";
+
 });
+
 
 menu.addEventListener("click", function(e){
+
     e.stopPropagation();
+
 });
 
-document.getElementById("lang-en").addEventListener("click", function(e){
+
+/* =========================
+   ENGLISH
+========================= */
+
+document
+.getElementById("lang-en")
+.addEventListener("click", function(e){
 
     e.preventDefault();
 
     btn.innerHTML = "🌐 EN";
-    document.getElementById("btn-about").innerText =
-english.aboutButton;
 
-document.getElementById("btn-offers").innerText =
-english.offersButton;
 
-document.getElementById("btn-partner").innerText =
-english.partnerButton;
-document.getElementById("btnWho").innerText = english.buttonWho;
-document.getElementById("btnOffers").innerText = english.buttonOffers;
-document.getElementById("btnPartner").innerText = english.buttonPartner;
-document.getElementById("footer-slogan").innerText = english.footerSlogan;
-document.getElementById("footer-services").innerText = english.footerServices;
-document.getElementById("footer-copy").innerText = english.footerCopy;
-    localStorage.setItem("language","en");
+    document
+    .getElementById("btn-about")
+    .innerText =
+    english.aboutButton;
+
+
+    document
+    .getElementById("btn-offers")
+    .innerText =
+    english.offersButton;
+
+
+    document
+    .getElementById("btn-partner")
+    .innerText =
+    english.partnerButton;
+
+
+    document
+    .getElementById("footer-slogan")
+    .innerText =
+    english.footerSlogan;
+
+
+    document
+    .getElementById("footer-services")
+    .innerText =
+    english.footerServices;
+
+
+    document
+    .getElementById("footer-copy")
+    .innerText =
+    english.footerCopy;
+
+
+    localStorage.setItem(
+        "language",
+        "en"
+    );
+
 
     menu.style.display = "none";
 
 });
 
-document.getElementById("lang-zh").addEventListener("click", function(e){
+
+/* =========================
+   CHINESE
+========================= */
+
+document
+.getElementById("lang-zh")
+.addEventListener("click", function(e){
 
     e.preventDefault();
 
     btn.innerHTML = "🌐 中文";
-    document.getElementById("btn-about").innerText =
-chinese.aboutButton;
 
-document.getElementById("btn-offers").innerText =
-chinese.offersButton;
 
-document.getElementById("btn-partner").innerText =
-chinese.partnerButton;
-document.getElementById("btnWho").innerText = chinese.buttonWho;
-document.getElementById("btnOffers").innerText = chinese.buttonOffers;
-document.getElementById("btnPartner").innerText = chinese.buttonPartner;    
-document.getElementById("footer-slogan").innerText = chinese.footerSlogan;
-document.getElementById("footer-services").innerText = chinese.footerServices;
-document.getElementById("footer-copy").innerText = chinese.footerCopy;
-    localStorage.setItem("language","zh");
+    document
+    .getElementById("btn-about")
+    .innerText =
+    chinese.aboutButton;
+
+
+    document
+    .getElementById("btn-offers")
+    .innerText =
+    chinese.offersButton;
+
+
+    document
+    .getElementById("btn-partner")
+    .innerText =
+    chinese.partnerButton;
+
+
+    document
+    .getElementById("footer-slogan")
+    .innerText =
+    chinese.footerSlogan;
+
+
+    document
+    .getElementById("footer-services")
+    .innerText =
+    chinese.footerServices;
+
+
+    document
+    .getElementById("footer-copy")
+    .innerText =
+    chinese.footerCopy;
+
+
+    localStorage.setItem(
+        "language",
+        "zh"
+    );
+
 
     menu.style.display = "none";
 
 });
 
 
-    if(savedLanguage==="zh"){
+/* =========================
+   LOAD SAVED LANGUAGE
+========================= */
 
-document.getElementById("lang-zh").click();
+if(savedLanguage === "zh"){
+
+    document
+    .getElementById("lang-zh")
+    .click();
 
 }else{
 
-document.getElementById("lang-en").click();
+    document
+    .getElementById("lang-en")
+    .click();
 
-    }
+}
 
-</script>
+        </script>
 
 </body>
 
