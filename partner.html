@@ -1,1 +1,3435 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Become a Partner | FIDDEXA
+</title>
+
+
+<!-- =========================
+     FAVICONS
+========================= -->
+
+<link rel="icon"
+type="image/x-icon"
+href="favicon.ico">
+
+<link rel="icon"
+type="image/png"
+sizes="16x16"
+href="favicon-16x16.png">
+
+<link rel="icon"
+type="image/png"
+sizes="32x32"
+href="favicon-32x32.png">
+
+<link rel="apple-touch-icon"
+sizes="180x180"
+href="apple-touch-icon.png">
+
+<link rel="manifest"
+href="site.webmanifest">
+
+<meta name="theme-color"
+content="#06141a">
+
+
+<!-- =========================
+     GOOGLE FONTS
+========================= -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    padding-top:90px;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        180deg,
+        #06141a,
+        #081d24,
+        #06141a
+    );
+
+    font-family:
+    'Inter',
+    sans-serif;
+
+    color:#f5f5f5;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:1920px;
+
+    margin:0 auto;
+
+    padding:
+    50px 20px 50px;
+
+}
+
+
+
+/* =========================
+   FIXED HEADER
+========================= */
+
+.top-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding-top:16px;
+
+    background:
+    rgba(4,10,20,.82);
+
+    backdrop-filter:
+    blur(10px);
+
+    -webkit-backdrop-filter:
+    blur(10px);
+
+    border-bottom:
+    1px solid
+    rgba(216,176,93,.18);
+
+    z-index:9999;
+
+}
+
+
+
+/* =========================
+   FIDDEXA LOGO
+========================= */
+
+.logo-link{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+}
+
+
+.logo-link img{
+
+    width:230px;
+
+    height:auto;
+
+    display:block;
+
+    transition:
+    transform .3s ease,
+    filter .3s ease;
+
+}
+
+
+.logo-link img:hover{
+
+    transform:
+    scale(1.05);
+
+    filter:
+    drop-shadow(
+        0 0 18px
+        rgba(255,210,70,.9)
+    );
+
+}
+
+
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher{
+
+    position:fixed;
+
+    top:102px;
+
+    right:12px;
+
+    z-index:9000;
+
+}
+
+
+.lang-btn{
+
+    width:72px;
+    height:38px;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:5px;
+
+    background:
+    rgba(6,24,30,.94);
+
+    color:#d8b05d;
+
+    border:
+    1px solid
+    rgba(216,176,93,.45);
+
+    border-radius:999px;
+
+    font-family:
+    'Inter',
+    sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    backdrop-filter:
+    blur(12px);
+
+    -webkit-backdrop-filter:
+    blur(12px);
+
+}
+
+
+
+/* =========================
+   LANGUAGE MENU
+========================= */
+
+.lang-menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:52px;
+
+    right:0;
+
+    width:125px;
+
+    background:
+    rgba(6,24,30,.97);
+
+    border:
+    1px solid
+    rgba(216,176,93,.35);
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 30px
+    rgba(0,0,0,.45);
+
+}
+
+
+.lang-menu.show{
+
+    display:block;
+
+}
+
+
+.lang-menu a{
+
+    display:block;
+
+    padding:
+    10px 14px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:
+    background .25s ease,
+    color .25s ease;
+
+}
+
+
+.lang-menu a:hover{
+
+    background:
+    rgba(216,176,93,.15);
+
+    color:#d8b05d;
+
+}
+
+
+
+/* =========================
+   HOME BUTTON
+========================= */
+
+.back-wrap{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:
+    10px auto 35px;
+
+}
+
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:
+    10px 20px;
+
+    border:
+    1px solid
+    rgba(216,176,93,.45);
+
+    border-radius:999px;
+
+    background:
+    rgba(6,24,30,.72);
+
+    color:#d8b05d;
+
+    text-decoration:none;
+
+    font-family:
+    'Inter',
+    sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    transition:
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+
+}
+
+
+.back-button:hover{
+
+    transform:
+    translateY(-2px);
+
+    background:
+    rgba(216,176,93,.12);
+
+    border-color:#d8b05d;
+
+    color:#f0d17d;
+
+}
+
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro{
+
+    max-width:1000px;
+
+    margin:
+    0 auto 55px;
+
+    text-align:center;
+
+}
+
+
+.page-intro h1{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#d8b05d;
+
+    margin-bottom:22px;
+
+    text-shadow:
+
+    0 3px 12px
+    rgba(0,0,0,.55),
+
+    0 0 25px
+    rgba(216,176,93,.20);
+
+}
+
+
+.intro-line{
+
+    width:140px;
+
+    height:2px;
+
+    margin:
+    0 auto 28px;
+
+    background:#d8b05d;
+
+    opacity:.75;
+
+}
+
+
+.page-intro p{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    font-size:19px;
+
+    font-weight:300;
+
+    line-height:1.9;
+
+    letter-spacing:.3px;
+
+    color:#f6f4ef;
+
+}
+
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.partner-card{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:
+    0 auto 70px;
+
+    padding:
+    55px;
+
+    background:
+    rgba(6,24,30,.68);
+
+    backdrop-filter:
+    blur(18px);
+
+    -webkit-backdrop-filter:
+    blur(18px);
+
+    border:
+    1px solid
+    rgba(216,176,93,.28);
+
+    border-radius:24px;
+
+    box-shadow:
+    0 0 45px
+    rgba(0,0,0,.40);
+
+}
+
+
+.partner-card h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#d8b05d;
+
+    margin-bottom:15px;
+
+}
+
+
+.form-description{
+
+    max-width:700px;
+
+    margin:
+    0 auto 40px;
+
+    text-align:center;
+
+    font-size:16px;
+
+    font-weight:300;
+
+    line-height:1.8;
+
+    color:
+    rgba(255,255,255,.82);
+
+}
+
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:
+    25px 22px;
+
+}
+
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.form-group.full-width{
+
+    grid-column:
+    1 / -1;
+
+}
+
+
+.form-group label{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    color:#e3c06d;
+
+}
+  /* =========================
+   FORM INPUTS
+========================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:
+    15px 17px;
+
+    background:
+    rgba(3,15,20,.72);
+
+    border:
+    1px solid
+    rgba(216,176,93,.30);
+
+    border-radius:12px;
+
+    outline:none;
+
+    color:#ffffff;
+
+    font-family:
+    'Inter',
+    sans-serif;
+
+    font-size:15px;
+
+    transition:
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+
+}
+
+
+.form-group input{
+
+    min-height:52px;
+
+}
+
+
+.form-group select{
+
+    min-height:52px;
+
+    cursor:pointer;
+
+}
+
+
+.form-group textarea{
+
+    min-height:160px;
+
+    resize:vertical;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:
+    rgba(255,255,255,.40);
+
+}
+
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#d8b05d;
+
+    background:
+    rgba(3,15,20,.90);
+
+    box-shadow:
+    0 0 0 3px
+    rgba(216,176,93,.08),
+    0 0 18px
+    rgba(216,176,93,.10);
+
+}
+
+
+
+/* =========================
+   SELECT OPTIONS
+========================= */
+
+.form-group select option{
+
+    background:#06181e;
+
+    color:#ffffff;
+
+}
+
+
+
+/* =========================
+   REQUIRED MARK
+========================= */
+
+.required{
+
+    color:#d8b05d;
+
+    margin-left:3px;
+
+}
+
+
+
+/* =========================
+   SEND BUTTON WRAPPER
+========================= */
+
+.submit-wrap{
+
+    grid-column:
+    1 / -1;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+}
+
+
+
+/* =========================
+   SEND REQUEST BUTTON
+========================= */
+
+.submit-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:260px;
+
+    min-height:58px;
+
+    padding:
+    16px 40px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f0d17d,
+        #d8b05d
+    );
+
+    color:#06141a;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 30px
+    rgba(216,176,93,.35);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    opacity .3s ease;
+
+}
+
+
+.submit-button:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 12px 35px
+    rgba(216,176,93,.55);
+
+}
+
+
+.submit-button:active{
+
+    transform:
+    translateY(0);
+
+}
+
+
+.submit-button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.60;
+
+    transform:none;
+
+}
+
+
+
+/* =========================
+   FORM STATUS MESSAGE
+========================= */
+
+.form-status{
+
+    grid-column:
+    1 / -1;
+
+    display:none;
+
+    margin-top:8px;
+
+    padding:
+    14px 18px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+.form-status.success{
+
+    display:block;
+
+    color:#f4e5b7;
+
+    background:
+    rgba(216,176,93,.10);
+
+    border:
+    1px solid
+    rgba(216,176,93,.35);
+
+}
+
+
+.form-status.error{
+
+    display:block;
+
+    color:#ffffff;
+
+    background:
+    rgba(120,30,30,.20);
+
+    border:
+    1px solid
+    rgba(220,100,100,.35);
+
+}
+
+
+
+/* =========================
+   PRIVACY NOTE
+========================= */
+
+.privacy-note{
+
+    grid-column:
+    1 / -1;
+
+    max-width:700px;
+
+    margin:
+    5px auto 0;
+
+    text-align:center;
+
+    color:
+    rgba(255,255,255,.55);
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:
+    80px auto 0;
+
+    padding:
+    35px 20px 10px;
+
+    text-align:center;
+
+    border-top:
+    1px solid
+    rgba(216,176,93,.25);
+
+}
+
+
+.footer-brand{
+
+    margin-bottom:12px;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:34px;
+
+    color:#d8b05d;
+
+    letter-spacing:5px;
+
+}
+
+
+.footer-email{
+
+    margin-bottom:20px;
+
+}
+
+
+.footer-email a{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:
+    12px 26px;
+
+    border:
+    1.5px solid
+    #e3c06d;
+
+    border-radius:999px;
+
+    background:
+    rgba(6,24,30,.75);
+
+    color:#e3c06d;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:none;
+
+    box-shadow:
+    0 0 12px
+    rgba(216,176,93,.25),
+    0 0 24px
+    rgba(216,176,93,.10);
+
+    transition:
+    transform .3s ease,
+    background .3s ease;
+
+}
+
+
+.footer-email a:hover{
+
+    transform:
+    translateY(-2px);
+
+    background:
+    rgba(216,176,93,.08);
+
+}
+
+
+.footer-slogan{
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.footer-services{
+
+    color:
+    rgba(255,255,255,.65);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    letter-spacing:1px;
+
+}
+
+
+.footer-copy{
+
+    margin-top:30px;
+
+    color:
+    rgba(255,255,255,.45);
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+
+    body{
+
+        padding-top:90px;
+
+    }
+
+
+    .container{
+
+        padding:
+        35px 15px 40px;
+
+    }
+
+
+    .logo-link img{
+
+        width:200px;
+
+    }
+
+
+    .language-switcher{
+
+        top:100px;
+
+        right:12px;
+
+    }
+
+
+    .back-wrap{
+
+        margin:
+        8px auto 30px;
+
+    }
+
+
+    .page-intro{
+
+        margin-bottom:40px;
+
+    }
+
+
+    .page-intro h1{
+
+        font-size:40px;
+
+        letter-spacing:3px;
+
+        line-height:1.15;
+
+    }
+
+
+    .intro-line{
+
+        width:90px;
+
+        margin-bottom:22px;
+
+    }
+
+
+    .page-intro p{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+        padding:
+        0 5px;
+
+    }
+
+
+    .partner-card{
+
+        padding:
+        32px 20px;
+
+        border-radius:18px;
+
+        margin-bottom:45px;
+
+    }
+
+
+    .partner-card h2{
+
+        font-size:31px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .form-description{
+
+        margin-bottom:30px;
+
+        font-size:14px;
+
+    }
+
+
+    .form-grid{
+
+        grid-template-columns:
+        1fr;
+
+        gap:20px;
+
+    }
+
+
+    .form-group.full-width{
+
+        grid-column:auto;
+
+    }
+
+
+    .submit-wrap{
+
+        grid-column:auto;
+
+    }
+
+
+    .form-status{
+
+        grid-column:auto;
+
+    }
+
+
+    .privacy-note{
+
+        grid-column:auto;
+
+    }
+
+
+    .submit-button{
+
+        width:100%;
+
+        min-width:0;
+
+        min-height:56px;
+
+        font-size:19px;
+
+    }
+
+
+    footer{
+
+        margin-top:55px;
+
+        padding-left:10px;
+
+        padding-right:10px;
+
+    }
+
+
+    .footer-brand{
+
+        font-size:30px;
+
+    }
+
+
+    .footer-email a{
+
+        font-size:15px;
+
+        padding:
+        11px 20px;
+
+    }
+
+
+    .footer-slogan{
+
+        font-size:13px;
+
+        line-height:1.7;
+
+    }
+
+
+    .footer-services{
+
+        font-size:12px;
+
+    }
+
+}
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+
+    .page-intro h1{
+
+        font-size:34px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .partner-card{
+
+        padding:
+        28px 16px;
+
+    }
+
+
+    .partner-card h2{
+
+        font-size:27px;
+
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+
+        font-size:16px;
+
+    }
+
+      }
+  </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- =========================
+     FIXED HEADER
+========================= -->
+
+<header class="top-header">
+
+    <a href="#top" class="logo-link">
+
+        <img
+        src="images/fiddexa-title.png"
+        alt="FIDDEXA">
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     LANGUAGE SWITCHER
+========================= -->
+
+<div class="language-switcher">
+
+    <button
+    class="lang-btn"
+    id="langBtn"
+    type="button">
+
+        🌐 EN
+
+    </button>
+
+
+    <div
+    class="lang-menu"
+    id="langMenu">
+
+
+        <a href="#"
+        data-lang="en">
+            English
+        </a>
+
+
+        <a href="#"
+        data-lang="zh">
+            中文
+        </a>
+
+
+        <a href="#"
+        data-lang="fr">
+            Français
+        </a>
+
+
+        <a href="#"
+        data-lang="es">
+            Español
+        </a>
+
+
+        <a href="#"
+        data-lang="ru">
+            Русский
+        </a>
+
+
+        <a href="#"
+        data-lang="hi">
+            हिन्दी
+        </a>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     MAIN CONTAINER
+========================= -->
+
+<div class="container">
+
+
+
+<!-- =========================
+     HOME BUTTON
+========================= -->
+
+<div class="back-wrap">
+
+    <a
+    href="index.html"
+    class="back-button"
+    id="back-button">
+
+        ← HOME
+
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     PAGE INTRO
+========================= -->
+
+<section class="page-intro">
+
+
+    <h1 id="page-title">
+
+        BECOME A PARTNER
+
+    </h1>
+
+
+    <div class="intro-line"></div>
+
+
+    <p id="page-description">
+
+        Interested in working with FIDDEXA?
+        Tell us about your company, business activities,
+        products, services, or cooperation proposal.
+        Our team will review your request and contact you
+        regarding potential opportunities for cooperation.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================
+     PARTNER FORM CARD
+========================= -->
+
+<section class="partner-card">
+
+
+    <h2 id="form-title">
+
+        PARTNERSHIP REQUEST
+
+    </h2>
+
+
+    <p
+    class="form-description"
+    id="form-description">
+
+        Please provide the information below.
+        Fields marked with * are required.
+
+    </p>
+
+
+
+<!-- =========================
+     FORM
+========================= -->
+
+<form
+id="partnerForm"
+method="POST">
+
+
+<div class="form-grid">
+
+
+
+<!-- =========================
+     INDIVIDUAL OR COMPANY
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="partner-type"
+    id="label-partner-type">
+
+        Individual or Company
+        <span class="required">*</span>
+
+    </label>
+
+
+    <select
+    id="partner-type"
+    name="partner_type"
+    required>
+
+
+        <option
+        value=""
+        id="option-select-type">
+
+            Select
+
+        </option>
+
+
+        <option
+        value="Individual"
+        id="option-individual">
+
+            Individual
+
+        </option>
+
+
+        <option
+        value="Company"
+        id="option-company">
+
+            Company
+
+        </option>
+
+
+    </select>
+
+
+</div>
+
+
+
+<!-- =========================
+     COMPANY NAME
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="company-name"
+    id="label-company-name">
+
+        Company Name
+
+    </label>
+
+
+    <input
+    type="text"
+    id="company-name"
+    name="company_name"
+    placeholder="Company name">
+
+
+</div>
+
+
+
+<!-- =========================
+     CONTACT PERSON
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="contact-person"
+    id="label-contact-person">
+
+        Contact Person
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+    type="text"
+    id="contact-person"
+    name="contact_person"
+    placeholder="Full name"
+    required>
+
+
+</div>
+
+
+
+<!-- =========================
+     COUNTRY
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="country"
+    id="label-country">
+
+        Country
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+    type="text"
+    id="country"
+    name="country"
+    placeholder="Country"
+    required>
+
+
+</div>
+
+
+
+<!-- =========================
+     EMAIL
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="email"
+    id="label-email">
+
+        Email
+        <span class="required">*</span>
+
+    </label>
+
+
+    <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="name@company.com"
+    required>
+
+
+</div>
+
+
+
+<!-- =========================
+     PHONE / WECHAT
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="phone"
+    id="label-phone">
+
+        Phone / WeChat
+
+    </label>
+
+
+    <input
+    type="text"
+    id="phone"
+    name="phone_wechat"
+    placeholder="Phone number or WeChat ID">
+
+
+</div>
+<!-- =========================
+     BUSINESS TYPE
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="business-type"
+    id="label-business-type">
+
+        Business Type
+
+    </label>
+
+
+    <input
+    type="text"
+    id="business-type"
+    name="business_type"
+    placeholder="Trading, manufacturing, distribution, investment, etc.">
+
+
+</div>
+
+
+
+<!-- =========================
+     PRODUCTS / SERVICES
+========================= -->
+
+<div class="form-group">
+
+
+    <label
+    for="products-services"
+    id="label-products-services">
+
+        Products / Services
+
+    </label>
+
+
+    <input
+    type="text"
+    id="products-services"
+    name="products_services"
+    placeholder="Products or services of interest">
+
+
+</div>
+
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<div class="form-group full-width">
+
+
+    <label
+    for="message"
+    id="label-message">
+
+        Message
+        <span class="required">*</span>
+
+    </label>
+
+
+    <textarea
+    id="message"
+    name="message"
+    placeholder="Tell us about your business, request, proposal, or potential cooperation."
+    required></textarea>
+
+
+</div>
+
+
+
+<!-- =========================
+     PRIVACY NOTE
+========================= -->
+
+<div
+class="privacy-note"
+id="privacy-note">
+
+    By submitting this form, you agree that
+    FIDDEXA may use the information provided
+    to review your request and contact you
+    regarding potential business cooperation.
+
+</div>
+
+
+
+<!-- =========================
+     SEND REQUEST BUTTON
+========================= -->
+
+<div class="submit-wrap">
+
+
+    <button
+    type="submit"
+    class="submit-button"
+    id="submit-button">
+
+        SEND REQUEST
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =========================
+     FORM STATUS
+========================= -->
+
+<div
+class="form-status"
+id="form-status">
+
+</div>
+
+
+
+</div>
+
+</form>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+    <div class="footer-brand">
+
+        FIDDEXA
+
+    </div>
+
+
+
+    <div class="footer-email">
+
+        <a href="mailto:request@fiddexa.com">
+
+            request@fiddexa.com
+
+        </a>
+
+    </div>
+
+
+
+    <div
+    class="footer-slogan"
+    id="footer-slogan">
+
+        CONNECTING BUSINESSES WORLDWIDE
+
+    </div>
+
+
+
+    <div
+    class="footer-services"
+    id="footer-services">
+
+        Global Trade • International Sourcing • Strategic Partnerships
+
+    </div>
+
+
+
+    <div
+    class="footer-copy"
+    id="footer-copy">
+
+        © 2026 FIDDEXA. All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   TRANSLATIONS
+========================= */
+
+const translations = {
+
+
+
+/* =========================
+   ENGLISH
+========================= */
+
+en: {
+
+    langButton:
+    "🌐 EN",
+
+    backButton:
+    "← HOME",
+
+    pageTitle:
+    "BECOME A PARTNER",
+
+    pageDescription:
+    "Interested in working with FIDDEXA? Tell us about your company, business activities, products, services, or cooperation proposal. Our team will review your request and contact you regarding potential opportunities for cooperation.",
+
+
+    formTitle:
+    "PARTNERSHIP REQUEST",
+
+    formDescription:
+    "Please provide the information below. Fields marked with * are required.",
+
+
+    /* FORM LABELS */
+
+    partnerType:
+    "Individual or Company",
+
+    companyName:
+    "Company Name",
+
+    contactPerson:
+    "Contact Person",
+
+    country:
+    "Country",
+
+    email:
+    "Email",
+
+    phone:
+    "Phone / WeChat",
+
+    businessType:
+    "Business Type",
+
+    productsServices:
+    "Products / Services",
+
+    message:
+    "Message",
+
+
+    /* SELECT */
+
+    selectType:
+    "Select",
+
+    individual:
+    "Individual",
+
+    company:
+    "Company",
+
+
+    /* PLACEHOLDERS */
+
+    companyPlaceholder:
+    "Company name",
+
+    contactPlaceholder:
+    "Full name",
+
+    countryPlaceholder:
+    "Country",
+
+    emailPlaceholder:
+    "name@company.com",
+
+    phonePlaceholder:
+    "Phone number or WeChat ID",
+
+    businessPlaceholder:
+    "Trading, manufacturing, distribution, investment, etc.",
+
+    productsPlaceholder:
+    "Products or services of interest",
+
+    messagePlaceholder:
+    "Tell us about your business, request, proposal, or potential cooperation.",
+
+
+    /* PRIVACY */
+
+    privacy:
+    "By submitting this form, you agree that FIDDEXA may use the information provided to review your request and contact you regarding potential business cooperation.",
+
+
+    /* BUTTON */
+
+    submitButton:
+    "SEND REQUEST",
+
+    sending:
+    "SENDING...",
+
+
+    /* FORM MESSAGES */
+
+    successMessage:
+    "Thank you. Your partnership request has been sent successfully.",
+
+    errorMessage:
+    "The request could not be sent. Please try again or contact us at request@fiddexa.com.",
+
+
+    /* FOOTER */
+
+    footerSlogan:
+    "CONNECTING BUSINESSES WORLDWIDE",
+
+    footerServices:
+    "Global Trade • International Sourcing • Strategic Partnerships",
+
+    footerCopy:
+    "© 2026 FIDDEXA. All Rights Reserved."
+
+},
+  /* =========================
+   CHINESE
+========================= */
+
+zh: {
+
+    langButton:
+    "🌐 中文",
+
+    backButton:
+    "← 首页",
+
+    pageTitle:
+    "成为合作伙伴",
+
+    pageDescription:
+    "有意与 FIDDEXA 开展合作？请向我们介绍您的公司、业务活动、产品、服务或合作方案。我们的团队将审核您的请求，并就潜在的合作机会与您联系。",
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    formTitle:
+    "合作申请",
+
+    formDescription:
+    "请填写以下信息。标有 * 的字段为必填项。",
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    partnerType:
+    "个人或公司",
+
+    companyName:
+    "公司名称",
+
+    contactPerson:
+    "联系人",
+
+    country:
+    "国家",
+
+    email:
+    "电子邮箱",
+
+    phone:
+    "电话 / 微信",
+
+    businessType:
+    "业务类型",
+
+    productsServices:
+    "产品 / 服务",
+
+    message:
+    "留言",
+
+
+    /* =========================
+       SELECT
+    ========================= */
+
+    selectType:
+    "请选择",
+
+    individual:
+    "个人",
+
+    company:
+    "公司",
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    companyPlaceholder:
+    "公司名称",
+
+    contactPlaceholder:
+    "姓名",
+
+    countryPlaceholder:
+    "国家",
+
+    emailPlaceholder:
+    "name@company.com",
+
+    phonePlaceholder:
+    "电话号码或微信号",
+
+    businessPlaceholder:
+    "贸易、制造、分销、投资等",
+
+    productsPlaceholder:
+    "感兴趣的产品或服务",
+
+    messagePlaceholder:
+    "请介绍您的业务、需求、合作方案或潜在的合作机会。",
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    privacy:
+    "提交此表单即表示您同意 FIDDEXA 使用您提供的信息来审核您的申请，并就潜在的商业合作与您联系。",
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    submitButton:
+    "发送申请",
+
+    sending:
+    "正在发送...",
+
+
+    /* =========================
+       FORM MESSAGES
+    ========================= */
+
+    successMessage:
+    "感谢您。您的合作申请已成功发送。",
+
+    errorMessage:
+    "申请未能发送。请重试或通过 request@fiddexa.com 与我们联系。",
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footerSlogan:
+    "连接全球企业",
+
+    footerServices:
+    "国际贸易 • 全球采购 • 战略合作伙伴关系",
+
+    footerCopy:
+    "© 2026 FIDDEXA。版权所有。"
+
+},
+  /* =========================
+   FRENCH
+========================= */
+
+fr: {
+
+    langButton:
+    "🌐 FR",
+
+    backButton:
+    "← ACCUEIL",
+
+    pageTitle:
+    "DEVENIR PARTENAIRE",
+
+    pageDescription:
+    "Vous souhaitez collaborer avec FIDDEXA ? Présentez-nous votre entreprise, vos activités, vos produits, vos services ou votre proposition de coopération. Notre équipe examinera votre demande et vous contactera afin d’étudier les possibilités de collaboration.",
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    formTitle:
+    "DEMANDE DE PARTENARIAT",
+
+    formDescription:
+    "Veuillez fournir les informations ci-dessous. Les champs marqués d’un * sont obligatoires.",
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    partnerType:
+    "Particulier ou entreprise",
+
+    companyName:
+    "Nom de l’entreprise",
+
+    contactPerson:
+    "Personne de contact",
+
+    country:
+    "Pays",
+
+    email:
+    "E-mail",
+
+    phone:
+    "Téléphone / WeChat",
+
+    businessType:
+    "Type d’activité",
+
+    productsServices:
+    "Produits / Services",
+
+    message:
+    "Message",
+
+
+    /* =========================
+       SELECT
+    ========================= */
+
+    selectType:
+    "Sélectionner",
+
+    individual:
+    "Particulier",
+
+    company:
+    "Entreprise",
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    companyPlaceholder:
+    "Nom de l’entreprise",
+
+    contactPlaceholder:
+    "Nom complet",
+
+    countryPlaceholder:
+    "Pays",
+
+    emailPlaceholder:
+    "nom@entreprise.com",
+
+    phonePlaceholder:
+    "Numéro de téléphone ou identifiant WeChat",
+
+    businessPlaceholder:
+    "Commerce, fabrication, distribution, investissement, etc.",
+
+    productsPlaceholder:
+    "Produits ou services qui vous intéressent",
+
+    messagePlaceholder:
+    "Présentez-nous votre activité, votre demande, votre proposition ou une possibilité de coopération.",
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    privacy:
+    "En soumettant ce formulaire, vous acceptez que FIDDEXA utilise les informations fournies afin d’examiner votre demande et de vous contacter au sujet d’une éventuelle coopération commerciale.",
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    submitButton:
+    "ENVOYER LA DEMANDE",
+
+    sending:
+    "ENVOI EN COURS...",
+
+
+    /* =========================
+       FORM MESSAGES
+    ========================= */
+
+    successMessage:
+    "Merci. Votre demande de partenariat a été envoyée avec succès.",
+
+    errorMessage:
+    "La demande n’a pas pu être envoyée. Veuillez réessayer ou nous contacter à request@fiddexa.com.",
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footerSlogan:
+    "CONNECTER LES ENTREPRISES DANS LE MONDE ENTIER",
+
+    footerServices:
+    "Commerce international • Sourcing international • Partenariats stratégiques",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Tous droits réservés."
+
+},
+  /* =========================
+   SPANISH
+========================= */
+
+es: {
+
+    langButton:
+    "🌐 ES",
+
+    backButton:
+    "← INICIO",
+
+    pageTitle:
+    "CONVIÉRTETE EN SOCIO",
+
+    pageDescription:
+    "¿Está interesado en colaborar con FIDDEXA? Cuéntenos sobre su empresa, actividades comerciales, productos, servicios o propuesta de cooperación. Nuestro equipo revisará su solicitud y se pondrá en contacto con usted para analizar posibles oportunidades de colaboración.",
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    formTitle:
+    "SOLICITUD DE COLABORACIÓN",
+
+    formDescription:
+    "Complete la información que aparece a continuación. Los campos marcados con * son obligatorios.",
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    partnerType:
+    "Persona o empresa",
+
+    companyName:
+    "Nombre de la empresa",
+
+    contactPerson:
+    "Persona de contacto",
+
+    country:
+    "País",
+
+    email:
+    "Correo electrónico",
+
+    phone:
+    "Teléfono / WeChat",
+
+    businessType:
+    "Tipo de actividad",
+
+    productsServices:
+    "Productos / Servicios",
+
+    message:
+    "Mensaje",
+
+
+    /* =========================
+       SELECT
+    ========================= */
+
+    selectType:
+    "Seleccionar",
+
+    individual:
+    "Persona",
+
+    company:
+    "Empresa",
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    companyPlaceholder:
+    "Nombre de la empresa",
+
+    contactPlaceholder:
+    "Nombre completo",
+
+    countryPlaceholder:
+    "País",
+
+    emailPlaceholder:
+    "nombre@empresa.com",
+
+    phonePlaceholder:
+    "Número de teléfono o ID de WeChat",
+
+    businessPlaceholder:
+    "Comercio, fabricación, distribución, inversión, etc.",
+
+    productsPlaceholder:
+    "Productos o servicios de interés",
+
+    messagePlaceholder:
+    "Cuéntenos sobre su empresa, solicitud, propuesta o posible cooperación.",
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    privacy:
+    "Al enviar este formulario, usted acepta que FIDDEXA utilice la información proporcionada para revisar su solicitud y ponerse en contacto con usted en relación con una posible cooperación comercial.",
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    submitButton:
+    "ENVIAR SOLICITUD",
+
+    sending:
+    "ENVIANDO...",
+
+
+    /* =========================
+       FORM MESSAGES
+    ========================= */
+
+    successMessage:
+    "Gracias. Su solicitud de colaboración se ha enviado correctamente.",
+
+    errorMessage:
+    "No se pudo enviar la solicitud. Inténtelo de nuevo o póngase en contacto con nosotros en request@fiddexa.com.",
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footerSlogan:
+    "CONECTANDO EMPRESAS EN TODO EL MUNDO",
+
+    footerServices:
+    "Comercio internacional • Abastecimiento global • Asociaciones estratégicas",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Todos los derechos reservados."
+
+},
+  /* =========================
+   RUSSIAN
+========================= */
+
+ru: {
+
+    langButton:
+    "🌐 RU",
+
+    backButton:
+    "← ГЛАВНАЯ",
+
+    pageTitle:
+    "СТАТЬ ПАРТНЁРОМ",
+
+    pageDescription:
+    "Заинтересованы в сотрудничестве с FIDDEXA? Расскажите нам о вашей компании, направлении деятельности, продуктах, услугах или предложении о сотрудничестве. Наша команда рассмотрит ваш запрос и свяжется с вами для обсуждения возможных вариантов сотрудничества.",
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    formTitle:
+    "ЗАПРОС НА СОТРУДНИЧЕСТВО",
+
+    formDescription:
+    "Пожалуйста, заполните информацию ниже. Поля, отмеченные символом *, обязательны для заполнения.",
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    partnerType:
+    "Физическое лицо или компания",
+
+    companyName:
+    "Название компании",
+
+    contactPerson:
+    "Контактное лицо",
+
+    country:
+    "Страна",
+
+    email:
+    "Электронная почта",
+
+    phone:
+    "Телефон / WeChat",
+
+    businessType:
+    "Вид деятельности",
+
+    productsServices:
+    "Продукты / Услуги",
+
+    message:
+    "Сообщение",
+
+
+    /* =========================
+       SELECT
+    ========================= */
+
+    selectType:
+    "Выберите",
+
+    individual:
+    "Физическое лицо",
+
+    company:
+    "Компания",
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    companyPlaceholder:
+    "Название компании",
+
+    contactPlaceholder:
+    "Имя и фамилия",
+
+    countryPlaceholder:
+    "Страна",
+
+    emailPlaceholder:
+    "name@company.com",
+
+    phonePlaceholder:
+    "Номер телефона или WeChat ID",
+
+    businessPlaceholder:
+    "Торговля, производство, дистрибуция, инвестиции и т. д.",
+
+    productsPlaceholder:
+    "Интересующие продукты или услуги",
+
+    messagePlaceholder:
+    "Расскажите о вашем бизнесе, запросе, предложении или возможном сотрудничестве.",
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    privacy:
+    "Отправляя эту форму, вы соглашаетесь с тем, что FIDDEXA может использовать предоставленную информацию для рассмотрения вашего запроса и связи с вами по вопросам возможного делового сотрудничества.",
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    submitButton:
+    "ОТПРАВИТЬ ЗАПРОС",
+
+    sending:
+    "ОТПРАВКА...",
+
+
+    /* =========================
+       FORM MESSAGES
+    ========================= */
+
+    successMessage:
+    "Спасибо. Ваш запрос на сотрудничество успешно отправлен.",
+
+    errorMessage:
+    "Не удалось отправить запрос. Пожалуйста, попробуйте ещё раз или свяжитесь с нами по адресу request@fiddexa.com.",
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footerSlogan:
+    "СОЕДИНЯЕМ БИЗНЕС ПО ВСЕМУ МИРУ",
+
+    footerServices:
+    "Международная торговля • Глобальный поиск поставщиков • Стратегические партнёрства",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Все права защищены."
+
+},
+  /* =========================
+   HINDI
+========================= */
+
+hi: {
+
+    langButton:
+    "🌐 HI",
+
+    backButton:
+    "← मुख्य पृष्ठ",
+
+    pageTitle:
+    "भागीदार बनें",
+
+    pageDescription:
+    "क्या आप FIDDEXA के साथ सहयोग करने में रुचि रखते हैं? हमें अपनी कंपनी, व्यावसायिक गतिविधियों, उत्पादों, सेवाओं या सहयोग प्रस्ताव के बारे में बताएं। हमारी टीम आपके अनुरोध की समीक्षा करेगी और संभावित सहयोग के अवसरों पर चर्चा करने के लिए आपसे संपर्क करेगी.",
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    formTitle:
+    "साझेदारी अनुरोध",
+
+    formDescription:
+    "कृपया नीचे दी गई जानकारी भरें। * से चिह्नित फ़ील्ड अनिवार्य हैं।",
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    partnerType:
+    "व्यक्ति या कंपनी",
+
+    companyName:
+    "कंपनी का नाम",
+
+    contactPerson:
+    "संपर्क व्यक्ति",
+
+    country:
+    "देश",
+
+    email:
+    "ईमेल",
+
+    phone:
+    "फ़ोन / WeChat",
+
+    businessType:
+    "व्यवसाय का प्रकार",
+
+    productsServices:
+    "उत्पाद / सेवाएँ",
+
+    message:
+    "संदेश",
+
+
+    /* =========================
+       SELECT
+    ========================= */
+
+    selectType:
+    "चुनें",
+
+    individual:
+    "व्यक्ति",
+
+    company:
+    "कंपनी",
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    companyPlaceholder:
+    "कंपनी का नाम",
+
+    contactPlaceholder:
+    "पूरा नाम",
+
+    countryPlaceholder:
+    "देश",
+
+    emailPlaceholder:
+    "name@company.com",
+
+    phonePlaceholder:
+    "फ़ोन नंबर या WeChat ID",
+
+    businessPlaceholder:
+    "व्यापार, विनिर्माण, वितरण, निवेश आदि",
+
+    productsPlaceholder:
+    "रुचि के उत्पाद या सेवाएँ",
+
+    messagePlaceholder:
+    "हमें अपने व्यवसाय, अनुरोध, प्रस्ताव या संभावित सहयोग के बारे में बताएं।",
+
+
+    /* =========================
+       PRIVACY
+    ========================= */
+
+    privacy:
+    "इस फ़ॉर्म को भेजकर आप सहमत होते हैं कि FIDDEXA आपके द्वारा प्रदान की गई जानकारी का उपयोग आपके अनुरोध की समीक्षा करने और संभावित व्यावसायिक सहयोग के संबंध में आपसे संपर्क करने के लिए कर सकता है।",
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    submitButton:
+    "अनुरोध भेजें",
+
+    sending:
+    "भेजा जा रहा है...",
+
+
+    /* =========================
+       FORM MESSAGES
+    ========================= */
+
+    successMessage:
+    "धन्यवाद। आपका साझेदारी अनुरोध सफलतापूर्वक भेज दिया गया है।",
+
+    errorMessage:
+    "अनुरोध भेजा नहीं जा सका। कृपया पुनः प्रयास करें या request@fiddexa.com पर हमसे संपर्क करें।",
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footerSlogan:
+    "दुनिया भर के व्यवसायों को जोड़ना",
+
+    footerServices:
+    "अंतरराष्ट्रीय व्यापार • वैश्विक सोर्सिंग • रणनीतिक साझेदारी",
+
+    footerCopy:
+    "© 2026 FIDDEXA. सर्वाधिकार सुरक्षित।"
+
+}
+
+};
+
+  /* =========================
+   LANGUAGE SYSTEM
+========================= */
+
+const langBtn =
+document.getElementById("langBtn");
+
+const langMenu =
+document.getElementById("langMenu");
+
+const languageLinks =
+document.querySelectorAll(
+    "#langMenu [data-lang]"
+);
+
+let currentLanguage = "en";
+
+
+/* =========================
+   APPLY LANGUAGE
+========================= */
+
+function applyLanguage(lang){
+
+    /* Если язык не найден,
+       используем английский */
+
+    if(!translations[lang]){
+        lang = "en";
+    }
+
+    currentLanguage = lang;
+
+    const t = translations[lang];
+
+
+    /* =========================
+       LANGUAGE BUTTON
+    ========================= */
+
+    langBtn.textContent =
+    t.langButton;
+
+
+    /* =========================
+       HOME BUTTON
+    ========================= */
+
+    document.getElementById(
+        "back-button"
+    ).textContent =
+    t.backButton;
+
+
+    /* =========================
+       PAGE INTRO
+    ========================= */
+
+    document.getElementById(
+        "page-title"
+    ).textContent =
+    t.pageTitle;
+
+
+    document.getElementById(
+        "page-description"
+    ).textContent =
+    t.pageDescription;
+
+
+    /* =========================
+       FORM TITLE
+    ========================= */
+
+    document.getElementById(
+        "form-title"
+    ).textContent =
+    t.formTitle;
+
+
+    document.getElementById(
+        "form-description"
+    ).textContent =
+    t.formDescription;
+
+
+    /* =========================
+       FORM LABELS
+    ========================= */
+
+    document.getElementById(
+        "label-partner-type"
+    ).childNodes[0].nodeValue =
+    t.partnerType + " ";
+
+
+    document.getElementById(
+        "label-company-name"
+    ).textContent =
+    t.companyName;
+
+
+    document.getElementById(
+        "label-contact-person"
+    ).childNodes[0].nodeValue =
+    t.contactPerson + " ";
+
+
+    document.getElementById(
+        "label-country"
+    ).childNodes[0].nodeValue =
+    t.country + " ";
+
+
+    document.getElementById(
+        "label-email"
+    ).childNodes[0].nodeValue =
+    t.email + " ";
+
+
+    document.getElementById(
+        "label-phone"
+    ).textContent =
+    t.phone;
+
+
+    document.getElementById(
+        "label-business-type"
+    ).textContent =
+    t.businessType;
+
+
+    document.getElementById(
+        "label-products-services"
+    ).textContent =
+    t.productsServices;
+
+
+    document.getElementById(
+        "label-message"
+    ).childNodes[0].nodeValue =
+    t.message + " ";
+
+
+    /* =========================
+       SELECT OPTIONS
+    ========================= */
+
+    document.getElementById(
+        "option-select-type"
+    ).textContent =
+    t.selectType;
+
+
+    document.getElementById(
+        "option-individual"
+    ).textContent =
+    t.individual;
+
+
+    document.getElementById(
+        "option-company"
+    ).textContent =
+    t.company;
+
+
+    /* =========================
+       PLACEHOLDERS
+    ========================= */
+
+    document.getElementById(
+        "company-name"
+    ).placeholder =
+    t.companyPlaceholder;
+
+
+    document.getElementById(
+        "contact-person"
+    ).placeholder =
+    t.contactPlaceholder;
+
+
+    document.getElementById(
+        "country"
+    ).placeholder =
+    t.countryPlaceholder;
+
+
+    document.getElementById(
+        "email"
+    ).placeholder =
+    t.emailPlaceholder;
+
+
+    document.getElementById(
+        "phone"
+    ).placeholder =
+    t.phonePlaceholder;
+
+
+    document.getElementById(
+        "business-type"
+    ).placeholder =
+    t.businessPlaceholder;
+
+
+    document.getElementById(
+        "products-services"
+    ).placeholder =
+    t.productsPlaceholder;
+
+
+    document.getElementById(
+        "message"
+    ).placeholder =
+    t.messagePlaceholder;
+
+
+    /* =========================
+       PRIVACY NOTE
+    ========================= */
+
+    document.getElementById(
+        "privacy-note"
+    ).textContent =
+    t.privacy;
+
+
+    /* =========================
+       SEND BUTTON
+    ========================= */
+
+    document.getElementById(
+        "submit-button"
+    ).textContent =
+    t.submitButton;
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    document.getElementById(
+        "footer-slogan"
+    ).textContent =
+    t.footerSlogan;
+
+
+    document.getElementById(
+        "footer-services"
+    ).textContent =
+    t.footerServices;
+
+
+    document.getElementById(
+        "footer-copy"
+    ).textContent =
+    t.footerCopy;
+
+
+    /* =========================
+       HTML LANGUAGE
+    ========================= */
+
+    document.documentElement.lang =
+    lang;
+
+
+    /* =========================
+       SAVE LANGUAGE
+    ========================= */
+
+    localStorage.setItem(
+        "language",
+        lang
+    );
+
+}
+
+
+
+/* =========================
+   OPEN / CLOSE LANGUAGE MENU
+========================= */
+
+langBtn.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+        langMenu.classList.toggle(
+            "show"
+        );
+
+    }
+);
+
+
+
+/* =========================
+   SELECT LANGUAGE
+========================= */
+
+languageLinks.forEach(
+    function(link){
+
+        link.addEventListener(
+            "click",
+            function(event){
+
+                event.preventDefault();
+
+                const selectedLanguage =
+                this.dataset.lang;
+
+                applyLanguage(
+                    selectedLanguage
+                );
+
+                langMenu.classList.remove(
+                    "show"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================
+   CLOSE MENU WHEN CLICKING
+   OUTSIDE
+========================= */
+
+document.addEventListener(
+    "click",
+    function(){
+
+        langMenu.classList.remove(
+            "show"
+        );
+
+    }
+);
+
+
+
+/* =========================
+   DO NOT CLOSE WHEN CLICKING
+   INSIDE LANGUAGE MENU
+========================= */
+
+langMenu.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+    }
+);
+
+
+
+/* =========================
+   LOAD SAVED LANGUAGE
+========================= */
+
+const savedLanguage =
+localStorage.getItem(
+    "language"
+);
+
+
+if(
+    savedLanguage &&
+    translations[savedLanguage]
+){
+
+    applyLanguage(
+        savedLanguage
+    );
+
+}else{
+
+    applyLanguage(
+        "en"
+    );
+
+}
+  /* =========================
+   PARTNER FORM
+========================= */
+
+const partnerForm =
+document.getElementById("partnerForm");
+
+const submitButton =
+document.getElementById("submit-button");
+
+const formStatus =
+document.getElementById("form-status");
+
+
+/* =========================
+   FORM SUBMIT
+========================= */
+
+partnerForm.addEventListener(
+    "submit",
+    async function(event){
+
+        event.preventDefault();
+
+
+        /* =========================
+           CURRENT LANGUAGE
+        ========================= */
+
+        const t =
+        translations[currentLanguage];
+
+
+        /* =========================
+           RESET STATUS
+        ========================= */
+
+        formStatus.className =
+        "form-status";
+
+        formStatus.textContent =
+        "";
+
+
+        /* =========================
+           BUTTON: SENDING
+        ========================= */
+
+        submitButton.disabled =
+        true;
+
+        submitButton.textContent =
+        t.sending;
+
+
+        /* =========================
+           COLLECT FORM DATA
+        ========================= */
+
+        const formData =
+        new FormData(partnerForm);
+
+
+        /*
+        =====================================
+        FORM ENDPOINT
+
+        На следующем этапе сюда поставим
+        настоящий адрес обработчика формы.
+        =====================================
+        */
+
+        const FORM_ENDPOINT =
+        "YOUR_FORM_ENDPOINT_HERE";
+
+
+        try{
+
+
+            /* =========================
+               CHECK ENDPOINT
+            ========================= */
+
+            if(
+                FORM_ENDPOINT ===
+                "YOUR_FORM_ENDPOINT_HERE"
+            ){
+
+                throw new Error(
+                    "Form endpoint is not configured."
+                );
+
+            }
+
+
+            /* =========================
+               SEND FORM
+            ========================= */
+
+            const response =
+            await fetch(
+                FORM_ENDPOINT,
+                {
+
+                    method:"POST",
+
+                    body:formData,
+
+                    headers:{
+                        "Accept":
+                        "application/json"
+                    }
+
+                }
+            );
+
+
+            /* =========================
+               SUCCESS
+            ========================= */
+
+            if(response.ok){
+
+
+                formStatus.className =
+                "form-status success";
+
+
+                formStatus.textContent =
+                t.successMessage;
+
+
+                /*
+                Очистить форму после
+                успешной отправки
+                */
+
+                partnerForm.reset();
+
+
+            }else{
+
+
+                throw new Error(
+                    "Form submission failed."
+                );
+
+
+            }
+
+
+        }catch(error){
+
+
+            /* =========================
+               ERROR
+            ========================= */
+
+            console.error(
+                "FIDDEXA form error:",
+                error
+            );
+
+
+            formStatus.className =
+            "form-status error";
+
+
+            formStatus.textContent =
+            t.errorMessage;
+
+
+        }finally{
+
+
+            /* =========================
+               RESTORE BUTTON
+            ========================= */
+
+            submitButton.disabled =
+            false;
+
+
+            submitButton.textContent =
+            translations[
+                currentLanguage
+            ].submitButton;
+
+
+        }
+
+
+    }
+);
+
+
+
+/* =========================
+   END JAVASCRIPT
+========================= */
+
+</script>
+
+
+</body>
+
+</html>
