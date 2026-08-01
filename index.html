@@ -83,7 +83,92 @@ box-shadow:
 0 12px 35px rgba(216,176,93,.6);
 
 }
+/* =========================
+   MAIN NAVIGATION BUTTONS
+========================= */
 
+.main-buttons-wrap{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:45px auto 60px;
+
+    padding:0 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:22px;
+
+}
+
+
+.main-btn{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:72px;
+
+    padding:18px 25px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:23px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#06141a;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f0d17d,
+        #d8b05d
+    );
+
+    border-radius:60px;
+
+    box-shadow:
+    0 8px 30px
+    rgba(216,176,93,.35);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+.main-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 12px 35px
+    rgba(216,176,93,.55);
+
+}
+    
 *{
 margin:0;
 padding:0;
@@ -153,7 +238,32 @@ border-top:
 }
 
 @media(max-width:900px){
+.main-buttons-wrap{
 
+    flex-direction:column;
+
+    gap:16px;
+
+    margin:30px auto 45px;
+
+    padding:0 20px;
+
+}
+
+
+.main-btn{
+
+    width:100%;
+
+    min-height:60px;
+
+    padding:15px 20px;
+
+    font-size:21px;
+
+    letter-spacing:1.5px;
+
+}
 .container{
     padding:0 0 40px;
 
@@ -375,13 +485,30 @@ font-size:13px;
 
 <img src="images/hero.png" class="hero" alt="FIDDEXA">
 
-    <div class="about-button-wrap">
+    <div class="main-buttons-wrap">
 
-    <a href="about.html" id="btnWho" class="about-btn">
-    WHO WE ARE
+    <a
+    href="about.html"
+    class="main-btn"
+    id="btn-about">
+        WHO WE ARE
     </a>
 
-</div>
+    <a
+    href="offers.html"
+    class="main-btn"
+    id="btn-offers">
+        OUR OFFERS
+    </a>
+
+    <a
+    href="partner.html"
+    class="main-btn"
+    id="btn-partner">
+        BECOME A PARTNER
+    </a>
+
+    </div>
 
 <div class="about-button-wrap">
 
