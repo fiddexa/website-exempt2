@@ -590,27 +590,31 @@ opacity:.6;">
 
 <script>
 
-const btn = document.querySelector(".lang-btn");
-const menu = document.querySelector(".lang-menu");
+const btn =
+document.querySelector(".lang-btn");
 
-const savedLanguage =
-localStorage.getItem("language");
+const menu =
+document.querySelector(".lang-menu");
 
 
 /* =========================
-   ENGLISH
+   TRANSLATIONS
 ========================= */
 
-const english = {
+const translations = {
 
-    aboutButton:
-    "WHO WE ARE",
 
-    offersButton:
-    "OUR OFFERS",
+/* ENGLISH */
 
-    partnerButton:
-    "BECOME A PARTNER",
+en: {
+
+    langButton:"🌐 EN",
+
+    aboutButton:"WHO WE ARE",
+
+    offersButton:"OUR OFFERS",
+
+    partnerButton:"BECOME A PARTNER",
 
     footerSlogan:
     "CONNECTING BUSINESSES WORLDWIDE",
@@ -621,23 +625,20 @@ const english = {
     footerCopy:
     "© 2026 FIDDEXA. All Rights Reserved."
 
-};
+},
 
 
-/* =========================
-   CHINESE
-========================= */
+/* CHINESE */
 
-const chinese = {
+zh: {
 
-    aboutButton:
-    "关于我们",
+    langButton:"🌐 中文",
 
-    offersButton:
-    "我们的业务机会",
+    aboutButton:"关于我们",
 
-    partnerButton:
-    "成为合作伙伴",
+    offersButton:"我们的业务机会",
+
+    partnerButton:"成为合作伙伴",
 
     footerSlogan:
     "连接全球企业",
@@ -648,178 +649,333 @@ const chinese = {
     footerCopy:
     "© 2026 FIDDEXA。版权所有。"
 
+},
+
+
+/* FRENCH */
+
+fr: {
+
+    langButton:"🌐 FR",
+
+    aboutButton:"QUI SOMMES-NOUS",
+
+    offersButton:"NOS OFFRES",
+
+    partnerButton:"DEVENIR PARTENAIRE",
+
+    footerSlogan:
+    "CONNECTER LES ENTREPRISES DANS LE MONDE ENTIER",
+
+    footerServices:
+    "Commerce international • Sourcing international • Partenariats stratégiques",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Tous droits réservés."
+
+},
+
+
+/* SPANISH */
+
+es: {
+
+    langButton:"🌐 ES",
+
+    aboutButton:"QUIÉNES SOMOS",
+
+    offersButton:"NUESTRAS OFERTAS",
+
+    partnerButton:"CONVIÉRTETE EN SOCIO",
+
+    footerSlogan:
+    "CONECTANDO EMPRESAS EN TODO EL MUNDO",
+
+    footerServices:
+    "Comercio internacional • Abastecimiento global • Asociaciones estratégicas",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Todos los derechos reservados."
+
+},
+
+
+/* RUSSIAN */
+
+ru: {
+
+    langButton:"🌐 RU",
+
+    aboutButton:"О КОМПАНИИ",
+
+    offersButton:"НАШИ ПРЕДЛОЖЕНИЯ",
+
+    partnerButton:"СТАТЬ ПАРТНЁРОМ",
+
+    footerSlogan:
+    "СОЕДИНЯЕМ БИЗНЕС ПО ВСЕМУ МИРУ",
+
+    footerServices:
+    "Международная торговля • Глобальный поиск поставщиков • Стратегические партнёрства",
+
+    footerCopy:
+    "© 2026 FIDDEXA. Все права защищены."
+
+},
+
+
+/* HINDI */
+
+hi: {
+
+    langButton:"🌐 HI",
+
+    aboutButton:"हम कौन हैं",
+
+    offersButton:"हमारे प्रस्ताव",
+
+    partnerButton:"भागीदार बनें",
+
+    footerSlogan:
+    "दुनिया भर के व्यवसायों को जोड़ना",
+
+    footerServices:
+    "अंतरराष्ट्रीय व्यापार • वैश्विक सोर्सिंग • रणनीतिक साझेदारी",
+
+    footerCopy:
+    "© 2026 FIDDEXA. सर्वाधिकार सुरक्षित।"
+
+}
+
 };
 
 
 /* =========================
-   OPEN / CLOSE LANGUAGE MENU
+   APPLY LANGUAGE
 ========================= */
 
-btn.addEventListener("click", function(e){
+function applyLanguage(lang){
 
-    e.stopPropagation();
+    if(!translations[lang]){
+        lang = "en";
+    }
+
+    const t =
+    translations[lang];
+
+
+    btn.textContent =
+    t.langButton;
+
+
+    document
+    .getElementById("btn-about")
+    .textContent =
+    t.aboutButton;
+
+
+    document
+    .getElementById("btn-offers")
+    .textContent =
+    t.offersButton;
+
+
+    document
+    .getElementById("btn-partner")
+    .textContent =
+    t.partnerButton;
+
+
+    document
+    .getElementById("footer-slogan")
+    .textContent =
+    t.footerSlogan;
+
+
+    document
+    .getElementById("footer-services")
+    .textContent =
+    t.footerServices;
+
+
+    document
+    .getElementById("footer-copy")
+    .textContent =
+    t.footerCopy;
+
+
+    document.documentElement.lang =
+    lang;
+
+
+    localStorage.setItem(
+        "language",
+        lang
+    );
+
 
     menu.style.display =
-    menu.style.display === "block"
-    ? "none"
-    : "block";
+    "none";
 
-});
+}
+
+
+/* =========================
+   LANGUAGE MENU
+========================= */
+
+btn.addEventListener(
+    "click",
+    function(e){
+
+        e.stopPropagation();
+
+        menu.style.display =
+        menu.style.display === "block"
+        ? "none"
+        : "block";
+
+    }
+);
+
+
+/* =========================
+   LANGUAGE LINKS
+========================= */
+
+document
+.getElementById("lang-en")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("en");
+
+    }
+);
+
+
+document
+.getElementById("lang-zh")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("zh");
+
+    }
+);
+
+
+document
+.getElementById("lang-fr")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("fr");
+
+    }
+);
+
+
+document
+.getElementById("lang-es")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("es");
+
+    }
+);
+
+
+document
+.getElementById("lang-ru")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("ru");
+
+    }
+);
+
+
+document
+.getElementById("lang-hi")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        applyLanguage("hi");
+
+    }
+);
 
 
 /* =========================
    CLOSE MENU OUTSIDE
 ========================= */
 
-document.addEventListener("click", function(){
+document.addEventListener(
+    "click",
+    function(){
 
-    menu.style.display = "none";
+        menu.style.display =
+        "none";
 
-});
-
-
-menu.addEventListener("click", function(e){
-
-    e.stopPropagation();
-
-});
+    }
+);
 
 
-/* =========================
-   ENGLISH
-========================= */
+menu.addEventListener(
+    "click",
+    function(e){
 
-document
-.getElementById("lang-en")
-.addEventListener("click", function(e){
+        e.stopPropagation();
 
-    e.preventDefault();
-
-    btn.innerHTML = "🌐 EN";
-
-
-    document
-    .getElementById("btn-about")
-    .innerText =
-    english.aboutButton;
-
-
-    document
-    .getElementById("btn-offers")
-    .innerText =
-    english.offersButton;
-
-
-    document
-    .getElementById("btn-partner")
-    .innerText =
-    english.partnerButton;
-
-
-    document
-    .getElementById("footer-slogan")
-    .innerText =
-    english.footerSlogan;
-
-
-    document
-    .getElementById("footer-services")
-    .innerText =
-    english.footerServices;
-
-
-    document
-    .getElementById("footer-copy")
-    .innerText =
-    english.footerCopy;
-
-
-    localStorage.setItem(
-        "language",
-        "en"
-    );
-
-
-    menu.style.display = "none";
-
-});
-
-
-/* =========================
-   CHINESE
-========================= */
-
-document
-.getElementById("lang-zh")
-.addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    btn.innerHTML = "🌐 中文";
-
-
-    document
-    .getElementById("btn-about")
-    .innerText =
-    chinese.aboutButton;
-
-
-    document
-    .getElementById("btn-offers")
-    .innerText =
-    chinese.offersButton;
-
-
-    document
-    .getElementById("btn-partner")
-    .innerText =
-    chinese.partnerButton;
-
-
-    document
-    .getElementById("footer-slogan")
-    .innerText =
-    chinese.footerSlogan;
-
-
-    document
-    .getElementById("footer-services")
-    .innerText =
-    chinese.footerServices;
-
-
-    document
-    .getElementById("footer-copy")
-    .innerText =
-    chinese.footerCopy;
-
-
-    localStorage.setItem(
-        "language",
-        "zh"
-    );
-
-
-    menu.style.display = "none";
-
-});
+    }
+);
 
 
 /* =========================
    LOAD SAVED LANGUAGE
 ========================= */
 
-if(savedLanguage === "zh"){
+const savedLanguage =
+localStorage.getItem(
+    "language"
+);
 
-    document
-    .getElementById("lang-zh")
-    .click();
+
+if(
+    savedLanguage &&
+    translations[savedLanguage]
+){
+
+    applyLanguage(
+        savedLanguage
+    );
 
 }else{
 
-    document
-    .getElementById("lang-en")
-    .click();
+    applyLanguage(
+        "en"
+    );
 
 }
 
