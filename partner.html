@@ -2890,7 +2890,16 @@ document.querySelectorAll(
 );
 
 let currentLanguage = "en";
+/* =========================
+   SUBMISSION COOLDOWN
+   15 MINUTES
+========================= */
 
+const SUBMISSION_COOLDOWN =
+15 * 60 * 1000;
+
+const LAST_SUBMISSION_KEY =
+"fiddexa_partner_last_submission";
 
 /* =========================
    APPLY LANGUAGE
