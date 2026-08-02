@@ -2901,6 +2901,24 @@ const SUBMISSION_COOLDOWN =
 const LAST_SUBMISSION_KEY =
 "fiddexa_partner_last_submission";
 
+     function isSubmissionCooldownActive(){
+
+    const lastSubmission =
+    localStorage.getItem(
+        LAST_SUBMISSION_KEY
+    );
+
+    if(!lastSubmission){
+        return false;
+    }
+
+    const timePassed =
+    Date.now() -
+    Number(lastSubmission);
+
+    return timePassed <
+    SUBMISSION_COOLDOWN;
+     }
 /* =========================
    APPLY LANGUAGE
 ========================= */
