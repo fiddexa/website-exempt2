@@ -1612,6 +1612,7 @@ en: {
     offersStatus:
     "UPDATES COMING SOON",
 
+    offersAction: "VIEW OFFERS →",
 
     /* =========================
        SERVICES
@@ -1640,7 +1641,23 @@ en: {
     requestsStatus:
     "UPDATES COMING SOON",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "FIDDEXA BUSINESS OPPORTUNITIES",
+
+    activeOffersTitle:
+    "ACTIVE OFFERS",
+
+    activeOffersDescription:
+    "Current commercial offers and international business opportunities available through FIDDEXA.",
+
+    noOffersTitle:
+    "NO ACTIVE OFFERS AT THE MOMENT",
+
+    noOffersText:
+    "New commercial opportunities will be published here.",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -1690,6 +1707,7 @@ zh: {
     offersStatus:
     "即将更新",
 
+    offersAction: "查看报价 →",
 
     /* =========================
        SERVICES
@@ -1718,7 +1736,23 @@ zh: {
     requestsStatus:
     "即将更新",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "FIDDEXA 商业机会",
+
+    activeOffersTitle:
+    "当前商业报价",
+
+    activeOffersDescription:
+    "查看目前通过 FIDDEXA 提供的商业报价和国际商业机会。",
+
+    noOffersTitle:
+    "目前暂无有效报价",
+
+    noOffersText:
+    "新的商业机会将在此发布。",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -1765,6 +1799,7 @@ fr: {
     offersStatus:
     "MISES À JOUR À VENIR",
 
+    offersAction: "VOIR LES OFFRES →",
 
     /* =========================
        SERVICES
@@ -1793,7 +1828,23 @@ fr: {
     requestsStatus:
     "MISES À JOUR À VENIR",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "OPPORTUNITÉS COMMERCIALES FIDDEXA",
+
+    activeOffersTitle:
+    "OFFRES ACTUELLES",
+
+    activeOffersDescription:
+    "Découvrez les offres commerciales actuelles et les opportunités d’affaires internationales disponibles par l’intermédiaire de FIDDEXA.",
+
+    noOffersTitle:
+    "AUCUNE OFFRE ACTIVE POUR LE MOMENT",
+
+    noOffersText:
+    "De nouvelles opportunités commerciales seront publiées ici.",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -1843,6 +1894,7 @@ es: {
     offersStatus:
     "PRÓXIMAS ACTUALIZACIONES",
 
+    offersAction: "VER OFERTAS →",
 
     /* =========================
        SERVICES
@@ -1871,7 +1923,23 @@ es: {
     requestsStatus:
     "PRÓXIMAS ACTUALIZACIONES",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "OPORTUNIDADES COMERCIALES FIDDEXA",
+
+    activeOffersTitle:
+    "OFERTAS ACTUALES",
+
+    activeOffersDescription:
+    "Consulte las ofertas comerciales actuales y las oportunidades de negocio internacionales disponibles a través de FIDDEXA.",
+
+    noOffersTitle:
+    "NO HAY OFERTAS ACTIVAS EN ESTE MOMENTO",
+
+    noOffersText:
+    "Las nuevas oportunidades comerciales se publicarán aquí.",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -1918,6 +1986,7 @@ ru: {
     offersStatus:
     "СКОРО ОБНОВЛЕНИЯ",
 
+    offersAction: "СМОТРЕТЬ ПРЕДЛОЖЕНИЯ →",
 
     /* =========================
        SERVICES
@@ -1946,7 +2015,23 @@ ru: {
     requestsStatus:
     "СКОРО ОБНОВЛЕНИЯ",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "ДЕЛОВЫЕ ВОЗМОЖНОСТИ FIDDEXA",
+
+    activeOffersTitle:
+    "АКТУАЛЬНЫЕ ПРЕДЛОЖЕНИЯ",
+
+    activeOffersDescription:
+    "Актуальные коммерческие предложения и международные деловые возможности, доступные через FIDDEXA.",
+
+    noOffersTitle:
+    "НЕТ АКТИВНЫХ ПРЕДЛОЖЕНИЙ",
+
+    noOffersText:
+    "Новые коммерческие предложения будут опубликованы здесь.",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -1996,7 +2081,8 @@ hi: {
     offersStatus:
     "जल्द ही अपडेट उपलब्ध होंगे",
 
-
+    offersAction: "प्रस्ताव देखें →",
+    
     /* =========================
        SERVICES
     ========================= */
@@ -2024,7 +2110,23 @@ hi: {
     requestsStatus:
     "जल्द ही अपडेट उपलब्ध होंगे",
 
+    /* ACTIVE OFFERS */
 
+    activeOffersLabel:
+    "FIDDEXA व्यावसायिक अवसर",
+
+    activeOffersTitle:
+    "वर्तमान प्रस्ताव",
+
+    activeOffersDescription:
+    "FIDDEXA के माध्यम से उपलब्ध वर्तमान वाणिज्यिक प्रस्तावों और अंतरराष्ट्रीय व्यावसायिक अवसरों के बारे में जानें।",
+
+    noOffersTitle:
+    "फिलहाल कोई सक्रिय प्रस्ताव नहीं है",
+
+    noOffersText:
+    "नए व्यावसायिक अवसर यहाँ प्रकाशित किए जाएंगे।",
+    
     /* =========================
        FOOTER
     ========================= */
@@ -2131,6 +2233,10 @@ function applyLanguage(lang) {
     ).textContent =
     t.offersStatus;
 
+        document.getElementById(
+        "offers-action"
+    ).textContent =
+    t.offersAction;
 
     /* =========================
        SERVICES
@@ -2175,7 +2281,39 @@ function applyLanguage(lang) {
     ).textContent =
     t.requestsStatus;
 
+    /* =========================
+       ACTIVE OFFERS
+    ========================= */
 
+    document.getElementById(
+        "active-offers-label"
+    ).textContent =
+    t.activeOffersLabel;
+
+
+    document.getElementById(
+        "active-offers-title"
+    ).textContent =
+    t.activeOffersTitle;
+
+
+    document.getElementById(
+        "active-offers-description"
+    ).textContent =
+    t.activeOffersDescription;
+
+
+    document.getElementById(
+        "no-offers-title"
+    ).textContent =
+    t.noOffersTitle;
+
+
+    document.getElementById(
+        "no-offers-text"
+    ).textContent =
+    t.noOffersText;
+    
     /* =========================
        FOOTER
     ========================= */
