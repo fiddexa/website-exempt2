@@ -3257,6 +3257,44 @@ if(
     );
 
 }
+     /* =========================
+   COMPANY NAME REQUIREMENT
+========================= */
+
+const partnerType =
+document.getElementById("partner-type");
+
+const companyName =
+document.getElementById("company-name");
+
+
+function updateCompanyRequirement(){
+
+    if(partnerType.value === "Company"){
+
+        companyName.required = true;
+
+    }else{
+
+        companyName.required = false;
+
+    }
+
+}
+
+
+/* Check when selection changes */
+
+partnerType.addEventListener(
+    "change",
+    updateCompanyRequirement
+);
+
+
+/* Check initial state */
+
+updateCompanyRequirement();
+     
   /* =========================
    PARTNER FORM
 ========================= */
