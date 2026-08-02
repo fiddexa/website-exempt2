@@ -3382,14 +3382,18 @@ partnerForm.addEventListener(
 
 if(isSubmissionCooldownActive()){
 
+    const cooldownTranslation =
+    translations[currentLanguage] ||
+    translations.en;
+
     formStatus.className =
     "form-status error";
 
     formStatus.textContent =
-    "Please wait 15 minutes before sending another request.";
+    cooldownTranslation.cooldownMessage;
 
     return;
-             }
+}
 
         /* =========================
            CURRENT LANGUAGE
