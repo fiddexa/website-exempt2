@@ -2107,13 +2107,16 @@ en: {
 
 
     /* FORM MESSAGES */
+     
+successMessage:
+"Thank you. Your partnership request has been sent successfully.",
 
-    successMessage:
-    "Thank you. Your partnership request has been sent successfully.",
+errorMessage:
+"The request could not be sent. Please try again or contact us at partner@fiddexa.com.",
 
-    errorMessage:
-    "The request could not be sent. Please try again or contact us at partner@fiddexa.com.",
-
+cooldownMessage:
+"Your request has already been sent. Please wait 15 minutes before sending another request.",
+    
 
     /* FOOTER */
 
@@ -2261,6 +2264,8 @@ zh: {
     errorMessage:
     "申请未能发送。请重试或通过 partner@fiddexa.com 与我们联系。",
 
+     cooldownMessage:
+"您的申请已成功发送。请等待 15 分钟后再提交新的申请。",
 
     /* =========================
        FOOTER
@@ -2410,7 +2415,8 @@ fr: {
     errorMessage:
     "La demande n’a pas pu être envoyée. Veuillez réessayer ou nous contacter à partner@fiddexa.com.",
 
-
+cooldownMessage:
+"Votre demande a déjà été envoyée. Veuillez attendre 15 minutes avant d’envoyer une nouvelle demande.",
     /* =========================
        FOOTER
     ========================= */
@@ -2559,7 +2565,8 @@ es: {
     errorMessage:
     "No se pudo enviar la solicitud. Inténtelo de nuevo o póngase en contacto con nosotros en partner@fiddexa.com.",
 
-
+cooldownMessage:
+"Su solicitud ya ha sido enviada. Espere 15 minutos antes de enviar una nueva solicitud.",
     /* =========================
        FOOTER
     ========================= */
@@ -2708,7 +2715,8 @@ ru: {
     errorMessage:
     "Не удалось отправить запрос. Пожалуйста, попробуйте ещё раз или свяжитесь с нами по адресу partner@fiddexa.com.",
 
-
+cooldownMessage:
+"Ваш запрос уже отправлен. Пожалуйста, подождите 15 минут перед отправкой нового запроса.",
     /* =========================
        FOOTER
     ========================= */
@@ -2857,6 +2865,8 @@ hi: {
     errorMessage:
 "अनुरोध भेजा नहीं जा सका। कृपया पुनः प्रयास करें या partner@fiddexa.com पर हमसे संपर्क करें।",
 
+     cooldownMessage:
+"आपका अनुरोध पहले ही भेजा जा चुका है। नया अनुरोध भेजने से पहले कृपया 15 मिनट प्रतीक्षा करें।",
     /* =========================
        FOOTER
     ========================= */
@@ -3366,7 +3376,20 @@ partnerForm.addEventListener(
     async function(event){
 
         event.preventDefault();
+/* =========================
+   CHECK SUBMISSION COOLDOWN
+========================= */
 
+if(isSubmissionCooldownActive()){
+
+    formStatus.className =
+    "form-status error";
+
+    formStatus.textContent =
+    "Please wait 15 minutes before sending another request.";
+
+    return;
+             }
 
         /* =========================
            CURRENT LANGUAGE
@@ -3458,7 +3481,12 @@ partnerForm.addEventListener(
                 formStatus.textContent =
                 t.successMessage;
 
+/* Save successful submission time */
 
+localStorage.setItem(
+    LAST_SUBMISSION_KEY,
+    Date.now().toString()
+);
                 /*
                 Очистить форму после
                 успешной отправки
