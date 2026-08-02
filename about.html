@@ -2842,213 +2842,334 @@ function setLanguage(lang) {
 
     const t = translations[lang];
 
-    if (!t) return;
+    if (!t) {
+        lang = "en";
+    }
+
+    const current =
+    translations[lang];
 
 
-    /* =========================
-       LANGUAGE BUTTON
-    ========================= */
-
-    const langBtn = document.querySelector(".lang-btn");
+    /* LANGUAGE BUTTON */
 
     if (langBtn) {
-        langBtn.innerHTML = t.langButton;
+        langBtn.innerHTML =
+        current.langButton;
     }
 
 
-    /* =========================
-       BACK BUTTON
-    ========================= */
+    /* BACK BUTTON */
 
-    const backButton = document.getElementById("back-button");
-
-    if (backButton) {
-        backButton.innerText = t.backButton;
-    }
+    setText(
+        "backButton",
+        current.backButton
+    );
 
 
-    /* =========================
-       PAGE TITLE
-    ========================= */
+    /* PAGE TITLE */
 
-    const pageTitle = document.getElementById("page-title");
-
-    if (pageTitle) {
-        pageTitle.innerText = t.pageTitle;
-    }
+    setText(
+        "pageTitle",
+        current.pageTitle
+    );
 
 
     /* =========================
        ABOUT FIDDEXA
     ========================= */
 
-    setText("about-title", t.aboutTitle);
+    setText(
+        "aboutTitle",
+        current.aboutTitle
+    );
 
-    setText("about-text1", t.aboutText1);
-    setText("about-text2", t.aboutText2);
-    setText("about-text3", t.aboutText3);
+    setText(
+        "aboutText1",
+        current.aboutText1
+    );
+
+    setText(
+        "aboutText2",
+        current.aboutText2
+    );
+
+    setText(
+        "aboutText3",
+        current.aboutText3
+    );
 
 
     /* =========================
        WHY CHOOSE FIDDEXA
     ========================= */
 
-    setText("why-title", t.whyTitle);
+    setText(
+        "whyTitle",
+        current.whyTitle
+    );
 
-    setText("why1", t.why1);
-    setText("why2", t.why2);
-    setText("why3", t.why3);
-    setText("why4", t.why4);
-    setText("why5", t.why5);
-    setText("why6", t.why6);
-    setText("why7", t.why7);
-    setText("why8", t.why8);
+    setText("why1", current.why1);
+    setText("why2", current.why2);
+    setText("why3", current.why3);
+    setText("why4", current.why4);
+    setText("why5", current.why5);
+    setText("why6", current.why6);
+    setText("why7", current.why7);
+    setText("why8", current.why8);
 
 
     /* =========================
        COOPERATION GEOGRAPHY
     ========================= */
 
-    setText("geography-title", t.geographyTitle);
+    setText(
+        "geographyTitle",
+        current.geographyTitle
+    );
 
-    setText("geography-text", t.geographyText);
+    setText(
+        "geographyText",
+        current.geographyText
+    );
 
-    setText("geo1", t.geo1);
-    setText("geo2", t.geo2);
-    setText("geo3", t.geo3);
-    setText("geo4", t.geo4);
-    setText("geo5", t.geo5);
-    setText("geo6", t.geo6);
-    setText("geo7", t.geo7);
-    setText("geo8", t.geo8);
+    setText("geo1", current.geo1);
+    setText("geo2", current.geo2);
+    setText("geo3", current.geo3);
+    setText("geo4", current.geo4);
+    setText("geo5", current.geo5);
+    setText("geo6", current.geo6);
+    setText("geo7", current.geo7);
+    setText("geo8", current.geo8);
 
 
     /* =========================
        OUR BUSINESS AREAS
     ========================= */
 
-    setText("areas-title", t.areasTitle);
+    setText(
+        "areasTitle",
+        current.areasTitle
+    );
 
-    setText("area1", t.area1);
-    setText("area2", t.area2);
-    setText("area3", t.area3);
-    setText("area4", t.area4);
-    setText("area5", t.area5);
-    setText("area6", t.area6);
-    setText("area7", t.area7);
-    setText("area8", t.area8);
-    setText("area9", t.area9);
-    setText("area10", t.area10);
+    setText("area1", current.area1);
+    setText("area2", current.area2);
+    setText("area3", current.area3);
+    setText("area4", current.area4);
+    setText("area5", current.area5);
+    setText("area6", current.area6);
+    setText("area7", current.area7);
+    setText("area8", current.area8);
+    setText("area9", current.area9);
+    setText("area10", current.area10);
 
 
     /* =========================
        OUR SERVICES
     ========================= */
 
-    setText("services-title", t.servicesTitle);
+    setText(
+        "servicesTitle",
+        current.servicesTitle
+    );
 
-    setText("service1", t.service1);
-    setText("service2", t.service2);
-    setText("service3", t.service3);
-    setText("service4", t.service4);
-    setText("service5", t.service5);
-    setText("service6", t.service6);
-    setText("service7", t.service7);
-    setText("service8", t.service8);
-    setText("service9", t.service9);
-    setText("service10", t.service10);
+    setText(
+        "service1",
+        current.service1
+    );
+
+    setText(
+        "service2",
+        current.service2
+    );
+
+    setText(
+        "service3",
+        current.service3
+    );
+
+    setText(
+        "service4",
+        current.service4
+    );
+
+    setText(
+        "service5",
+        current.service5
+    );
+
+    setText(
+        "service6",
+        current.service6
+    );
+
+    setText(
+        "service7",
+        current.service7
+    );
+
+    setText(
+        "service8",
+        current.service8
+    );
+
+    setText(
+        "service9",
+        current.service9
+    );
+
+    setText(
+        "service10",
+        current.service10
+    );
 
 
     /* =========================
        HOW WE WORK
     ========================= */
 
-    setText("work-title", t.workTitle);
+    setText(
+        "workTitle",
+        current.workTitle
+    );
 
 
     /* STEP 1 */
 
-    setText("step1-title", t.step1Title);
-    setText("step1-text", t.step1Text);
+    setText(
+        "step1Title",
+        current.step1Title
+    );
+
+    setText(
+        "step1Text",
+        current.step1Text
+    );
 
 
     /* STEP 2 */
 
-    setText("step2-title", t.step2Title);
-    setText("step2-text", t.step2Text);
+    setText(
+        "step2Title",
+        current.step2Title
+    );
+
+    setText(
+        "step2Text",
+        current.step2Text
+    );
 
 
     /* STEP 3 */
 
-    setText("step3-title", t.step3Title);
-    setText("step3-text", t.step3Text);
+    setText(
+        "step3Title",
+        current.step3Title
+    );
+
+    setText(
+        "step3Text",
+        current.step3Text
+    );
 
 
     /* STEP 4 */
 
-    setText("step4-title", t.step4Title);
-    setText("step4-text", t.step4Text);
+    setText(
+        "step4Title",
+        current.step4Title
+    );
+
+    setText(
+        "step4Text",
+        current.step4Text
+    );
 
 
     /* STEP 5 */
 
-    setText("step5-title", t.step5Title);
-    setText("step5-text", t.step5Text);
+    setText(
+        "step5Title",
+        current.step5Title
+    );
+
+    setText(
+        "step5Text",
+        current.step5Text
+    );
 
 
     /* STEP 6 */
 
-    setText("step6-title", t.step6Title);
-    setText("step6-text", t.step6Text);
+    setText(
+        "step6Title",
+        current.step6Title
+    );
+
+    setText(
+        "step6Text",
+        current.step6Text
+    );
 
 
     /* =========================
        OUR PARTNERS
     ========================= */
 
-    setText("partners-title", t.partnersTitle);
+    setText(
+        "partnersTitle",
+        current.partnersTitle
+    );
 
-    setText("partners-text", t.partnersText);
+    setText(
+        "partnersText",
+        current.partnersText
+    );
 
 
     /* =========================
        FOOTER
     ========================= */
 
-    setText("footer-slogan", t.footerSlogan);
+    setText(
+        "footerSlogan",
+        current.footerSlogan
+    );
 
-    setText("footer-services", t.footerServices);
+    setText(
+        "footerServices",
+        current.footerServices
+    );
 
-    setText("footer-copy", t.footerCopy);
+    setText(
+        "footerCopy",
+        current.footerCopy
+    );
 
 
     /* =========================
        SAVE LANGUAGE
     ========================= */
 
-    localStorage.setItem("language", lang);
+    localStorage.setItem(
+        "language",
+        lang
+    );
 
 
-    /* =========================
-       HTML LANGUAGE ATTRIBUTE
-    ========================= */
+    /* HTML LANGUAGE */
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang =
+    lang;
 
 
-    /* =========================
-       CLOSE LANGUAGE MENU
-    ========================= */
+    /* CLOSE LANGUAGE MENU */
 
-    const menu = document.querySelector(".lang-menu");
-
-    if (menu) {
-        menu.style.display = "none";
+    if (langMenu) {
+        langMenu.style.display =
+        "none";
     }
 
 }
-
-
 
 /* =========================
    SAFE TEXT FUNCTION
