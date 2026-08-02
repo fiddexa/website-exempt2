@@ -3279,13 +3279,25 @@ document.getElementById("company-name");
 
 function updateCompanyRequirement(){
 
+    const companyRequired =
+    document.getElementById(
+        "company-name-required"
+    );
+
+
     if(partnerType.value === "Company"){
 
         companyName.required = true;
 
+        companyRequired.style.display =
+        "inline";
+
     }else{
 
         companyName.required = false;
+
+        companyRequired.style.display =
+        "none";
 
     }
 
