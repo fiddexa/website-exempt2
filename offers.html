@@ -192,13 +192,13 @@ BACK BUTTON
 
 .back-wrap{
 
-    width:100%
+    width:100%;
     max-width:1100px;
 
     margin:
     35px auto 20px;
 
-    padding:0 20px
+    padding:0 20px;
 
 }
 
@@ -615,15 +615,10 @@ LANGUAGE SWITCHER
 ========================= */
 
 .language-switcher{
-
     position:fixed;
-
-    top:102px;
-
+    top:100px;
     right:12px;
-
-    z-index:9000;
-
+    z-index:10001;
 }
 
 
@@ -1080,13 +1075,19 @@ MOBILE
         position:fixed;
         top:100px;
         right:12px;
-        z-index:9000;
+        z-index:10001;
     }
 
     .lang-btn{
-        height:38px;
+        position:relative;
+    z-index:10002;
+    height:38px;
     }
 
+    .lang-menu{
+    z-index:10003;
+    }
+    
     .back-wrap{
         position:fixed;
         top:100px;
@@ -1278,11 +1279,10 @@ LANGUAGE SWITCHER
 <div class="language-switcher">
 
     <button
+    type="button"
     class="lang-btn"
     id="langBtn">
-
-        🌐 EN
-
+    🌐 EN
     </button>
 
 
