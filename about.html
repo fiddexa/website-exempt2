@@ -556,38 +556,117 @@ body{
 
     line-height:1.75;
 }
+/* =========================
+   FOOTER
+========================= */
 
- <footer>
+footer{
+    width:100%;
+    max-width:1180px;
 
-    <div class="footer-brand">
-        FIDDEXA
-    </div>
+    margin:80px auto 0;
+    padding:40px 20px 10px;
 
-    <div class="footer-email">
-        <a href="mailto:contact@fiddexa.com">
-            contact@fiddexa.com
-        </a>
-    </div>
+    text-align:center;
 
-    <div
-        class="footer-slogan"
-        id="footer-slogan">
-        CONNECTING BUSINESSES WORLDWIDE
-    </div>
+    border-top:
+    1px solid rgba(216,176,93,.25);
 
-    <div
-        class="footer-services"
-        id="footer-services">
-        Global Trade • International Sourcing • Strategic Partnerships
-    </div>
+    color:#b8b8b8;
+}
 
-    <div
-        class="footer-copy"
-        id="footer-copy">
-        © 2026 FIDDEXA. All Rights Reserved.
-    </div>
+.footer-brand{
+    font-family:'Cormorant Garamond',serif;
 
-</footer>
+    font-size:34px;
+    font-weight:600;
+
+    color:#d8b05d;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+}
+
+.footer-email{
+    margin-bottom:22px;
+}
+
+.footer-email a{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:11px 24px;
+
+    border:
+    1px solid rgba(216,176,93,.60);
+
+    border-radius:999px;
+
+    color:#d8b05d;
+
+    background:
+    rgba(6,24,30,.75);
+
+    text-decoration:none;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:16px;
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    text-transform:none;
+
+    transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
+}
+
+.footer-email a:hover{
+    background:
+    rgba(216,176,93,.10);
+
+    color:#f0d17d;
+
+    transform:translateY(-2px);
+}
+
+.footer-slogan{
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.footer-services{
+    font-size:14px;
+
+    line-height:1.8;
+
+    letter-spacing:1px;
+
+    opacity:.8;
+}
+
+.footer-copy{
+    margin-top:30px;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    opacity:.6;
+}
+   
+
 /* =========================
    MOBILE
 ========================= */
@@ -629,7 +708,7 @@ body{
         z-index:9000;
     }
 
-    .back-button{
+    .back-btn{
         height:38px;
         min-height:38px;
 
@@ -1368,154 +1447,47 @@ body{
 
 </section>
 
-
 <!-- =========================
      FOOTER
 ========================= -->
 
-   /* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    width:100%;
-    max-width:1180px;
-
-    margin:80px auto 0;
-
-    padding:40px 20px 10px;
-
-    text-align:center;
-
-    border-top:
-    1px solid rgba(216,176,93,.25);
-
-    color:#b8b8b8;
-
-}
-
-
-.footer-brand{
-
-    font-family:
-    'Cormorant Garamond',
-    serif;
-
-    font-size:34px;
-
-    font-weight:600;
-
-    color:#d8b05d;
-
-    letter-spacing:5px;
-
-    margin-bottom:15px;
-
-}
-
-
-.footer-email{
-
-    margin-bottom:22px;
-
-}
-
-
-.footer-email a{
-
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    padding:11px 24px;
-
-    border:
-    1px solid rgba(216,176,93,.60);
-
-    border-radius:999px;
-
-    color:#d8b05d;
-
-    background:
-    rgba(6,24,30,.75);
-
-    text-decoration:none;
-
-    font-family:
-    'Inter',
-    sans-serif;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    letter-spacing:.5px;
-
-    text-transform:none;
-
-    transition:
-    background .3s ease,
-    color .3s ease,
-    transform .3s ease;
-
-}
-
-
-.footer-email a:hover{
-
-    background:
-    rgba(216,176,93,.10);
-
-    color:#f0d17d;
-
-    transform:translateY(-2px);
-
-}
-
-
-.footer-slogan{
-
-    font-size:15px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:12px;
-
-}
-
-
-.footer-services{
-
-    font-size:14px;
-
-    line-height:1.8;
-
-    letter-spacing:1px;
-
-    opacity:.8;
-
-}
-
-
-.footer-copy{
-
-    margin-top:30px;
-
-    font-size:12px;
-
-    letter-spacing:1px;
-
-    opacity:.6;
-
-}
-
+<footer>
+
+    <div class="footer-brand">
+        FIDDEXA
+    </div>
+
+    <div class="footer-email">
+
+        <a href="mailto:contact@fiddexa.com">
+            contact@fiddexa.com
+        </a>
+
+    </div>
+
+    <div
+        class="footer-slogan"
+        id="footerSlogan">
+        CONNECTING BUSINESSES WORLDWIDE
+    </div>
+
+    <div
+        class="footer-services"
+        id="footerServices">
+        Global Trade • International Sourcing • Strategic Partnerships
+    </div>
+
+    <div
+        class="footer-copy"
+        id="footerCopy">
+        © 2026 FIDDEXA. All Rights Reserved.
+    </div>
+
+</footer>
 
 </div>
 <!-- END .container -->
+
   <script>
 
 /* =========================
