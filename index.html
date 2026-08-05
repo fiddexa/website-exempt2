@@ -632,46 +632,94 @@ font-size:13px;
     filter:
     drop-shadow(
         0 0 18px rgba(216,176,93,.65)
-    );
-}
+        }
 
     /* =========================
-   FINAL HEADER LOGO SIZE
+   INDEX HEADER — FINAL
 ========================= */
 
 .top-header{
-    height:90px;
-    padding-top:0px;
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:165px;
+
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(4,10,20,.96);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid rgba(216,176,93,.18);
+
+    z-index:9999;
 }
 
+
 .logo-link{
-    display:inline-block;
-    line-height:0;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
 }
+
 
 .logo-link img{
     width:230px;
     height:auto;
-    max-width:none;
-    max-height:none;
+
     display:block;
+
+    margin:0;
+
+    max-width:none;
 }
 
 
-/* MOBILE */
+/* место под фиксированную шапку */
+
+body{
+    padding-top:165px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
     .top-header{
-        height:90px;
-        padding-top:10px;
+        height:165px;
+        padding:0;
+    }
+
+    body{
+        padding-top:165px;
+    }
+
+    .logo-link{
+        height:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
     }
 
     .logo-link img{
-        width:200px;
+        width:230px;
         height:auto;
-        max-width:none;
-        max-height:none;
+        margin:0;
     }
 
 }
