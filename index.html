@@ -541,14 +541,15 @@ color:#d8b05d;
 
 @media(max-width:900px){
 
-    .top-header{
-        height:90px;
-        padding-top:10px;
-    }
+.top-header{
+    height:90px;
+    padding:0;
+}
 
-    .logo-link img{
-        width:200px;
-    }
+.logo-link img{
+    width:175px;
+    max-height:52px;
+}
 
     .language-switcher{
         top:100px;
@@ -568,43 +569,70 @@ padding:0;
 font-size:13px;
 
     }
-    /* ===== Fixed Header ===== */
+
+    /* =========================
+   FIXED HEADER
+========================= */
 
 .top-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
+    position:fixed;
+    top:0;
+    left:0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width:100%;
+    height:90px;
 
-    padding-top: 16px;   /* опускает логотип немного ниже */
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    background: rgba(4,10,20,.82);
-    backdrop-filter: blur(10px);
+    padding:0;
 
-    border-bottom: 1px solid rgba(255,215,0,.15);
+    background:rgba(4,10,20,.88);
 
-    z-index: 9999;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(216,176,93,.18);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.25);
+
+    z-index:9999;
+}
+
+.logo-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:90px;
+
+    text-decoration:none;
 }
 
 .logo-link img{
-    width: 230px;
-    height: auto;
-    display: block;
+    width:190px;
+    max-height:58px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:
+    transform .3s ease,
+    filter .3s ease;
 }
 
 .logo-link img:hover{
-
-    transform:scale(1.05);
+    transform:scale(1.04);
 
     filter:
-    drop-shadow(0 0 18px rgba(255,210,70,.9));
-
-    }
+    drop-shadow(
+        0 0 18px rgba(216,176,93,.65)
+    );
+}
 </style>
 
 </head>
@@ -612,11 +640,12 @@ font-size:13px;
 <body id="top">
     <header class="top-header">
 
-<a href="#top" class="logo-link">
+<a href="index.html" class="logo-link">
     <img src="images/fiddexa-title.png" alt="FIDDEXA">
 </a>
-
+        
     </header>
+    
     <div class="language-switcher">
 
 <button class="lang-btn">
